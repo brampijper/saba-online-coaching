@@ -14,5 +14,14 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        contentTypes: [],
+        singleTypes: [`homepage`, `navigation`],
+        queryLimit: 1000,
+      },
+    }
   ],
 };
