@@ -4,9 +4,9 @@ import ButtonMailTo from './ButtonMailTo';
 
 const getData = graphql `
 query getContactBarContent {
-    strapiHomepage {
-        contactbar_text
-        contactbar_email
+    strapiContactbar {
+        text
+        email
       }
 }
 `
@@ -14,7 +14,7 @@ query getContactBarContent {
 const ContactBar = () => {
     const data = useStaticQuery(getData);
     const {
-        strapiHomepage: { contactbar_text: text, contactbar_email: email}
+        strapiContactbar: { text, email}
     } = data;
 
     return (

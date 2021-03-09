@@ -29,7 +29,7 @@
     }
 
     h1 {
-        @apply font-bold text-s-turquoise; 
+        @apply font-bold; 
         @apply text-3x1 md:text-7x1;
         @apply leading-tight;
     }

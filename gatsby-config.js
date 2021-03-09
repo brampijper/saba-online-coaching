@@ -3,6 +3,7 @@ module.exports = {
     title: "Sofia-k-coaching",
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
@@ -17,10 +18,14 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://sofia-k-strapi.herokuapp.com`,
         contentTypes: [],
-        singleTypes: [`homepage`, `navigation`],
+        singleTypes: [`navigation`, `contactbar`],
         queryLimit: 1000,
+        // loginData: {
+        //   identifier: "",
+        //   password: "",
+        // },
       },
     }
   ],
