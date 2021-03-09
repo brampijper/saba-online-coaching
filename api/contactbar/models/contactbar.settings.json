@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactbars",
+  "info": {
+    "name": "contactbar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

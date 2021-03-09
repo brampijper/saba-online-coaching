@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contactbar",
+      "handler": "contactbar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contactbar",
+      "handler": "contactbar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contactbar",
+      "handler": "contactbar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
