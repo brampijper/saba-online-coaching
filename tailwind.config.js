@@ -11,6 +11,7 @@ module.exports = {
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],
+        'gabriela': ['Gabriela', 'serif']
       },
       colors: {
         's-turquoise': '#5EC4B6',
