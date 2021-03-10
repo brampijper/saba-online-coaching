@@ -8,22 +8,23 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 const getLogo = graphql`
 query retrieveImage {
     strapiNavigation {
-      logo {
-        childImageSharp {
-            gatsbyImageData(
+        logo {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
                 width: 200,
                 placeholder: BLURRED
-            )
+              )
+            }
+          }
         }
       }
-    }
   }
 `
-
 const Navigation = () => {
     const data = useStaticQuery(getLogo);
-    const image = getImage(data.strapiNavigation.logo);
-
+    const image = getImage(data.strapiNavigation.logo.localFile);
+    // console.log(image);
     const [showMenu, setShowMenu] = useState(false);
 
     const handleClick = () => {
@@ -58,8 +59,8 @@ const Navigation = () => {
                         absolute left-0 top-0
                         h-full w-full
                         bg-s-purple
-                        text-gray-200 text-3x1 text-center
-                        flex flex-col justify-center
+                        text-gray-200 text-4xl text-center
+                        flex flex-col justify-center space-y-7
                     `}
                 >
                     <FontAwesomeIcon icon={faTimes} className='fixed top-2 right-6'/>
