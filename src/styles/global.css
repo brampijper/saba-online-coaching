@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
     @font-face {
         font-family: "Averta";
         font-weight: 400;
@@ -25,7 +26,7 @@
     }
 
     body {
-        @apply font-averta;
+        @apply font-averta overflow-x-hidden;
     }
 
     h1 {
@@ -37,5 +38,9 @@
     p {
         @apply text-xs md:text-sm;
         @apply font-normal;
+    }
+
+    h3 {
+        @apply text-4xl font-gabriela;
     }
 }
