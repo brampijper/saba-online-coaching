@@ -1,11 +1,12 @@
-import * as React from "react"
-import Layout from '../components/layout'
+import * as React from "react";
+import Layout from '../components/layout';
+import Header from '../components/Header';
 
  const IndexPage = () => {
   return (
     <Layout>
-        <div className="h-auto flex items-center text-center bg-s-turquoise-light">
-          <h1> Coaching for individuals &amp; teams.</h1>
+        <div>
+          <Header />
         </div>
     </Layout>
   )
