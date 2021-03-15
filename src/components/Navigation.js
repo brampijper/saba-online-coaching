@@ -57,7 +57,7 @@ const Navigation = () => {
                         ${showMenu ? "absolute" : "hidden"}
                         sm:hidden 
                         absolute left-0 top-0
-                        h-full w-full
+                        h-full w-full z-10
                         bg-s-purple
                         text-gray-200 text-4xl text-center
                         flex flex-col justify-center space-y-7
