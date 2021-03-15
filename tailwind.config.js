@@ -6,8 +6,6 @@ module.exports = {
       fontSize: {
         'xs': '1.125rem',   // 18px
         'sm': '1.375rem',   // 21px
-        '7x1': '5rem',      // 80px
-        '3x1': '3.125rem',  // 50px
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],
@@ -18,6 +16,16 @@ module.exports = {
         's-gold': '#D2B271',
         's-purple': '#312B6E',
         's-turquoise-light': '#D9EEE7'
+      },
+      backgroundImage: theme => ({
+        'blocks': "url('/images/svg/blocks.svg')",
+        'stripe': "url('/images/svg/stripe.svg')",
+      }),
+      zIndex: {
+        '-10': '-10'
+      },
+      inset: {
+        '1/10': '25%'
       }
     },
   },

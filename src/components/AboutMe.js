@@ -4,6 +4,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import MarkdownView from 'react-showdown';
 
 import Stripe from "../images/svg/stripe.svg";
+import GoldenSquare1 from "../images/svg/square-gold1.svg";
+import GoldenSquare2 from "../images/svg/square-gold2.svg";
+import BlueSquare from "../images/svg/square-blue.svg";
+
 
 
 const getData = graphql`
@@ -47,6 +51,7 @@ const AboutMe = () => {
                         h-72 w-72 
                         bg-s-purple rounded-full
                         flex items-center self-center mx-auto
+                        lg:h-96 lg:w-96
                     ">
                         <h2 className="text-white text-center word-spacing-wide">{title}</h2>
                     </div>
@@ -67,7 +72,11 @@ const AboutMe = () => {
                         </div>
                     </div>
             </div>
-            <Stripe className="absolute -z-10 top-1/10 w-screen h-full" />
+
+                <GoldenSquare1 className="absolute -z-10 left-5 top-px hidden md:block md:-left-20 xl:left-40" />
+                <GoldenSquare2 className="absolute -z-10 right-10 top-0 hidden md:block xl:right-40" />
+                <BlueSquare className="absolute -z-10 left-1/3 top-1/3" />
+                <Stripe className="absolute top-1/10 -z-10 w-screen h-full" />
         </div>
     )
 }
