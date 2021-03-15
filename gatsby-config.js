@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-smoothscroll",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -20,13 +21,21 @@ module.exports = {
       options: {
         apiURL: `https://sofia-k-strapi.herokuapp.com`,
         contentTypes: [],
-        singleTypes: [`navigation`, `contactbar`, `header`],
+        singleTypes: [`navigation`, `contactbar`, `header`, `about`],
         queryLimit: 1000,
         // loginData: {
         //   identifier: "",
         //   password: "",
         // },
       },
-    }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
+    },
   ],
 };
