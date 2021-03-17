@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_services_service_cards",
+  "info": {
+    "name": "service-card",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "price_description": {
+      "type": "string"
+    }
+  }
+}
