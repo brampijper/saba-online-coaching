@@ -1,8 +1,9 @@
 {
   "collectionName": "components_services_service_cards",
   "info": {
-    "name": "service-card",
-    "icon": "address-card"
+    "name": "service",
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
