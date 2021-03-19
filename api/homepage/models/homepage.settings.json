@@ -55,16 +55,6 @@
     "aboutme_image_text": {
       "type": "richtext"
     },
-    "service": {
-      "type": "component",
-      "repeatable": true,
-      "component": "services.service-card"
-    },
-    "testimonial": {
-      "type": "component",
-      "repeatable": true,
-      "component": "testimonials.testimonials"
-    },
     "helpsection_title": {
       "type": "string"
     },
@@ -81,6 +71,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "services": {
+      "collection": "services"
+    },
+    "testimonials": {
+      "collection": "testimonals"
     }
   }
 }
