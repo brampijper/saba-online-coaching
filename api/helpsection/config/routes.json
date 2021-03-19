@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/helpsection",
+      "handler": "helpsection.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/helpsection",
+      "handler": "helpsection.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/helpsection",
+      "handler": "helpsection.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

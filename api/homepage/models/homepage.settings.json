@@ -1,0 +1,86 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "homepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "header_title": {
+      "type": "string",
+      "required": true
+    },
+    "header_subtitle": {
+      "type": "text"
+    },
+    "header_button": {
+      "type": "string"
+    },
+    "header_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "quote": {
+      "type": "text"
+    },
+    "aboutme_title": {
+      "type": "string"
+    },
+    "aboutme_text": {
+      "type": "richtext"
+    },
+    "aboutme_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "aboutme_image_text": {
+      "type": "richtext"
+    },
+    "service": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.service-card"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonials.testimonials"
+    },
+    "helpsection_title": {
+      "type": "string"
+    },
+    "helpsection_description": {
+      "type": "richtext"
+    },
+    "helpsection_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
