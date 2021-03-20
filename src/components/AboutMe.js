@@ -4,27 +4,25 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import MarkdownView from 'react-showdown';
 
 import Stripe from "../images/svg/stripe.svg";
-import GoldenSquare1 from "../images/svg/square-gold1.svg";
-import GoldenSquare2 from "../images/svg/square-gold2.svg";
-import BlueSquare from "../images/svg/square-blue.svg";
+import Squares from "../images/svg/squares.svg";
 
 
 
 const getData = graphql`
 query GetAboutMeContent {
-    strapiAbout {
-        title
-        text
-        imagetext
-        image {
+    strapiHomepage {
+        aboutme_title
+        aboutme_text
+        aboutme_image_text
+        aboutme_image {
             alternativeText
             localFile {
                 childImageSharp {
-                    gatsbyImageData(
+                    gatsbyImageData (
                         placeholder: BLURRED
                     )
                 }
-            }
+            } 
         }
     }
 }
@@ -33,9 +31,9 @@ query GetAboutMeContent {
 const AboutMe = () => {
     const data = useStaticQuery(getData);
     const {
-        strapiAbout: {
-            title, text, imagetext, 
-            image: {
+        strapiHomepage: {
+            aboutme_title, aboutme_text, aboutme_image_text, 
+            aboutme_image: {
                 localFile,
                 alternativeText: alt
             }
@@ -53,7 +51,7 @@ const AboutMe = () => {
                         flex items-center self-center mx-auto
                         lg:h-96 lg:w-96
                     ">
-                        <h2 className="text-white text-center word-spacing-wide">{title}</h2>
+                        <h2 className="text-white text-center word-spacing-wide">{aboutme_title}</h2>
                     </div>
 
                     <div className="
@@ -62,21 +60,20 @@ const AboutMe = () => {
                         ">
                         
                         <div>
-                            <MarkdownView markdown={text} className="space-y-6 max-w-prose pb-4" />
-                            <Link className="underline" to='/about'>Read more</Link>
+                            <MarkdownView markdown={aboutme_text} className="space-y-6 max-w-prose pb-4" />
+                            {/* <Link className="underline" to='/about'>Read more</Link> */}
                         </div>
 
                         <div className="space-y-6 place-self-center">
                             <GatsbyImage image={image} alt={alt} className="rounded-lg" />
-                            <MarkdownView markdown={imagetext} className="space-y-2 max-w-prose" />
+                            <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose" />
                         </div>
                     </div>
             </div>
-
-                <GoldenSquare1 className="absolute -z-10 left-5 top-px hidden md:block md:-left-20 xl:left-40" />
-                <GoldenSquare2 className="absolute -z-10 right-10 top-0 hidden md:block xl:right-40" />
-                <BlueSquare className="absolute -z-10 left-1/3 top-1/3" />
-                <Stripe className="absolute top-1/10 -z-10 w-screen h-full" />
+            <div className="flex justify-center">
+                <Squares className="absolute z-minus top-1/15 md:top-0 w-full h-auto max-w-screen-xl" />
+            </div>
+            <Stripe className="absolute z-minus top-1/4 md:top-1/3 w-auto h-full lg:w-full lg:h-auto" />
         </div>
     )
 }
