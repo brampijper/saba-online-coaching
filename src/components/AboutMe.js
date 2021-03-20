@@ -42,7 +42,7 @@ const AboutMe = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="relative">
+        <div className="relative overflow-hidden md-overflow-visible">
             <div className="h-auto space-y-52 max-w-screen-lg xl:max-w-screen-xl mx-auto" id="about-me">
 
                     <div className="
