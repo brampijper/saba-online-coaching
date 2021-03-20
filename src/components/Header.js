@@ -3,28 +3,26 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import ButtonMailTo from './ButtonMailTo';
 import ArrowDown from "../images/svg/arrow-down.svg";
 
 
 const getData = graphql`
 query GetHeaderContent {
-    strapiHeader {
-      title
-      subtitle
-      button
-      quote
-      image {
-        alternativeText
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-                placeholder: BLURRED
-                width: 600
-            )
-          }
+    strapiHomepage {
+        header_title
+        header_subtitle
+        header_button
+        quote
+        header_image {
+            alternativeText
+            localFile {
+            childImageSharp {
+                gatsbyImageData(
+                    placeholder: BLURRED
+                    width: 600
+                )
+            }
         }
       }
     }
@@ -34,9 +32,9 @@ query GetHeaderContent {
 const Header = () => {
     const data = useStaticQuery(getData);
     const {
-        strapiHeader: {
-            title, subtitle, button, quote,
-            image: { 
+        strapiHomepage: {
+            header_title, header_subtitle, header_button, quote,
+            header_image: { 
                 localFile, 
                 alternativeText: alt 
             } 
@@ -64,11 +62,11 @@ const Header = () => {
                         container
                         "
                     >
-                        <h1>{title}</h1>
-                        <p>{subtitle}</p>
+                        <h1>{header_title}</h1>
+                        <p>{header_subtitle}</p>
 
                         <ButtonMailTo> 
-                            <span>{button}</span>
+                            <span>{header_button}</span>
                         </ButtonMailTo>
 
                     </div>
@@ -82,14 +80,14 @@ const Header = () => {
 
             <div className="container mx-auto">
                 <div className="px-6 my-20 flex space-x-3 md:max-w-4xl mx-auto">
-                    <FontAwesomeIcon icon={faQuoteRight} className='fa-2x fa-fw fa-flip-horizontal' />
-                    <h3 className="relative m-auto">
+                    <h3 className="relative m-auto text-center">
+                        <span className="font-extrabold	text-3xl mx-1 md:text-5xl font-bold font-gabriela">"</span>
                         {quote}
-                        {/* <FontAwesomeIcon icon={faQuoteRight} className='fa-sm fa-fw absolute bottom-0' /> */}
+                        <span className="font-extrabold	text-3xl mx-1 md:text-5xl font-bold font-gabriela">"</span>
                     </h3>
                 </div>
                 
-                <ArrowDown className="h-28 mx-auto" onClick={ () => scrollTo('#about-me')} />
+                <ArrowDown className="h-28 mx-auto cursor-pointer animate-bounce" onClick={ () => scrollTo('#about-me')} />
             </div>
 
         </>
