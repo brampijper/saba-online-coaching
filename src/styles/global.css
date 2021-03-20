@@ -22,7 +22,7 @@
 
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
-    @font-face {
+    /* @font-face {
         font-family: "Averta";
         font-weight: 400;
         src: url(../styles/fonts/SF-Pro-Text-Regular.woff2) format("woff2");
@@ -41,7 +41,7 @@
         font-family: "Averta";
         font-weight: 700;
         src: url(../styles/fonts/SF-Pro-Text-Bold.woff2) format("woff2");
-    }
+    } */
 
     body {
         @apply font-averta overflow-x-hidden;
