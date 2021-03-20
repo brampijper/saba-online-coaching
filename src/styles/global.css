@@ -7,8 +7,16 @@
         word-spacing: 100vw;
     }
 
+    .word-spacing-none {
+        word-spacing: initial;
+    }
+
     .circle-height {
         height: 100vw;
+    }
+
+    .full-navbar-height {
+        height: calc(100vh - 7rem);
     }
 }
 
@@ -62,7 +70,7 @@
     }
 
     p {
-        @apply text-xs md:text-sm;
+        @apply text-base md:text-sm;
         @apply font-normal;
     }
 }
