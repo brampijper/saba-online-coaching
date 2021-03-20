@@ -20,8 +20,8 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://sofia-k-strapi.herokuapp.com`,
-        contentTypes: [],
-        singleTypes: [`navigation`, `contactbar`, `header`, `about`],
+        contentTypes: [`services`, `testimonals`],
+        singleTypes: [`navigation`, `contactbar`, `homepage`],
         queryLimit: 1000,
         // loginData: {
         //   identifier: "",
