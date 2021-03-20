@@ -18,8 +18,10 @@ ButtonMailTo.defaultProps = {
     styles: `
         mb-5 mt-5 
         bg-white border-2 rounded border-black 
-        w-full px-6 py-2.5 
-        text-center`
+        max-w-md px-6 py-2.5 
+        text-center
+        md:max-w-xs
+        `
   };
 
 export default ButtonMailTo;
