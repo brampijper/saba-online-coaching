@@ -21,7 +21,7 @@ module.exports = {
       options: {
         apiURL: `https://sofia-k-strapi.herokuapp.com`,
         contentTypes: [`services`, `testimonals`],
-        singleTypes: [`navigation`, `contactbar`, `homepage`],
+        singleTypes: [`navigation`, `contactbar`, `homepage`, `service-page`],
         queryLimit: 1000,
         // loginData: {
         //   identifier: "",
