@@ -39,9 +39,9 @@ const Navigation = () => {
             </Link>
             <ul className="hidden sm:flex flex-row space-x-6">
                 <li><Link to='/'>Home</Link></li>
-                {/* <li><Link to='/about'>About</Link></li>
+                <li><Link to='/about'>About</Link></li>
                 <li><Link to='/services'>Services</Link></li>
-                <li><Link to='/testimonials'>Testimonials</Link></li> */}
+                <li><Link to='/testimonials'>Testimonials</Link></li>
             </ul>
 
             <div className="sm:hidden z-20" role="button" tabIndex="0" onClick={handleClick}>
@@ -70,9 +70,9 @@ const Navigation = () => {
                 `}
             >
                 <li><Link to='/'>Home</Link></li>
-                {/* <li><Link to='/about'>About</Link></li>
+                <li><Link to='/about'>About</Link></li>
                 <li><Link to='/services'>Services</Link></li>
-                <li><Link to='/testimonials'>Testimonials</Link></li> */}
+                <li><Link to='/testimonials'>Testimonials</Link></li>
             </ul>
         </nav>
         </>
