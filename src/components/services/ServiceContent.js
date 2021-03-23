@@ -14,7 +14,7 @@ const ServiceContent = ({ service: {service} }) => {
     console.log(service)
     return (
         <>
-            <div className={ service.darkMode ? "bg-s-purple pt-32 pb-32 text-white" : "" }>
+            <div className={ service.darkMode ? "bg-s-purple pt-32 pb-32 text-white" : " " }>
             
                 <div className="container mx-auto text-center h-auto grid grid-cols-1 gap-12 md:space-y-28 justify-items-center
                 xl:max-w-screen-xl max-w-screen-lg px-6">
