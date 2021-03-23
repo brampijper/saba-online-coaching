@@ -1,12 +1,14 @@
 import React from 'react';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
-const Testimonials = () => {
+import Testimonials from '../components/Testimonials';
+
+const TestimonialPage = () => {
     return (
         <Layout>
-            <span>Hello from the Testimonials page</span>
+            <Testimonials />
         </Layout>
     )
 }
 
-export default Testimonials;
+export default TestimonialPage;
