@@ -1,12 +1,54 @@
 import React from 'react';
-import Layout from '../components/layout'
+import { graphql, useStaticQuery } from 'gatsby';
+import Layout from '../components/layout';
+import ServiceContent from '../components/services/ServiceContent';
 
-const Services = () => {
+const getData = graphql`
+query GetServicePageContent {
+    strapiServicePage {
+        services {
+          id
+          service {
+            title
+            price
+            id
+            description
+            price_description
+            program_duration
+            darkMode
+            subjects {
+              id
+              description
+              title
+            }
+          }
+        }
+    }
+}
+`
+
+const ServicePage = () => {
+    const data = useStaticQuery(getData);
+    const {
+        strapiServicePage: {
+            services
+        }
+    } = data
+    // console.log(services.map( (service) => {
+    //     console.log(service)
+    // }));
+    console.log(services)
     return (
         <Layout>
-            <span>Hello from the services page</span>
+            {
+                services.map( (service ) => {
+                    return (
+                        <ServiceContent key={service.id} service={service} />
+                    )
+                })
+            }
         </Layout>
     )
 }
 
-export default Services;
+export default ServicePage;
