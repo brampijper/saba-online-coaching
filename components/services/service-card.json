@@ -26,6 +26,10 @@
     },
     "program_duration": {
       "type": "integer"
+    },
+    "darkMode": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
