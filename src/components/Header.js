@@ -44,7 +44,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="bg-s-turquoise-light h-auto py-10">
+            <div className="bg-s-turquoise-light h-auto">
 
                 <div className="
                     space-y-14 px-6
