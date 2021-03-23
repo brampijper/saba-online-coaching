@@ -29,6 +29,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "about_me": {
+      "type": "richtext"
+    },
+    "what_ive_done": {
+      "type": "richtext"
     }
   }
 }
