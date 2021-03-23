@@ -1,10 +1,12 @@
 import React from 'react';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const About = () => {
     return (
         <Layout>
-            <span>Hello from the about page</span>
+            <div className="container text-center h-screen flex flex-col justify-center">
+                <h2>content for about page</h2>
+            </div> 
         </Layout>
     )
 }
