@@ -18,6 +18,14 @@
     },
     "price_description": {
       "type": "string"
+    },
+    "subjects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.service-description"
+    },
+    "program_duration": {
+      "type": "integer"
     }
   }
 }
