@@ -19,9 +19,9 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faAt} className='fa-2x' />
                     </div>
                     <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-6">
-                        <Link to="/">FAQ</Link>
+                        <Link to="/faq">FAQ</Link>
                         <span className="hidden md:block">|</span>
-                        <Link to="/">Support</Link>
+                        <a href={'mailto:' + 'hello@sofiakakkava.com'}>Support</a>
                         <span className="hidden md:block">|</span>
                         <Link to="/">Terms of Use</Link>
                         <span className="hidden md:block">|</span>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <p className="text-xs">This website is designed &amp; built by bram builds. The contents and opinions of this website are those of Sofia Kakkava.</p>
+                <p className="text-xs">This website is designed &amp; built by Bram. The contents and opinions of this website are those of Sofia Kakkava.</p>
             </div>
         </>
     )
