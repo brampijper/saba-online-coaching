@@ -37,9 +37,6 @@ const Testimonials = () => {
             nodes: cards
         }
     } = data
-
-    console.log(cards);
-
     return (
         <>
             <div>
