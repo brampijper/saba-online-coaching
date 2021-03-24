@@ -31,17 +31,13 @@ const ServicePage = () => {
     const data = useStaticQuery(getData);
     const {
         strapiServicePage: {
-            services
+            services,
         }
-    } = data
-    // console.log(services.map( (service) => {
-    //     console.log(service)
-    // }));
-    console.log(services)
+    } = data;
     return (
         <Layout>
             {
-                services.map( (service ) => {
+                services.map( ( service ) => {
                     return (
                         <ServiceContent key={service.id} service={service} />
                     )
