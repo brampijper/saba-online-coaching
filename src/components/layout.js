@@ -11,7 +11,6 @@ const Layout = ({children}) => {
 
             <main className="
                 h-auto
-                py-10
                 space-y-20 
                 sm:space-y-32 
                 md:space-y-40 
