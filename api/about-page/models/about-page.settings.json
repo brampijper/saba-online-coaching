@@ -19,13 +19,11 @@
       "repeatable": true,
       "component": "takeaway-component.takeaway-card"
     },
-    "images": {
+    "aboutme_images": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false
@@ -35,6 +33,15 @@
     },
     "what_ive_done": {
       "type": "richtext"
+    },
+    "whativedone_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
