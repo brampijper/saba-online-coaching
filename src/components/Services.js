@@ -11,6 +11,7 @@ const getData = graphql`
 query getServiceCards {
     allStrapiServices {
       nodes {
+        strapiId 
         service {
           id
           description
@@ -61,7 +62,7 @@ const Services = () => {
                                             <article className="space-y-8 sm:space-y-4">
                                                 <h4 className="word-spacing-wide md:word-spacing-none">{title}</h4>                                
                                                 <p>{description}</p>
-                                                {/* <Link className="underline block" to='/services'>Read more</Link> */}
+                                                <Link className="underline block" to={`/services#${service.strapiId}`}>Read more</Link>
                                             </article> 
                                             {/* <div className="absolute bg-s-turquoise rounded-full z-0 w-40 h-40 top-1/11 right-1/13 sm:-right-1/4 sm:-top-1/2 sm:w-80 sm:h-80"></div> */}
                                         </div>
