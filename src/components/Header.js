@@ -47,7 +47,7 @@ const Header = () => {
             <div className="bg-s-turquoise-light h-auto">
 
                 <div className="
-                    space-y-14 px-6
+                    space-y-14 px-6 py-12
                     max-w-screen-lg mx-auto
                     sm:flex sm:flex-row sm:justify-around sm:space-x-14 sm:items-center xl:px-0
                     lg:space-x-20
