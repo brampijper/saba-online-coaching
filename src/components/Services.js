@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 import Triangles from "../images/svg/triangles.svg";
+import CornerSvg from "../images/svg/service-card-triangle.svg";
 
 const getData = graphql`
 query getServiceCards {
@@ -52,19 +53,24 @@ const Services = () => {
                                         service: {id, title, description, price, price_description}
                                     } = service
                                     return (
-                                        <div key={id} className="w-full h-auto rounded-lg bg-white shadow-md relative p-8 max-w-prose overflow-hidden">
-                                            <div className="absolute right-0 top-0 mt-2 mr-4 flex flex-col z-10 text-white text-center">
-                                                <span>{`$${price}`}</span>
-                                                <span>{price_description}</span>
-                                                <FontAwesomeIcon icon={faShoppingCart} className='fa-lg fa-fw mt-2 mx-auto' />
+                                        <div key={id} className="w-full h-auto rounded-lg bg-white shadow-md relative z-10 p-8 max-w-prose overflow-hidden">
+                                            <div className="absolute right-0 top-0 h-auto bg-s-turquoise w-full md:bg-transparent md:w-4/5">
+                                                <Link to="/" className="
+                                                    flex flex-row text-center text-white relative z-10 items-center justify-center h-16 space-x-1
+                                                    md:mt-6 md:flex-col md:w-32 md:float-right 
+                                                    ">
+                                                    <span className="">{`$${price} `}</span>
+                                                    <span className="mr-4">{price_description}</span>
+                                                    <FontAwesomeIcon icon={faShoppingCart} className='fa-lg fa-fw md:mt-2 md:mx-auto' />
+                                                </Link>
+                                                    <CornerSvg className="hidden md:block w-120 h-120 absolute right-0 top-0" />
                                             </div>
-                
-                                            <article className="space-y-8 sm:space-y-4">
+
+                                            <article className="mt-16 md:mt-0 md:space-y-8 space-y-4 z-20 relative md:mr-14">
                                                 <h4 className="word-spacing-wide md:word-spacing-none">{title}</h4>                                
                                                 <p>{description}</p>
                                                 <Link className="underline block" to={`/services#${service.strapiId}`}>Read more</Link>
-                                            </article> 
-                                            {/* <div className="absolute bg-s-turquoise rounded-full z-0 w-40 h-40 top-1/11 right-1/13 sm:-right-1/4 sm:-top-1/2 sm:w-80 sm:h-80"></div> */}
+                                            </article>
                                         </div>
                                     )
                                 })
