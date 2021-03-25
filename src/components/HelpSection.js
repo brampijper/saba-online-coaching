@@ -48,7 +48,6 @@ const HelpSection = () => {
                 <div className="flex flex-col space-y-10 md:order-last md:justify-center">
                     <h2>{helpsection_title}</h2>
                     <MarkdownView markdown={helpsection_description} className="space-y-2 max-w-prose" />
-
                     
                     <ButtonMailTo> 
                         <span>{helpsection_button}</span>
