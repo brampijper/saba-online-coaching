@@ -14,6 +14,9 @@
     "takeaways": {
       "type": "richtext",
       "required": true
+    },
+    "service": {
+      "model": "service"
     }
   }
 }
