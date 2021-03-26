@@ -16,47 +16,51 @@
       "required": true
     },
     "header_subtitle": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "header_button": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "header_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "quote": {
-      "type": "text"
+      "type": "text",
+      "private": false,
+      "required": true
     },
     "aboutme_title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "aboutme_text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "aboutme_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "aboutme_image_text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "helpsection_title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "helpsection_description": {
       "type": "richtext"
@@ -65,21 +69,34 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
-      "required": false
-    },
-    "services": {
-      "collection": "services"
-    },
-    "testimonials": {
-      "collection": "testimonals"
+      "required": true
     },
     "helpsection_button": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "columnName": "title",
+      "collection": "service"
+    },
+    "testimonials": {
+      "columnName": "name",
+      "collection": "testimonals"
+    },
+    "service_title": {
+      "type": "string",
+      "required": true
+    },
+    "testimonial_title": {
+      "type": "string",
+      "required": true
+    },
+    "testimonial_subtitle": {
+      "type": "text",
+      "required": true
     }
   }
 }

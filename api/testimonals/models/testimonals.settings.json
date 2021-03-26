@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "testimonials",
+  "collectionName": "testimonial",
   "info": {
-    "name": "Testimonials",
+    "name": "Testimonial",
     "description": ""
   },
   "options": {
@@ -11,10 +11,29 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "card": {
-      "type": "component",
-      "repeatable": false,
-      "component": "testimonials.testimonials"
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "workplace": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

@@ -2,16 +2,18 @@
   "collectionName": "components_faq_component_faq_components",
   "info": {
     "name": "faq-component",
-    "icon": "question",
+    "icon": "grin",
     "description": ""
   },
   "options": {},
   "attributes": {
     "question": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "answer": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

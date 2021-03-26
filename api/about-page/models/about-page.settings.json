@@ -12,12 +12,14 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "takeaway": {
       "type": "component",
       "repeatable": true,
-      "component": "takeaway-component.takeaway-card"
+      "component": "takeaway.takeaway-card",
+      "required": true
     },
     "aboutme_images": {
       "collection": "file",
@@ -26,13 +28,15 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "about_me": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "what_ive_done": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "whativedone_images": {
       "collection": "file",
@@ -41,7 +45,11 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
+    },
+    "takeaway_Title": {
+      "type": "string",
+      "required": true
     }
   }
 }
