@@ -6,14 +6,15 @@ import MarkdownView from 'react-showdown';
 import Layout from '../components/layout';
 
 const getData = graphql`
-query getAboutMePageContent {
+query GetAboutPageContent {
     strapiAboutPage {
       about_me
       title
       what_ive_done
+      takeaway_Title
       aboutme_images {
-        id
         alternativeText
+        id
         localFile {
           childImageSharp {
             gatsbyImageData
@@ -21,8 +22,8 @@ query getAboutMePageContent {
         }
       }
       whativedone_images {
-        id
         alternativeText
+        id
         localFile {
           childImageSharp {
             gatsbyImageData
@@ -30,15 +31,16 @@ query getAboutMePageContent {
         }
       }
       takeaway {
-        takeaways
         title
         id
+        takeaways
         service {
             id
         }
       }
     }
   }
+  
 `
 
 
@@ -46,7 +48,7 @@ const About = () => {
     const data = useStaticQuery(getData);
     const {
         strapiAboutPage: {
-            title, about_me, what_ive_done, takeaway, aboutme_images, whativedone_images
+            title, about_me, what_ive_done, takeaway, aboutme_images, whativedone_images, takeaway_Title
         }
     } = data;
     return (
@@ -99,7 +101,7 @@ const About = () => {
 
             <div className="bg-s-gold py-20 lg:py-52">
                 <div className="text-center h-auto space-y-16 md:space-y-28 px-8 mx-auto flex flex-col place-items-center xl:max-w-screen-xl max-w-screen-lg">
-                    <h2 className="text-white">What I can do for you</h2>
+                    <h2 className="text-white">{takeaway_Title}</h2>
 
                     <div className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-14">
                         {
