@@ -13,13 +13,6 @@
   "attributes": {
     "services": {
       "collection": "service"
-    },
-    "subject": {
-      "type": "dynamiczone",
-      "components": [
-        "service.service-info"
-      ],
-      "required": true
     }
   }
 }

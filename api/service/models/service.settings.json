@@ -26,6 +26,12 @@
     },
     "darkMode": {
       "type": "boolean"
+    },
+    "subject": {
+      "type": "dynamiczone",
+      "components": [
+        "service.service-info"
+      ]
     }
   }
 }

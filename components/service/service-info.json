@@ -14,9 +14,6 @@
     "description": {
       "type": "richtext",
       "required": true
-    },
-    "serviceHasManySubjects": {
-      "model": "service"
     }
   }
 }
