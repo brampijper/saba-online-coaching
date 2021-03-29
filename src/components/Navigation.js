@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link, graphql, useStaticQuery} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import TagLineSwitcher from './TagLineSwitcher';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,6 +35,9 @@ const Navigation = () => {
     return (
         <>
         <nav className="h-24 flex justify-between items-center px-6 relative">
+
+            <TagLineSwitcher />
+
             <Link to='/' className="z-20">
                 <GatsbyImage image={image} alt="this should be dynamic data" />
             </Link>
