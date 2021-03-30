@@ -9,23 +9,21 @@ import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
         <>
-        <div className="flex flex-col justify-center content-center text-center space-y-20 p-8 md:p-20 relative">
-            <div className="absolute top-0 left-0 bg-s-turquoise h-20 w-full"></div>
-                <div className="flex flex-col space-y-16">
-                    <StaticImage src="../images/logo.png" className="mx-auto mt-8 md:mt-0" alt="Sofia Kakkava logo" layout="fixed" placeholder="blurred" width={275} />
+        <div className="flex flex-col justify-center content-center text-center px-6 pb-6 space-y-16 md:space-y-20 md:pt-20 md:h-auto relative">
+            <div className="absolute top-0 left-0 bg-s-turquoise h-10 md:h-20 w-full"></div>
+                <div className="flex flex-col space-y-20">
+                    <Link to="/">
+                        <StaticImage src="../images/logo.png" className="mx-auto mt-8 md:mt-0" alt="Sofia Kakkava logo" layout="fixed" placeholder="blurred" width={275} />
+                    </Link>
                     <div className="flex flex-row justify-center space-x-12">
                         <FontAwesomeIcon icon={faLinkedinIn} className='fa-2x' />
                         <FontAwesomeIcon icon={faInstagram} className='fa-2x' />
                         <FontAwesomeIcon icon={faAt} className='fa-2x' />
                     </div>
-                    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-6">
+                    <div className="flex space-y-0 flex-row justify-center space-x-6">
                         <Link to="/faq">FAQ</Link>
-                        <span className="hidden md:block">|</span>
+                        <span className="">|</span>
                         <a href={'mailto:' + 'hello@sofiakakkava.com'}>Support</a>
-                        <span className="hidden md:block">|</span>
-                        <Link to="/">Terms of Use</Link>
-                        <span className="hidden md:block">|</span>
-                        <Link to="/">Privacy Policy</Link>
                     </div>
                 </div>
 
