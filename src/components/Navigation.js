@@ -2,13 +2,18 @@ import React, {useState} from 'react';
 import { Link, graphql, useStaticQuery} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import TagLineSwitcher from './TagLineSwitcher';
+import OnHoverChangeText from './OnHoverChangeText';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const getLogo = graphql`
+const getNavbarContent = graphql`
 query retrieveImage {
     strapiNavigation {
+        taglines {
+          taglines {
+              text
+          }
+        }
         logo {
           localFile {
             childImageSharp {
@@ -23,10 +28,21 @@ query retrieveImage {
   }
 `
 const Navigation = () => {
-    const data = useStaticQuery(getLogo);
-    const image = getImage(data.strapiNavigation.logo.localFile);
-    // console.log(image);
+    const data = useStaticQuery(getNavbarContent);
     const [showMenu, setShowMenu] = useState(false);
+
+    const {
+        strapiNavigation: {
+            taglines: {
+                taglines
+            },
+            logo: {
+                localFile
+            }
+        }
+    } = data
+
+    const image = getImage(localFile);
 
     const handleClick = () => {
         setShowMenu(!showMenu);
@@ -36,11 +52,11 @@ const Navigation = () => {
         <>
         <nav className="h-24 flex justify-between items-center px-6 relative">
 
-            <TagLineSwitcher />
-
             <Link to='/' className="z-20">
-                <GatsbyImage image={image} alt="this should be dynamic data" />
+                <OnHoverChangeText className="hidden md:block" defaultString="Sofia Kakkava" taglines={taglines} />
+                <GatsbyImage className="block md:hidden" image={image} alt="this should be dynamic data" />
             </Link>
+
             <ul className="hidden sm:flex flex-row space-x-6">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
