@@ -19,9 +19,9 @@ const ContactBar = () => {
 
     return (
         <>
-            <ButtonMailTo email={email} styles="w-screen h-28 md:h-12 bg-s-turquoise flex justify-center items-center cursor-pointer">
-                <p className="text-white text-center flex flex-col md:flex-row ">
-                    <span>{text}&nbsp;</span> 
+            <ButtonMailTo email={email} styles="w-screen h-12 bg-s-turquoise flex justify-start sm:justify-center items-center cursor-pointer">
+                <p className="text-white px-6 md:flex md:flex-row ">
+                    <span className="hidden md:block">{text}&nbsp;</span> 
                     <span>{email}</span>
                 </p>
             </ButtonMailTo>
