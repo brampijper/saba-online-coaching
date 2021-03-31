@@ -15,6 +15,7 @@ query retrieveImage {
           }
         }
         logo {
+          alternativeText
           localFile {
             childImageSharp {
               gatsbyImageData(
@@ -37,6 +38,7 @@ const Navigation = () => {
                 taglines
             },
             logo: {
+                alternativeText,
                 localFile
             }
         }
@@ -53,8 +55,8 @@ const Navigation = () => {
         <nav className="h-24 flex justify-between items-center px-6 relative">
 
             <Link to='/' className="z-20">
-                <OnHoverChangeText className="hidden md:block" defaultString="Sofia Kakkava" taglines={taglines} />
-                <GatsbyImage className="block md:hidden" image={image} alt="this should be dynamic data" />
+                <OnHoverChangeText className="hidden md:block" defaultString="ofia Kakkava" taglines={taglines} />
+                <GatsbyImage className="block md:hidden" image={image} alt={alternativeText} />
             </Link>
 
             <ul className="hidden sm:flex flex-row space-x-6">
