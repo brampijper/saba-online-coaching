@@ -24,7 +24,7 @@ const OnHoverChangeText = (props) => {
             onMouseEnter={onMouseOver}
             onMouseLeave={onMouseOut}
             className={`${props.className} text-black`}>
-            <h4>{myString}</h4>
+            <h5>{myString}</h5>
         </div>
     )
 }
