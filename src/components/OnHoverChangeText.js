@@ -6,13 +6,13 @@ import "../styles/fade.css";
 const OnHoverChangeText = (props) => {
     const [myIndex, setIndex] = useState(0);
     const [myString, setString] = useState(props.defaultString);
-    const [state, setState] = useState(false);
+    const [animate, setState] = useState(false);
     const [taglines, setTaglines] = useState([]);
 
     useEffect(() => {
         props.taglines.map( (tagline) => {
-            const { tagline: {text} } = tagline;
-            setTaglines(oldArray => [...oldArray,  sliceFirstLetter(text)]);
+            const { text } = tagline;
+            return setTaglines(oldArray => [...oldArray,  sliceFirstLetter(text)]);
         })
 
         function sliceFirstLetter(sentence) {
@@ -22,33 +22,43 @@ const OnHoverChangeText = (props) => {
     }, [props.taglines.length])
 
     function onMouseOver () {
-        setString(taglines[myIndex]);
+        switchTagline(false);
         setIndex(prevState => prevState +1);
-        setState(state => !state); 
+        switchAnimateState(animate);
     }
 
     function onMouseOut () {
-        setString(props.defaultString);
-        if (taglines.length === myIndex) {
+        switchTagline(true);
+        if (taglines.length === myIndex || myIndex > taglines.length) {
             setIndex(0);
-            setString(props.defaultString);
         } else {
-            setState(state => !state);
+            switchAnimateState(animate);
         }
+    }
+    
+    function switchTagline(defaultString) {
+        defaultString 
+            ? setString(props.defaultString) 
+            : setString(taglines[myIndex]);
+    }
+
+    // this function is needed for the CSSTransition component, so it switches between the animation states.
+    function switchAnimateState(bool) {
+        setState(bool => !bool)
     }
 
     return (
-        <div className="flex flex-row">
+        <div onMouseEnter={onMouseOver} onMouseLeave={onMouseOut} className={`${props.className}`}>
         <h5>S</h5>
         <SwitchTransition mode='out-in'>
             <CSSTransition 
-                key={state} 
+                key={animate} 
                 classNames="fade"
                 addEndListener={(node, done) => {
                     node.addEventListener("transitionend", done, false);
                 }}
             >
-                <div onMouseEnter={onMouseOver} onMouseLeave={onMouseOut} className={`${props.className} text-black`}>
+                <div>
                     <h5>
                         {`${myString}`}
                     </h5>
