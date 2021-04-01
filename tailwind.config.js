@@ -41,6 +41,9 @@ module.exports = {
       transitionProperty: {
         'height': 'height',
       },
+      letterSpacing: {
+        widest: '.2em'
+      }
     },
   },
   variants: {

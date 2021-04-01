@@ -2,13 +2,20 @@ import React, {useState} from 'react';
 import { Link, graphql, useStaticQuery} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import OnHoverChangeText from './OnHoverChangeText';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const getLogo = graphql`
+const getNavbarContent = graphql`
 query retrieveImage {
     strapiNavigation {
+        taglines {
+          taglines {
+              text
+          }
+        }
         logo {
+          alternativeText
           localFile {
             childImageSharp {
               gatsbyImageData(
@@ -22,10 +29,22 @@ query retrieveImage {
   }
 `
 const Navigation = () => {
-    const data = useStaticQuery(getLogo);
-    const image = getImage(data.strapiNavigation.logo.localFile);
-    // console.log(image);
+    const data = useStaticQuery(getNavbarContent);
     const [showMenu, setShowMenu] = useState(false);
+
+    const {
+        strapiNavigation: {
+            taglines: {
+                taglines
+            },
+            logo: {
+                alternativeText,
+                localFile
+            }
+        }
+    } = data
+
+    const image = getImage(localFile);
 
     const handleClick = () => {
         setShowMenu(!showMenu);
@@ -34,9 +53,12 @@ const Navigation = () => {
     return (
         <>
         <nav className="h-24 flex justify-between items-center px-6 relative">
+
             <Link to='/' className="z-20">
-                <GatsbyImage image={image} alt="this should be dynamic data" />
+                <OnHoverChangeText className="hidden lg:flex lg:flex-row text-black" defaultString="ofia Kakkava" taglines={taglines} />
+                <GatsbyImage className="block lg:hidden" image={image} alt={alternativeText} />
             </Link>
+
             <ul className="hidden sm:flex flex-row space-x-6">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
