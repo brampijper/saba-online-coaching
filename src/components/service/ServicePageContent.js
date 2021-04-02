@@ -2,16 +2,14 @@ import React from 'react';
 import ButtonMailTo from '../ButtonMailTo';
 
 const ServicePageContent = ( {services} ) => {
-    let bgColor, textColor, titleColor;
+    let bgColor, titleColor;
 
     function updateColors(darkMode) {
         if (darkMode) {
             bgColor = "bg-s-turquoise"
-            textColor = "text-white";
             titleColor = "text-s-turquoise"
         } else {
             bgColor = "bg-s-turquoise-light";
-            textColor = "text-black";
             titleColor = "text-s-purple";
         }
     }
