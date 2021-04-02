@@ -48,7 +48,7 @@ const OnHoverChangeText = (props) => {
     }
 
     return (
-        <div onMouseEnter={onMouseOver} onMouseLeave={onMouseOut} className={`${props.className}`}>
+        <div className="hidden lg:flex lg:flex-row text-black" onMouseEnter={onMouseOver} onMouseLeave={onMouseOut}>
         <h5>S</h5>
         <SwitchTransition mode='out-in'>
             <CSSTransition 

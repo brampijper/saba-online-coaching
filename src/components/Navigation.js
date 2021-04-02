@@ -55,7 +55,7 @@ const Navigation = () => {
         <nav className="h-24 flex items-center justify-between px-6 relative">
 
             <Link to='/' className="z-20">
-                <OnHoverChangeText className="hidden lg:flex lg:flex-row text-black" defaultString="ofia Kakkava" taglines={taglines} />
+                <OnHoverChangeText defaultString="ofia Kakkava" taglines={taglines} />
                 <GatsbyImage className="block lg:hidden" image={image} alt={alternativeText} />
             </Link>
 
