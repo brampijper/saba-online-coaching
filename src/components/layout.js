@@ -15,6 +15,7 @@ const Layout = ({children}) => {
                 sm:space-y-32 
                 md:space-y-40 
                 lg:space-y-44
+                overflow-hidden
             ">
                 {children}
             </main>
