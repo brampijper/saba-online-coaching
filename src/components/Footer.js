@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className="flex space-y-0 flex-row justify-center space-x-6">
                         <Link to="/faq">FAQ</Link>
                         <span className="">|</span>
-                        <a href={'mailto:' + 'hello@sofiakakkava.com'}>Support</a>
+                        <a href={`mailto:' + 'hello@sofiakakkava.com`}>Support</a>
                     </div>
                 </div>
 
