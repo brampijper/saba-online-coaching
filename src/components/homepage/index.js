@@ -5,7 +5,7 @@ import ServiceSection from './ServiceSection';
 import TestimonialSection from './TestimonialSection';
 import HelpSection from './HelpSection';
 
-export default () => {
+const HomeContent = () => {
     return (
         <>
             <Header />
@@ -16,3 +16,5 @@ export default () => {
         </>
     )
 }
+
+export default HomeContent
