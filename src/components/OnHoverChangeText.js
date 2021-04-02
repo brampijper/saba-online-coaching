@@ -19,7 +19,7 @@ const OnHoverChangeText = (props) => {
             return sentence.slice(1, sentence.length);
         }
 
-    }, [props.taglines.length])
+    }, [props.taglines, props.taglines.length])
 
     function onMouseOver () {
         switchTagline(false);
@@ -48,7 +48,7 @@ const OnHoverChangeText = (props) => {
     }
 
     return (
-        <div className="hidden lg:flex lg:flex-row text-black" onMouseEnter={onMouseOver} onMouseLeave={onMouseOut}>
+        <button className="hidden lg:flex lg:flex-row text-black focus:outline-none" onMouseEnter={onMouseOver} onMouseLeave={onMouseOut}>
         <h5>S</h5>
         <SwitchTransition mode='out-in'>
             <CSSTransition 
@@ -65,7 +65,7 @@ const OnHoverChangeText = (props) => {
                 </div>
             </CSSTransition>
         </SwitchTransition>
-        </div>
+        </button>
     )
 }
 
