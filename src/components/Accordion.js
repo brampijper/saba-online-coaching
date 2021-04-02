@@ -13,8 +13,8 @@ function Accordion(props) {
     return (
         <article className="border-b">
             <div className={`border-l-2 ${setActive === "hidden" ? "border-transparent" : "border-s-turquoise"}`}>
-                <header className={`flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none`} onClick={toggleAccordion}>
-                    <span className={`font-thin text-xl md:text-2xl font-bold ${setActive === "hidden" ? "text-grey-darkest" : "text-s-turquoise"}`}>
+                <button className={`focus:outline-none flex w-full justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none`} tabIndex="0" onClick={toggleAccordion}>
+                    <span className={`font-thin text-xl md:text-2xl mr-4 font-bold text-left ${setActive === "hidden" ? "text-grey-darkest" : "text-s-turquoise"}`}>
                         {props.question}
                     </span>
                     <div className={`rounded-full border border-grey w-7 h-7 flex items-center justify-center`}>
@@ -26,7 +26,7 @@ function Accordion(props) {
                             }
                         </svg>
                     </div>
-                </header>
+                </button>
                 <div className={`${setActive}`}>
                     <div className="pl-4 pb-4 pr-4 md:pl-16 md:pr-16 md:pb-12 text-grey-darkest">
                         <ul className="pl-4">
