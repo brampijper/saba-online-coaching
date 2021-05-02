@@ -22,16 +22,18 @@ const Footer = () => {
                         <a href="https://www.instagram.com/sofoula_k/" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faInstagram} className='fa-2x' />
                         </a>
-                        <FontAwesomeIcon icon={faAt} className='fa-2x' />
+                        <a href={`mailto:' + 'kakkava.sofia@gmail.com`} target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAt} className='fa-2x' />
+                        </a>
                     </div>
                     <div className="flex space-y-0 flex-row justify-center space-x-6">
                         <Link to="/faq">FAQ</Link>
                         <span className="">|</span>
-                        <a href={`mailto:' + 'kakkava.sofia@gmail.com'`}>Support</a>
+                        <a href={`mailto:' + 'kakkava.sofia@gmail.com`} target="_blank" rel="noreferrer">Support</a>
                     </div>
                 </div>
 
-                <p className="text-xs">This website is designed &amp; built by Bram. The contents and opinions of this website are those of Sofia Kakkava.</p>
+                <p className="text-xs">This website is designed &amp; built by <a href="https://www.brampijper.com/" target="_blank" rel="noreferrer">Bram</a> . The contents and opinions of this website are those of Sofia Kakkava.</p>
             </div>
         </>
     )
