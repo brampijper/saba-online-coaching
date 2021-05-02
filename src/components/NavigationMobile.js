@@ -22,6 +22,7 @@ const NavigationMobile = (props) => {
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/services'>Services</Link></li>
                 <li><Link to='/testimonials'>Testimonials</Link></li>
+                <li><Link to='/faq'>FAQ</Link></li>
             </ul>
         </Transition> 
     )
