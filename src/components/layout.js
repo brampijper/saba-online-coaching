@@ -10,6 +10,7 @@ const Layout = ({children}) => {
             <Helmet>
                 <html lang="en" />
                 <meta name="description" content="An online coaching business by Sofia Kakkava." />
+                <meta name="icon" href="../images/favicon.png" />
                 <title>Sofia Kakkava - Online Coaching</title>  
             </Helmet>
             <ContactBar />
