@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <p className="text-xs">This website is designed &amp; built by <a href="https://www.brampijper.com/" target="_blank" rel="noreferrer">Bram</a> . The contents and opinions of this website are those of Sofia Kakkava.</p>
+                <p className="text-xs">This website is designed &amp; built by <a href="https://www.brampijper.com/" target="_blank" rel="noreferrer">Bram</a>. The contents and opinions of this website are those of Sofia Kakkava.</p>
             </div>
         </>
     )
