@@ -16,14 +16,18 @@ const Footer = () => {
                         <StaticImage src="../images/logo.png" className="mx-auto mt-8 md:mt-0" alt="Sofia Kakkava logo" layout="fixed" placeholder="blurred" width={275} />
                     </Link>
                     <div className="flex flex-row justify-center space-x-12">
-                        <FontAwesomeIcon icon={faLinkedinIn} className='fa-2x' />
-                        <FontAwesomeIcon icon={faInstagram} className='fa-2x' />
+                        <a href="https://www.linkedin.com/in/sofia-kakkava/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedinIn} className='fa-2x' />
+                        </a>
+                        <a href="https://www.instagram.com/sofoula_k/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faInstagram} className='fa-2x' />
+                        </a>
                         <FontAwesomeIcon icon={faAt} className='fa-2x' />
                     </div>
                     <div className="flex space-y-0 flex-row justify-center space-x-6">
                         <Link to="/faq">FAQ</Link>
                         <span className="">|</span>
-                        <a href={`mailto:' + 'hello@sofiakakkava.com`}>Support</a>
+                        <a href={`mailto:' + 'kakkava.sofia@gmail.com'`}>Support</a>
                     </div>
                 </div>
 
