@@ -51,7 +51,7 @@ const AboutMe = () => {
                         flex items-center self-center mx-auto
                         lg:h-96 lg:w-96
                     ">
-                        <h2 className="text-white text-center word-spacing-wide">{aboutme_title}</h2>
+                        <h2 className="text-white text-center word-spacing-wide text-4xl leading-tight lg:text-5xl lg:leading-snug">{aboutme_title}</h2>
                     </div>
 
                     <div className="
