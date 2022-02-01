@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Sofia-k-coaching",
+    title: "saba-feronah-coaching",
   },
   plugins: [
     "gatsby-plugin-image",

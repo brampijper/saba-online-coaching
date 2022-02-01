@@ -61,7 +61,7 @@ const AboutMe = () => {
                         
                         <div>
                             <MarkdownView markdown={aboutme_text} className="space-y-6 max-w-prose pb-4" />
-                            <Link className="underline" to='/about'>Read more about Sofia</Link>
+                            <Link className="underline" to='/about'>Read more about Saba Feronah</Link>
                         </div>
 
                         <div className="space-y-6 place-self-center">

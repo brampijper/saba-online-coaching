@@ -13,7 +13,7 @@ const ButtonMailTo = ({ email, styles, children }) => {
 
 // Set default props
 ButtonMailTo.defaultProps = {
-    email: "kakkava.sofia@gmail.com",
+    email: "Saba.Feronah@gmail.com",
     children: "Send a message",
     styles: `
         mb-5 mt-5 

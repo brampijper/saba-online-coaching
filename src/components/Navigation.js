@@ -55,7 +55,7 @@ const Navigation = () => {
         <nav className="h-24 flex items-center justify-between px-6 relative">
 
             <Link to='/' className="z-20">
-                <OnHoverChangeText defaultString="ofia Kakkava" taglines={taglines} />
+                <OnHoverChangeText defaultString="aba Feronah" taglines={taglines} />
                 <div className="block lg:hidden">
                     <GatsbyImage image={image} alt={alternativeText} />
                 </div>
