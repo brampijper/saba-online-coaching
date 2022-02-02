@@ -5,6 +5,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import ButtonMailTo from '../ButtonMailTo';
 import ArrowDown from "../../images/svg/arrow-down.svg";
+import UnsplashCredit from "../UnsplashCredit";
 
 
 const getData = graphql`
@@ -71,8 +72,13 @@ const Header = () => {
 
                     </div>
 
-                    <div className="max-w-sm lg:max-w-md">
+                    <div className="max-w-sm lg:max-w-md relative">
                         <GatsbyImage image={image} alt={alt} className="rounded-lg" />
+                        <UnsplashCredit 
+                            photographer="Gabnrielle Clare Marino" 
+                            unsplashName="@gabiontheroad"
+                            textColor="s-turquoise-light"
+                        />
                     </div>
                 </div>
 

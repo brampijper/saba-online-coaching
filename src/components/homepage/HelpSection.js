@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import MarkdownView from 'react-showdown';
 
 import ButtonMailTo from '../ButtonMailTo';
+import UnsplashCredit from '../UnsplashCredit';
 
 const getData = graphql`
 query GetHelpSectionContent {
@@ -53,7 +54,14 @@ const HelpSection = () => {
                         <span>{helpsection_button}</span>
                     </ButtonMailTo>
                 </div>
-                <GatsbyImage image={image} alt={alt} className="md:order-first max-w-xs lg:max-w-lg mx-auto mt-8 md:mt-0" />
+                <div className="relative">
+                    <GatsbyImage image={image} alt={alt} className="md:order-first max-w-xs lg:max-w-lg mx-auto mt-8 md:mt-0 relative" />
+                    <UnsplashCredit 
+                        photographer="Gabnrielle Clare Marino" 
+                        unsplashName="@gabiontheroad"
+                        textColor="s-turquoise-light"
+                    />  
+                </div>
             </div>
         </div>
 

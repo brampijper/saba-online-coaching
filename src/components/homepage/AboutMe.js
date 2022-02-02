@@ -5,6 +5,8 @@ import MarkdownView from 'react-showdown';
 
 import Stripe from "../../images/svg/stripe.svg";
 import Squares from "../../images/svg/squares.svg";
+import UnsplashCredit from "../UnsplashCredit";
+
 
 
 
@@ -65,7 +67,14 @@ const AboutMe = () => {
                         </div>
 
                         <div className="space-y-6 place-self-center">
-                            <GatsbyImage image={image} alt={alt} className="rounded-lg" />
+                            <div className="relative">
+                                <GatsbyImage image={image} alt={alt} className="rounded-lg" />
+                                <UnsplashCredit 
+                                    photographer="Gabnrielle Clare Marino" 
+                                    unsplashName="@gabiontheroad"
+                                    textColor="black"
+                                />  
+                            </div>
                             <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose" />
                         </div>
                     </div>
