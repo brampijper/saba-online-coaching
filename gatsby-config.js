@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://sofia-k-strapi.herokuapp.com`,
+        apiURL: `https://saba-feronah-coaching.herokuapp.com`,
         contentTypes: [`services`, `testimonals`],
         singleTypes: [`navigation`, `contactbar`, `homepage`, `service-page`, `about-page`,`faq-page`],
         queryLimit: 1000,
