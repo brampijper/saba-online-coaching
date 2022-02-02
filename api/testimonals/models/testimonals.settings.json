@@ -34,6 +34,12 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "imagePhotographer": {
+      "type": "string"
+    },
+    "imageUnsplashName": {
+      "type": "string"
     }
   }
 }
