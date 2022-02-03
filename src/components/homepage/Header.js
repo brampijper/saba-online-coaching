@@ -78,6 +78,7 @@ const Header = () => {
                             photographer="Gabnrielle Clare Marino" 
                             unsplashName="@gabiontheroad"
                             textColor="s-turquoise-light"
+                            className="absolute inset-x-1 bottom-2"
                         />
                     </div>
                 </div>
