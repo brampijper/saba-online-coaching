@@ -13,6 +13,8 @@ query getAllTestimonials {
         title
         description
         workplace
+        imagePhotographer
+        imageUnsplashName
         name
         image {
           localFile {

@@ -72,7 +72,7 @@ const AboutMe = () => {
                                 <UnsplashCredit 
                                     photographer="Gabnrielle Clare Marino" 
                                     unsplashName="@gabiontheroad"
-                                    textColor="black"
+                                    className="absolute inset-x-1 bottom-2"
                                 />  
                             </div>
                             <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose" />

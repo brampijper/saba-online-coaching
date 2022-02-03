@@ -15,6 +15,8 @@ query getTestimonialContent {
         name
         title
         workplace
+        imagePhotographer
+        imageUnsplashName
         image {
             localFile {
                 childImageSharp {
