@@ -8,7 +8,7 @@ const TestimonialCard = ({card}) => {
     return (
         <>
             <div key={card.id} className="w-full h-auto rounded-lg border-opacity-90 border-4 border-s-gold bg-white shadow-md overflow-hidden pb-8 sm:w-4/5 sm:mx-auto md:pb-12 lg:pb-0">
-                <article className="space-y-4 flex flex-col lg:flex-row">
+                <article className="space-y-4 lg:space-y-6 flex flex-col lg:flex-row">
 
                     <div className="relative lg:min-w-16">  
                         <GatsbyImage image={image} alt="should be dynamic" className="max-h-96 lg:max-h-full lg:h-full" />
