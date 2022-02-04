@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import MarkdownView from 'react-showdown';
 
 import Layout from '../components/layout';
+import UnsplashCredit from '../components/UnsplashCredit';
 
 const getData = graphql`
 query GetAboutPageContent {
@@ -64,7 +65,7 @@ const About = () => {
                         <MarkdownView markdown={about_me} className="space-y-6 max-w-prose pb-4" />
                     </article>
 
-                    <div className="grid place-items-start gap-2">
+                    <div className="grid place-items-start gap-2 relative">
                     {
                         aboutme_images.map( ( { localFile, alternativeText, id }) => {
                             const image = getImage(localFile);
@@ -73,21 +74,32 @@ const About = () => {
                             )
                         })
                     }
+                    <UnsplashCredit 
+                        photographer="Gabnrielle Clare Marino" 
+                        unsplashName="@gabiontheroad"
+                        textColor="s-turquoise-light"
+                        className="absolute inset-x-1 bottom-2 text-left"
+                    />
                     </div>
                 </div>
 
 
-                <div className="grid md:grid-cols-2 px-6 justify-items-center gap-2 place-items-end">
-                    
-                    <div className="grid grid-rows-2 auto-cols-auto gap-2">
-                    {
-                        whativedone_images.map( ( { localFile, alternativeText, id }) => {
-                            const image = getImage(localFile);
-                            return (
-                                <GatsbyImage key={id} image={image} alt={alternativeText} className="max-h-96 rounded-lg" />
-                            )
-                        })
-                    }
+                <div className="grid md:grid-cols-2 px-6 gap-2 place-items-start">                    
+                    <div className="grid gap-2 relative">
+                        {
+                            whativedone_images.map( ( { localFile, alternativeText, id }) => {
+                                const image = getImage(localFile);
+                                return (
+                                    <GatsbyImage key={id} image={image} alt={alternativeText} className="max-h-96 rounded-lg" />
+                                )
+                            })
+                        }
+                        <UnsplashCredit 
+                            photographer="Gabnrielle Clare Marino" 
+                            unsplashName="@gabiontheroad"
+                            textColor="s-turquoise-light"
+                            className="absolute inset-x-1 bottom-2 text-left"
+                        />
                     </div>
 
                     
