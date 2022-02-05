@@ -47,7 +47,7 @@ const Cards = () => {
         >
           <h2 className="md:my-20 md:block hidden">{title}</h2>        
           <CardsLayout text={about_me} image={aboutme_images} />
-          <CardsLayout text={what_ive_done} image={whativedone_images} order="reverse" alt={true} />
+          <CardsLayout text={what_ive_done} image={whativedone_images} secondaryStyle={true} />
         </div>
     )
 }
