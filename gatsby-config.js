@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "saba-feronah-coaching",
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    DEV_WEBPACK_CACHE: true
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
