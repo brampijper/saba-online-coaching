@@ -36,8 +36,8 @@ const TakeAways = () => {
                         takeaway.map( ({service, takeaways, id, title}) => {
                             return (
                                 <TakeAwayCard 
+                                    key={id}
                                     serviceID={service.id}
-                                    id={id}
                                     takeaways={takeaways}
                                     title={title}
                                 />
