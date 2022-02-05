@@ -8,11 +8,11 @@ const ImageCard = (props) => {
         <div className={`relative ${props.className}`}>
             <GatsbyImage key={props.id} image={props.image} alt={props.alt} className="max-h-96 rounded-lg" />
             <UnsplashCredit 
-                    photographer="Gabnrielle Clare Marino" 
-                    unsplashName="@gabiontheroad"
-                    textColor="s-turquoise-light"
-                    className="absolute inset-x-1 bottom-2 text-left"
-                />
+                photographer="Gabnrielle Clare Marino" 
+                unsplashName="@gabiontheroad"
+                textColor="text-s-turquoise-light"
+                className="absolute inset-x-1 bottom-2 text-left"
+            />
         </div>
     )
 
