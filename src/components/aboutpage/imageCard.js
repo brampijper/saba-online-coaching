@@ -15,8 +15,6 @@ const ImageCard = (props) => {
             />
         </div>
     )
-
-
 }
 
 export default ImageCard;
