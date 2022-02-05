@@ -12,9 +12,11 @@ const Footer = () => {
         <div className="flex flex-col justify-center content-center text-center px-6 pb-6 space-y-16 md:space-y-20 md:pt-20 md:h-auto relative">
             <div className="absolute top-0 left-0 bg-s-turquoise h-10 md:h-20 w-full"></div>
                 <div className="flex flex-col space-y-20">
-                    <Link to="/">
-                        <StaticImage src="../images/logo.png" className="mx-auto mt-8 md:mt-0" alt="Saba Feronah logo" layout="fixed" placeholder="blurred" width={275} />
-                    </Link>
+                    <div>
+                        <Link to="/" className="inline-flex">
+                            <StaticImage src="../images/logo.png" className="mx-auto mt-8 md:mt-0" alt="Saba Feronah logo" layout="fixed" placeholder="blurred" width={275} />
+                        </Link>
+                    </div>
                     <div className="flex flex-row justify-center space-x-12">
                         <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faLinkedinIn} className='fa-2x' />
