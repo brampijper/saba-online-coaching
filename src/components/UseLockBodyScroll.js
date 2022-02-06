@@ -1,7 +1,7 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 export default function UseLockBodyScroll(showMenu) {
-  useLayoutEffect(
+  useEffect(
     () => {
       if(showMenu) {
           //prevent scrolling on mount
