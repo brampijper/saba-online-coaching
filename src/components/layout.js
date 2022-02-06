@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import ContactBar from './ContactBar';
+import ContactBar from './ui/ContactBar';
 import { Helmet } from "react-helmet";
 
 const Layout = ({children}) => {

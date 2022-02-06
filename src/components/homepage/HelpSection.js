@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import MarkdownView from 'react-showdown';
 
-import ButtonMailTo from '../ButtonMailTo';
+import ButtonMailTo from '../ui/ButtonMailTo';
 import UnsplashCredit from '../UnsplashCredit';
 
 const getData = graphql`

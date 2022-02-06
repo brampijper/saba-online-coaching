@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonMailTo from '../ButtonMailTo';
+import ButtonMailTo from '../ui/ButtonMailTo';
 
 const ServicePageContent = ( {services} ) => {
     let bgColor, titleColor;

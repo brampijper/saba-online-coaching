@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import ButtonMailTo from '../ButtonMailTo';
+import ButtonMailTo from '../ui/ButtonMailTo';
 import UnsplashCredit from "../UnsplashCredit";
 import HeaderQuote from "./HeaderQuote";
 
