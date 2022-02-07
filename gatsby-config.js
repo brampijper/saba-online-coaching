@@ -3,8 +3,10 @@ module.exports = {
     title: "saba-feronah-coaching",
   },
   flags: {
-    PRESERVE_WEBPACK_CACHE: true,
-    DEV_WEBPACK_CACHE: true
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PARALLEL_SOURCING: true,
+    LMDB_STORE: true
   },
   plugins: [
     "gatsby-plugin-image",
