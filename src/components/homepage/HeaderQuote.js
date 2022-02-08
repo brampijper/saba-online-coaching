@@ -1,7 +1,19 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+
 import ArrowBounceDown from '../ui/ArrowBounceDown';
 
-const HeaderQuote = ({quote}) => {
+const getData = graphql`
+query GetHeaderQuoteContent {
+    strapiHomepage {
+        quote
+    }
+  }  
+`
+
+const HeaderQuote = () => {
+    const data = useStaticQuery(getData);
+    const { strapiHomepage: { quote } } = data
     return (
         <div className="container mx-auto">
             <div className="px-6 my-20 flex space-x-3 md:max-w-4xl mx-auto">
