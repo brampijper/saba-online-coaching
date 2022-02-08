@@ -45,9 +45,8 @@ const ServicePageContent = ( {services} ) => {
                                     })
                                 }
                             </div>
-                            <ButtonMailTo> 
-                                <span className="text-black">Buy {title} package</span>
-                            </ButtonMailTo>
+                            <ButtonMailTo buttonText={`Buy ${title} package`} /> 
+                            {/* <span className="text-black">Buy {title} package</span> */}
                         </div>
 
                     </div>

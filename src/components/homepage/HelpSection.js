@@ -48,11 +48,8 @@ const HelpSection = () => {
                 
                 <div className="flex flex-col space-y-10 md:order-last md:justify-center">
                     <h2>{helpsection_title}</h2>
-                    <MarkdownView markdown={helpsection_description} className="space-y-2 max-w-prose" />
-                    
-                    <ButtonMailTo> 
-                        <span>{helpsection_button}</span>
-                    </ButtonMailTo>
+                    <MarkdownView markdown={helpsection_description} className="space-y-2 max-w-prose" />                    
+                    <ButtonMailTo buttonText={helpsection_button} /> 
                 </div>
                 <div className="relative">
                     <GatsbyImage image={image} alt={alt} className="md:order-first max-w-xs lg:max-w-lg mx-auto mt-8 md:mt-0 relative" />

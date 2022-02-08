@@ -55,12 +55,8 @@ const Header = () => {
                                     max-w-prose container">
                         <h1>{header_title}</h1>
                         <p>{header_subtitle}</p>
+                        <ButtonMailTo buttonText={header_button} /> 
 
-                        <ButtonMailTo> 
-                            <span>
-                                {header_button}
-                            </span>
-                        </ButtonMailTo>
                     </div>
                     <div className="max-w-sm lg:max-w-md relative">
                         <GatsbyImage image={image} alt={alt} className="rounded-lg" />
