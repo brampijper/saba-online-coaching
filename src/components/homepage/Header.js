@@ -41,7 +41,7 @@ const Header = () => {
 
     return (
         <div className="bg-s-turquoise-light h-auto">
-            <div className="flex flex-col px-6 py-12 space-y-14
+            <div className="flex flex-col px-6 py-12 space-y-14 mx-auto
                             md:max-w-screen-lg md:flex-row md:justify-evenly md:space-y-0 md:gap-8
                             xl:max-w-screen-xl">
 
