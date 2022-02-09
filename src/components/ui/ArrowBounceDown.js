@@ -5,7 +5,7 @@ import ArrowDown from "../../images/svg/arrow-down.svg";
 
 const ArrowBounceDown = ({ scrollToTarget }) => {
     return (
-        <ArrowDown className="h-28 mx-auto cursor-pointer animate-bounce" onClick={ () => scrollTo(`${scrollToTarget}`)} />
+        <ArrowDown className="h-24 mx-auto cursor-pointer animate-bounce" onClick={ () => scrollTo(`${scrollToTarget}`)} />
     )
 }
 
