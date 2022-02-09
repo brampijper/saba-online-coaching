@@ -26,27 +26,22 @@ const ServiceSection = () => {
         strapiHomepage: { service_title, services } 
     } = data;
     return (
-        <>
-        <div>
-            <div className="h-auto bg-s-purple pb-40">
-                
-                <div className="h-auto space-y-32 max-w-screen-lg xl:max-w-screen-xl mx-auto px-6">
-                    <h2 className="text-white text-center pt-20">{service_title}</h2>
+        <div className="h-auto bg-s-purple relative">
+            <div className="mx-auto pt-16 pb-32 md:pt-32 md:pb-60 flex flex-col gap-20 md:gap-32 px-6 max-w-screen-lg xl:max-w-screen-xl">
+                <h2 className="text-white text-left md:text-center">
+                    {service_title}
+                </h2>
 
-                    <div className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-20">
-                    
-                        {
-                            services.map( (service) => (
-                                <ServiceCard key={service.id} service={service} />
-                            ))
-                        }
-                    </div>
-                    
+                <div className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-20">
+                    {
+                        services.map( (service) => (
+                            <ServiceCard key={service.id} service={service} />
+                        ))
+                    }
                 </div>
             </div>
-            <Triangles className="w-full h-auto lg:max-w-screen-lg xl:max-w-screen-xl mx-auto" />
+            <Triangles className="w-full h-auto absolute lg:max-w-screen-lg xl:max-w-screen-xl left-0 right-0 ml-auto mr-auto" />
         </div>
-        </>
     )
 }
 
