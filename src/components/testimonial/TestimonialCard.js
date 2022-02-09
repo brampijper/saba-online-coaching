@@ -14,7 +14,7 @@ const TestimonialCard = ({card}) => {
                         <GatsbyImage image={image} alt="should be dynamic" className="max-h-96 lg:max-h-full lg:h-full" />
                         
                         <div className="
-                            absolute flex flex-col bottom-1.5 w-full 
+                            absolute flex flex-col bottom-0 w-full 
                             py-2 px-8 
                             text-white text-left bg-s-gold bg-opacity-80
                             md:px-12 lg:bottom-0 lg:px-0 lg:text-center
