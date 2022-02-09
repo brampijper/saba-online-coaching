@@ -56,13 +56,13 @@ const AboutMe = () => {
 
                 <div className="space-y-6 place-self-center">
                     <div className="relative">
-                        <GatsbyImage image={image} alt={alt} className="rounded-lg max-w-md self-center" />
+                        <GatsbyImage image={image} alt={alt} className="rounded-lg max-w-sm self-center" />
                         <UnsplashCredit 
                             photographer="Gabnrielle Clare Marino" 
                             unsplashName="@gabiontheroad"
                             className="absolute inset-x-1 bottom-2" />  
                     </div>
-                    <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose" />
+                    <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose md:w-2/3" />
                 </div>
             </div>
             <div className="flex justify-center">
