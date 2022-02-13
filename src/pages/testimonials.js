@@ -48,7 +48,7 @@ const TestimonialPage = () => {
                             ))
                         }
                     </div>
-                    <BgTestimonials className="w-full h-full absolute top-1/20 md:top-1/20 transform scale-x-150 z-minus" />
+                    <BgTestimonials className="w-full h-full absolute top-1/20 md:top-1/20 transform scale-x-220 z-minus" />
                 </div>
             </div>
         </Layout>
