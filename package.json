@@ -1,0 +1,50 @@
+{
+  "name": "saba-feronah",
+  "version": "1.0.0",
+  "private": true,
+  "description": "saba-feronah-coaching",
+  "author": "Bram",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
+    "@headlessui/react": "^0.3.2",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^4.6.2",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-react-helmet": "^5.6.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-source-strapi": "^1.0.2",
+    "gatsby-transformer-sharp": "^4.6.0",
+    "latest-version": "^6.0.0",
+    "lmdb-store": "^1.6.14",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-showdown": "^2.3.1",
+    "react-transition-group": "^4.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "babel-eslint": "^10.1.0",
+    "gatsby-plugin-postcss": "^5.6.0",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.5.5"
+  }
+}

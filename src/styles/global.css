@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .word-spacing-wide {
+        word-spacing: 100vw;
+    }
+
+    .word-spacing-none {
+        word-spacing: initial;
+    }
+
+    .circle-height {
+        height: 100vw;
+    }
+
+    .full-navbar-height {
+        height: calc(100vh - 3rem);
+    }
+}
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+    @font-face {
+        font-family: "Averta";
+        font-weight: 300;
+        src: url(../styles/fonts/SF-Pro-Text-Light.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: "Averta";
+        font-weight: 400;
+        src: url(../styles/fonts/SF-Pro-Text-Regular.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: "Averta";
+        font-weight: 500;
+        src: url(../styles/fonts/SF-Pro-Text-Medium.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: "Averta";
+        font-weight: 600;
+        src: url(../styles/fonts/SF-Pro-Text-Semibold.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: "Averta";
+        font-weight: 700;
+        src: url(../styles/fonts/SF-Pro-Text-Bold.woff2) format("woff2");
+    }
+
+    body {
+        @apply font-averta;
+    }
+
+    h1 {
+        @apply font-bold; 
+        @apply text-5xl lg:text-7xl; 
+        @apply leading-tight;
+    }
+
+    h2 {
+        @apply font-bold;
+        @apply text-5xl lg:text-7xl lg:leading-snug leading-tight;
+    }
+
+    h3 {
+        @apply text-4xl font-gabriela;
+        @apply lg:text-5xl lg:leading-tight;
+    }
+
+    h4 {
+        @apply text-2xl font-semibold;
+    }
+
+    h5 {
+        @apply font-averta tracking-widest text-2xl font-light;
+    }
+
+    p {
+        @apply text-base md:text-sm;
+        @apply font-normal;
+    }
+}
