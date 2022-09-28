@@ -18,20 +18,13 @@
     "description": {
       "type": "text"
     },
-    "price": {
-      "type": "integer"
-    },
-    "program_duration": {
-      "type": "integer"
-    },
     "darkMode": {
       "type": "boolean"
     },
-    "subject": {
-      "type": "dynamiczone",
-      "components": [
-        "service.service-info"
-      ]
+    "coachingpackage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.coaching-package"
     }
   }
 }
