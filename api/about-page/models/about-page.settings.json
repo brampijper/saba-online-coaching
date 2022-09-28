@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "name": "About Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "takeaway": {
+      "type": "component",
+      "repeatable": true,
+      "component": "takeaway.takeaway-card",
+      "required": true
+    },
+    "aboutme_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "about_me": {
+      "type": "richtext",
+      "required": true
+    },
+    "what_ive_done": {
+      "type": "richtext",
+      "required": true
+    },
+    "whativedone_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "takeaway_Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

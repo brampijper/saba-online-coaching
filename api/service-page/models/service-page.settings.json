@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "service_pages",
+  "info": {
+    "name": "Service Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "services": {
+      "collection": "service"
+    }
+  }
+}
