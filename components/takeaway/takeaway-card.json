@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_takeaway_component_takeaway_cards",
+  "info": {
+    "name": "takeaway-component",
+    "icon": "sim-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "takeaways": {
+      "type": "richtext",
+      "required": true
+    },
+    "service": {
+      "model": "service"
+    }
+  }
+}
