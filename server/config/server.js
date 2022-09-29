@@ -1,4 +1,4 @@
-const cred = process.env.NODE_ENV === 'production' ? null : require("../credentials.js");
+const cred = process.env.NODE_ENV === 'production' ? { ADMIN_JWT_SECRET: ""} : require("../credentials.js");
 
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
