@@ -3,7 +3,7 @@ if (process.env.NODE_ENV === 'production') {
     jwtSecret: process.env.JWT_SECRET 
   } 
 } else {
-  const cred = require("../credentials.js");
+  const cred = require("../../../credentials.js");
   module.exports = {
     jwtSecret: cred.JWT_SECRET
   } 
