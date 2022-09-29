@@ -14,11 +14,6 @@ query MyQuery {
             price
             program_duration
             darkMode
-            subject {
-            title
-            description
-            id
-            }
         }
     }
   }

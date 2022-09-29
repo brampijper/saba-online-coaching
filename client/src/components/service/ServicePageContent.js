@@ -16,7 +16,7 @@ const ServicePageContent = ( {services} ) => {
     return (
         <>
         {
-            services.map( ({title, id, description, darkMode, price, program_duration, subject}) => {
+            services.map( ({title, id, description, darkMode, price, program_duration, subject = []}) => {
                 updateColors(darkMode);
                 return (
                     <div key={id} className={ darkMode ? "bg-s-purple pt-16 pb-32 text-white" : "" }>
