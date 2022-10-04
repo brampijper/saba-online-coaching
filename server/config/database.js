@@ -1,18 +1,15 @@
-  // path: ./config/database.js
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: env('DATABASE_HOST', 'localhost'),
+      host: env('DATABASE_HOST', '127.0.0.1'),
       port: env.int('DATABASE_PORT', 5432),
-      database: env('DATABASE_NAME', 'strapi-online-coach'),
-      user: env('DATABASE_USERNAME', 'postgres'),
-      password: env('DATABASE_PASSWORD', 'postgres'),
-      ssl: {
-        rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
-      },
+      database: env('DATABASE_NAME', 'strapi'),
+      user: env('DATABASE_USERNAME', 'strapi'),
+      password: env('DATABASE_PASSWORD', 'strapi'),
+      schema: env('DATABASE_SCHEMA', 'public'), // Not required
+      ssl: env.bool('DATABASE_SSL', false),
     },
     debug: false,
   },
 });
- 
