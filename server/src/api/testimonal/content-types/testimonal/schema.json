@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonial",
+  "info": {
+    "singularName": "testimonal",
+    "pluralName": "testimonals",
+    "displayName": "Testimonal",
+    "name": "testimonal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "workplace": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "imagePhotographer": {
+      "type": "string"
+    },
+    "imageUnsplashName": {
+      "type": "string"
+    }
+  }
+}

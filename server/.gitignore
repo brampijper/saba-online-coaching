@@ -113,5 +113,3 @@ exports
 build
 .strapi-updater.json
 package-lock.json
-v3
-src

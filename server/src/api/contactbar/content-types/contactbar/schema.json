@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactbars",
+  "info": {
+    "singularName": "contactbar",
+    "pluralName": "contactbars",
+    "displayName": "Contactbar",
+    "name": "contactbar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
