@@ -12,8 +12,16 @@ const getData = graphql`
 query GetAboutMeContent {
     strapiHomepage {
         aboutme_title
-        aboutme_text
-        aboutme_image_text
+        aboutme_text {
+            data {
+                aboutme_text
+            }
+        }
+        aboutme_image_text {
+            data {
+                aboutme_image_text
+            }
+        }
         aboutme_image {
             alternativeText
             localFile {

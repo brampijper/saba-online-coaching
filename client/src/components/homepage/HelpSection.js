@@ -10,7 +10,11 @@ const getData = graphql`
 query GetHelpSectionContent {
     strapiHomepage {
         helpsection_title
-        helpsection_description
+        helpsection_description {
+            data {
+                helpsection_description
+            }
+        }
         helpsection_button
         helpsection_image {
             alternativeText

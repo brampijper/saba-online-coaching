@@ -10,9 +10,10 @@ query GetTakeAwayContent {
       takeaway {
         title
         id
-        takeaways
-        service {
-            id
+        takeaways {
+            data {
+                takeaways
+            }
         }
       }
     }
@@ -33,11 +34,11 @@ const TakeAways = () => {
 
                 <div className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-14">
                     {
-                        takeaway.map( ({service, takeaways, id, title}) => {
+                        takeaway.map( ({takeaways, id, title}) => {
                             return (
                                 <TakeAwayCard 
                                     key={id}
-                                    serviceID={service.id}
+                                    // serviceID={service.id}
                                     takeaways={takeaways}
                                     title={title}
                                 />

@@ -6,9 +6,17 @@ import CardsLayout from './CardsLayout';
 const getData = graphql`
 query GetAboutPageContent {
     strapiAboutPage {
-      about_me
+      about_me {
+        data {
+          about_me
+        }
+      }
       title
-      what_ive_done
+      what_ive_done {
+        data {
+          what_ive_done
+        }
+      }
       aboutme_images {
         alternativeText
         id

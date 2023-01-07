@@ -11,21 +11,12 @@ query getTestimonialContent {
       testimonial_subtitle
       testimonials {
         id
-        description
+        description {
+            data
+        }
         name
         title
         workplace
-        imagePhotographer
-        imageUnsplashName
-        image {
-            localFile {
-                childImageSharp {
-                    gatsbyImageData(
-                        placeholder: BLURRED
-                    )
-                }
-            }
-        }
       }
     }
   }
