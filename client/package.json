@@ -1,7 +1,7 @@
 {
   "name": "saba-feronah",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "saba-feronah-coaching",
   "author": "Bram",
   "keywords": [
@@ -34,7 +34,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-showdown": "^2.3.1",
+    "react-markdown": "^8.0.4",
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
