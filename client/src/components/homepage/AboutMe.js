@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import MarkdownView from 'react-showdown';
+import ReactMarkdown from 'react-markdown';
 
 import CircleTitle from '../ui/CircleTitle';
 import Stripe from "../../images/svg/stripe.svg";
@@ -40,7 +40,17 @@ const AboutMe = () => {
     const data = useStaticQuery(getData);
     const {
         strapiHomepage: {
-            aboutme_title, aboutme_text, aboutme_image_text, 
+            aboutme_title,
+            aboutme_image_text: {
+                data: {
+                    aboutme_image_text
+                }
+            },
+            aboutme_text: {
+                data: {
+                    aboutme_text
+                }
+            },
             aboutme_image: {
                 localFile,
                 alternativeText: alt
@@ -56,7 +66,7 @@ const AboutMe = () => {
                             px-6 pb-8 mx-auto md:grid md:grid-cols-2 md:gap-8 md:space-y-40">
                 <CircleTitle title={aboutme_title} styles="col-span-2" />  
                 <div>
-                    <MarkdownView markdown={aboutme_text} className="space-y-6 max-w-prose pb-4" />
+                <ReactMarkdown children={aboutme_text} className="space-y-6 max-w-prose pb-4" />
                     <Link className="underline" to='/about'>
                         Read more about Saba Feronah
                     </Link>
@@ -70,7 +80,7 @@ const AboutMe = () => {
                             unsplashName="@gabiontheroad"
                             className="absolute inset-x-1 bottom-2" />  
                     </div>
-                    <MarkdownView markdown={aboutme_image_text} className="space-y-2 max-w-prose md:w-2/3" />
+                    <ReactMarkdown children={aboutme_image_text} className="space-y-2 max-w-prose md:w-2/3" />
                 </div>
             </div>
             <div className="flex justify-center">
