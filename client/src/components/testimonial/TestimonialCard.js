@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-
 import UnsplashCredit from '../UnsplashCredit';
 
 const TestimonialCard = ({card}) => {
-    const image = getImage(card.image.localFile);
+    const { testimonal_image, description } = card;
+    const image = getImage(testimonal_image.localFile);
     return (
-        <>
-            <div key={card.id} className="w-full h-auto rounded-lg border-opacity-90 border-4 border-s-gold bg-white shadow-md overflow-hidden pb-8 sm:w-4/5 sm:mx-auto md:pb-12 lg:pb-0">
+        <div>
+            <div className="w-full h-auto rounded-lg border-opacity-90 border-4 border-s-gold bg-white shadow-md overflow-hidden pb-8 sm:w-4/5 sm:mx-auto md:pb-12 lg:pb-0">
                 <article className="space-y-4 lg:space-y-6 flex flex-col lg:flex-row">
 
                     <div className="relative lg:min-w-16">  
@@ -36,13 +37,13 @@ const TestimonialCard = ({card}) => {
                     </div>
 
                     <div className="max-w-prose mx-8 md:mx-12 lg:pb-8">
-                        {/* <h4 className="">{card.title}</h4> */}
-                        <p>{card.description}</p>                                
-                        {/* <Link className="underline block" to='/testimonials'>Read more</Link> */}
+                        <h4 className="">{card.title}</h4>
+                        <p>{description.data.description}</p>                                
+                        <Link className="underline block" to='/testimonials'>Read more</Link>
                     </div>
                 </article> 
             </div>
-        </>
+        </div>
     )
 }
 
