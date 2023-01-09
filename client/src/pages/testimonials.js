@@ -6,17 +6,21 @@ import TestimonialCard from "../components/testimonial/TestimonialCard";
 import BgTestimonials from "../images/svg/bg_testimonials.svg";
 
 const getData = graphql`
-query getAllTestimonials {
-    allStrapiTestimonals {
-      testimonials: nodes {
+query getAllTestimonals {
+    allStrapiTestimonal {
+      testimonals: nodes {
         id
         title
-        description
+        description {
+            data {
+                description
+            }
+        }
         workplace
         imagePhotographer
         imageUnsplashName
         name
-        image {
+        testimonal_image {
           localFile {
             childImageSharp {
               gatsbyImageData
@@ -32,7 +36,7 @@ query getAllTestimonials {
 const TestimonialPage = () => {
     const data = useStaticQuery(getData);
     const {
-        allStrapiTestimonals: { testimonials }
+        allStrapiTestimonal: { testimonals }
     } = data
     return (
         <Layout>
@@ -43,8 +47,11 @@ const TestimonialPage = () => {
                     </h2>
                     <div className="card-container grid grid-flow-row gap-12 place-content-center mt-32 lg:grid-cols-1 lg:gap-20">
                         {
-                            testimonials.map( (testimonial) => (
-                                <TestimonialCard key={testimonial.id} card={testimonial} />
+                            testimonals.map( testimonal => (
+                                <TestimonialCard 
+                                    key={testimonal.id} 
+                                    card={testimonal} 
+                                />
                             ))
                         }
                     </div>

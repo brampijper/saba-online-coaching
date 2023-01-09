@@ -6,12 +6,12 @@ import CardsLayout from './CardsLayout';
 const getData = graphql`
 query GetAboutPageContent {
     strapiAboutPage {
+      title
       about_me {
         data {
           about_me
         }
       }
-      title
       what_ive_done {
         data {
           what_ive_done
@@ -54,8 +54,8 @@ const Cards = () => {
                         xl:max-w-screen-xl lg:space-y-16"
         >
           <h2 className="md:my-20 md:block hidden">{title}</h2>        
-          <CardsLayout text={about_me} image={aboutme_images} />
-          <CardsLayout text={what_ive_done} image={whativedone_images} secondaryStyle={true} />
+          <CardsLayout text={about_me.data.about_me} image={aboutme_images} />
+          <CardsLayout text={what_ive_done.data.what_ive_done} image={whativedone_images} secondaryStyle={true} />
         </div>
     )
 }

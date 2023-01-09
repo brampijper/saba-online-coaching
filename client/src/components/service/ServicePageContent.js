@@ -16,7 +16,7 @@ const ServicePageContent = ( {services} ) => {
     return (
         <>
         {
-            services.map( ({title, id, description, darkMode, price, program_duration, subject = []}) => {
+            services.map( ({title, id, description, darkMode, subject = []}) => {
                 updateColors(darkMode);
                 return (
                     <div key={id} className={ darkMode ? "bg-s-purple pt-16 pb-32 text-white" : "" }>
@@ -30,7 +30,7 @@ const ServicePageContent = ( {services} ) => {
                             <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 lg:space-x-40 md:space-x-20">
                                 <div className={` ${bgColor} h-36 w-100 lg:h-48 lg:w-48 rounded border-2 border-s-purple flex justify-center items-center`}><span className="text-xl lg:text-2xl font-bold text-s-purple word-spacing-wide">1:1 coaching</span></div>
                                 {/* <div className={` ${bgColor} h-36 w-100 lg:h-48 lg:w-48 rounded border-2 border-s-purple flex justify-center items-center`}><span className="text-xl lg:text-2xl font-bold text-s-purple word-spacing-wide">{price}$ p/session</span></div> */}
-                                <div className={` ${bgColor} h-36 w-100 lg:h-48 lg:w-48 rounded border-2 border-s-purple flex justify-center items-center`}><span className="text-xl lg:text-2xl font-bold text-s-purple word-spacing-wide">{program_duration} days</span></div>
+                                {/* <div className={` ${bgColor} h-36 w-100 lg:h-48 lg:w-48 rounded border-2 border-s-purple flex justify-center items-center`}><span className="text-xl lg:text-2xl font-bold text-s-purple word-spacing-wide">{program_duration} days</span></div> */}
                             </div>
 
                             <div className="container grid grid-cols-1 gap-16 md:grid-cols-2 md:text-left md:gap-20 mx-auto mt-14">

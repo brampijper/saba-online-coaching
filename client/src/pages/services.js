@@ -12,7 +12,6 @@ query MyQuery {
             description
             id
             price
-            program_duration
             darkMode
         }
     }
