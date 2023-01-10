@@ -82,7 +82,7 @@
       "columnName": "title",
       "collection": "service"
     },
-    "testimonials": {
+    "testimonals": {
       "columnName": "name",
       "collection": "testimonals"
     },
@@ -90,11 +90,11 @@
       "type": "string",
       "required": true
     },
-    "testimonial_title": {
+    "testimonal_title": {
       "type": "string",
       "required": true
     },
-    "testimonial_subtitle": {
+    "testimonal_subtitle": {
       "type": "text",
       "required": true
     }

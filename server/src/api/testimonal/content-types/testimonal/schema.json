@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "testimonial",
+  "collectionName": "testimonal",
   "info": {
     "singularName": "testimonal",
     "pluralName": "testimonals",

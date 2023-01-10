@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "testimonial",
+  "collectionName": "testimonal",
   "info": {
-    "name": "Testimonial",
+    "name": "Testimonal",
     "description": ""
   },
   "options": {
@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "image": {
+    "testimonal_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
