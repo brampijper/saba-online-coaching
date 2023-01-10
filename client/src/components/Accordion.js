@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import MarkdownView from 'react-showdown';
+import ReactMarkdown from 'react-markdown'
 
 function Accordion(props) {
 
@@ -31,7 +31,7 @@ function Accordion(props) {
                     <div className="pl-4 pb-4 pr-4 md:pl-16 md:pr-16 md:pb-12 text-grey-darkest">
                         <ul className="pl-4">
                             <li className="pb-2 max-w-prose text-base md:text-sm">
-                                <MarkdownView markdown={props.answer} className="space-y-6 max-w-prose" />
+                                <ReactMarkdown children={props.answer} className="space-y-6 max-w-prose" />
                             </li>
                         </ul>
                     </div>

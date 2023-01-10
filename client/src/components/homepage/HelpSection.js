@@ -1,7 +1,7 @@
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import MarkdownView from 'react-showdown';
+import ReactMarkdown from 'react-markdown';
 
 import ButtonMailTo from '../ui/ButtonMailTo';
 import UnsplashCredit from '../UnsplashCredit';
@@ -10,7 +10,11 @@ const getData = graphql`
 query GetHelpSectionContent {
     strapiHomepage {
         helpsection_title
-        helpsection_description
+        helpsection_description {
+            data {
+                helpsection_description
+            }
+        }
         helpsection_button
         helpsection_image {
             alternativeText
@@ -30,7 +34,12 @@ const HelpSection = () => {
     const data = useStaticQuery(getData);
     const {
         strapiHomepage: {
-            helpsection_title, helpsection_description, helpsection_button,
+            helpsection_title, helpsection_button,
+            helpsection_description: {
+                data: {
+                    helpsection_description
+                }
+            },
             helpsection_image: { 
                 localFile, 
                 alternativeText: alt 
@@ -48,7 +57,7 @@ const HelpSection = () => {
                 
                 <div className="flex flex-col space-y-10 md:order-last md:justify-center">
                     <h2>{helpsection_title}</h2>
-                    <MarkdownView markdown={helpsection_description} className="space-y-2 max-w-prose" />                    
+                    <ReactMarkdown children={helpsection_description} className="space-y-2 max-w-prose" />                    
                     <ButtonMailTo buttonText={helpsection_button} /> 
                 </div>
                 <div className="relative">

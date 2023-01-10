@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation",
+    "name": "navigation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "allowedTypes": [
+        "images"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "taglines": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

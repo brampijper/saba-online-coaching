@@ -1,11 +1,16 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "saba-feronah-coaching",
   },
-  flags: {
-    FAST_DEV: true,
-    PARALLEL_SOURCING: true,
-  },
+  // flags: {
+  //   FAST_DEV: true,
+  //   PARALLEL_SOURCING: true,
+  //   DEV_SSR: true
+  // },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -24,14 +29,24 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://saba-online-coaching-production.up.railway.app`,
-        collectionTypes: [`services`, `testimonals`],
-        singleTypes: [`navigation`, `contactbar`, `homepage`, `service-page`, `about-page`,`faq-page`],
+        apiURL: process.env.STRAPI_API_URL,
+        accessToken: process.env.STRAPI_TOKEN,
+        collectionTypes: [
+          {
+            singularName: `service`,
+            queryParams: {
+              populate: "*"
+            } 
+          },
+          {
+            singularName: `testimonal`,
+            queryParams: {
+              populate: "*"
+            } 
+          },
+        ],
+        singleTypes: [`navigation`, `contactbar`, `service-page`, `about-page`,`faq-page`,`homepage`],
         queryLimit: 1000,
-        // loginData: {
-        //   identifier: "",
-        //   password: "",
-        // },
       },
     },
     {

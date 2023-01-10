@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_takeway_takeaways",
+  "info": {
+    "displayName": "Takeaway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    }
+  }
+}

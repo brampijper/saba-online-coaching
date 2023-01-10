@@ -4,40 +4,39 @@ import { graphql, useStaticQuery } from 'gatsby';
 import TestimonialCard from "../testimonial/TestimonialCard";
 import BgTestimonials from "../../images/svg/bg_testimonials.svg";
 
-const getData = graphql`
-query getTestimonialContent {
-    strapiHomepage {
-      testimonial_title
-      testimonial_subtitle
-      testimonials {
-        id
-        description
-        name
-        title
-        workplace
-        imagePhotographer
-        imageUnsplashName
-        image {
-            localFile {
-                childImageSharp {
-                    gatsbyImageData(
-                        placeholder: BLURRED
-                    )
+const TestimonialSection = () => {
+    const { strapiHomepage } = useStaticQuery(graphql`
+    query {
+        strapiHomepage {
+            testimonal_title
+            testimonal_subtitle
+            testimonals {
+                id
+                description {
+                    data {
+                        description
+                    }
+                }
+                name
+                title
+                workplace
+                imagePhotographer
+                imageUnsplashName
+                testimonal_image {
+                    localFile {
+                        childImageSharp {
+                            gatsbyImageData(
+                                placeholder: BLURRED
+                            )
+                        }
+                    }
                 }
             }
         }
-      }
-    }
-  }
-`
+    }`)
 
-const TestimonialSection = () => {
-    const data = useStaticQuery(getData);
-    const {
-        strapiHomepage: {
-            testimonial_title, testimonial_subtitle, testimonials
-        }
-    } = data
+    const { testimonial_title, testimonial_subtitle, testimonals } = strapiHomepage; 
+
     return (
         <div className="h-auto pb-20 lg:pb-40 relative">    
             <div className="h-auto max-w-screen-lg md:mt-96 xl:max-w-screen-xl mx-auto px-6">
@@ -49,8 +48,11 @@ const TestimonialSection = () => {
                 </p>
                 <div className="card-container grid grid-flow-row gap-12 place-content-center mt-16 md:mt-32 lg:grid-cols-1 lg:gap-20">
                     {
-                        testimonials.map( (card) => (
-                            <TestimonialCard key={card.id} card={card} />
+                        testimonals.map( card => (
+                            <TestimonialCard 
+                                key={card.id}
+                                card={card}
+                            />       
                         ))
                     }
                 </div> 

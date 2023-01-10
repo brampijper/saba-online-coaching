@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "faq_pages",
+  "info": {
+    "singularName": "faq-page",
+    "pluralName": "faq-pages",
+    "displayName": "Faq-page",
+    "name": "faq-page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faq-component"
+    }
+  }
+}
