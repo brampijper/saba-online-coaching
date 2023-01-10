@@ -5,7 +5,8 @@
     "singularName": "about-page",
     "pluralName": "about-pages",
     "displayName": "About-page",
-    "name": "about-page"
+    "name": "about-page",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,19 +18,13 @@
       "type": "string",
       "required": true
     },
-    "takeaway": {
-      "type": "component",
-      "repeatable": true,
-      "component": "takeaway.takeaway-card",
-      "required": true
-    },
     "aboutme_images": {
       "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "multiple": true,
-      "required": true
+      ]
     },
     "about_me": {
       "type": "richtext",
@@ -41,15 +36,20 @@
     },
     "whativedone_images": {
       "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "multiple": true,
-      "required": true
+      ]
     },
     "takeaway_Title": {
       "type": "string",
       "required": true
+    },
+    "takeaway": {
+      "type": "component",
+      "repeatable": true,
+      "component": "takeway.takeaway"
     }
   }
 }

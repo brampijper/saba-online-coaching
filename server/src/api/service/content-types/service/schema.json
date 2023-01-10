@@ -5,7 +5,8 @@
     "singularName": "service",
     "pluralName": "services",
     "displayName": "Service",
-    "name": "service"
+    "name": "service",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -27,6 +28,9 @@
       "type": "component",
       "repeatable": true,
       "component": "service.coaching-package"
+    },
+    "price": {
+      "type": "integer"
     }
   }
 }

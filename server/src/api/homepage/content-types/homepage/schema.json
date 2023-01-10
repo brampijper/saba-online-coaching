@@ -5,7 +5,8 @@
     "singularName": "homepage",
     "pluralName": "homepages",
     "displayName": "Homepage",
-    "name": "homepage"
+    "name": "homepage",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -27,15 +28,14 @@
     },
     "header_image": {
       "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "multiple": false,
-      "required": true
+      ]
     },
     "quote": {
       "type": "text",
-      "private": false,
       "required": true
     },
     "aboutme_title": {
@@ -48,11 +48,11 @@
     },
     "aboutme_image": {
       "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "multiple": false,
-      "required": true
+      ]
     },
     "aboutme_image_text": {
       "type": "richtext",
@@ -67,11 +67,11 @@
     },
     "helpsection_image": {
       "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "multiple": false,
-      "required": true
+      ]
     },
     "helpsection_button": {
       "type": "string",
@@ -82,7 +82,7 @@
       "relation": "oneToMany",
       "target": "api::service.service"
     },
-    "testimonials": {
+    "testimonals": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::testimonal.testimonal"
@@ -91,11 +91,11 @@
       "type": "string",
       "required": true
     },
-    "testimonial_title": {
+    "testimonal_title": {
       "type": "string",
       "required": true
     },
-    "testimonial_subtitle": {
+    "testimonal_subtitle": {
       "type": "text",
       "required": true
     }

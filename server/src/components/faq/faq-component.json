@@ -3,7 +3,8 @@
   "info": {
     "name": "faq-component",
     "icon": "grin",
-    "description": ""
+    "description": "",
+    "displayName": "faq"
   },
   "options": {},
   "attributes": {

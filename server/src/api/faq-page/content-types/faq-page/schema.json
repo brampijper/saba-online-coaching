@@ -5,7 +5,8 @@
     "singularName": "faq-page",
     "pluralName": "faq-pages",
     "displayName": "Faq-page",
-    "name": "faq-page"
+    "name": "faq-page",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,15 +14,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "faqtest": {
-      "type": "dynamiczone",
-      "components": [
-        "faq.faq-component"
-      ]
-    },
     "title": {
       "type": "string",
       "required": true
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faq-component"
     }
   }
 }
