@@ -82,11 +82,6 @@
       "relation": "oneToMany",
       "target": "api::service.service"
     },
-    "testimonals": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::testimonal.testimonal"
-    },
     "service_title": {
       "type": "string",
       "required": true
@@ -98,6 +93,11 @@
     "testimonal_subtitle": {
       "type": "text",
       "required": true
+    },
+    "testimonals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonal.testimonal"
     }
   }
 }
