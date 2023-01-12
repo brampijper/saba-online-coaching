@@ -10,7 +10,7 @@ query getAllTestimonals {
     allStrapiTestimonal {
       testimonals: nodes {
         id
-        title
+        function
         description {
             data {
                 description
