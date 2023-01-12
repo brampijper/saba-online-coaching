@@ -29,7 +29,7 @@
     "workplace": {
       "type": "string"
     },
-    "title": {
+    "function": {
       "type": "string"
     },
     "description": {

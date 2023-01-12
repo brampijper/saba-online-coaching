@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import UnsplashCredit from '../UnsplashCredit';
+import ReactMarkdown from 'react-markdown';
 
 const TestimonialCard = ({card}) => {
     const { testimonal_image, description } = card;
@@ -12,7 +13,11 @@ const TestimonialCard = ({card}) => {
                 <article className="space-y-4 lg:space-y-6 flex flex-col lg:flex-row">
 
                     <div className="relative lg:min-w-16">  
-                        <GatsbyImage image={image} alt="should be dynamic" className="max-h-96 lg:max-h-full lg:h-full" />
+                        <GatsbyImage 
+                            image={image} 
+                            alt="should be dynamic" 
+                            className="max-h-96 lg:max-h-full lg:h-full" 
+                        />
                         
                         <div className="
                             absolute flex flex-col bottom-0 w-full 
@@ -22,9 +27,11 @@ const TestimonialCard = ({card}) => {
                         ">
                             <div>
                                 <span className="text-base font-bold">
-                                    {card.name}{' '}
+                                    {`${card.function} at `}
                                 </span>
-                                <span className="text-xs">{card.workplace}</span>
+                                <span className="text-xs">
+                                    {card.workplace}
+                                </span>
                             </div>
                             <div className="">
                                 <UnsplashCredit 
@@ -36,10 +43,19 @@ const TestimonialCard = ({card}) => {
                         </div>
                     </div>
 
-                    <div className="max-w-prose mx-8 md:mx-12 lg:pb-8">
-                        <h4 className="">{card.title}</h4>
-                        <p>{description.data.description}</p>                                
-                        <Link className="underline block" to='/testimonials'>Read more</Link>
+                    <div className="max-w-prose mx-8 md:mx-12 lg:pb-8 space-y-4">
+                        <h4 className="">
+                            {card.name}
+                        </h4>
+                        <ReactMarkdown 
+                            children={description.data.description} 
+                            className="space-y-2" 
+                        />
+                        <Link 
+                            className="underline block" 
+                            to='/testimonials'>
+                            View all testimonals
+                        </Link>
                     </div>
                 </article> 
             </div>

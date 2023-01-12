@@ -18,7 +18,7 @@ const TestimonialSection = () => {
                     }
                 }
                 name
-                title
+                function
                 workplace
                 imagePhotographer
                 imageUnsplashName
