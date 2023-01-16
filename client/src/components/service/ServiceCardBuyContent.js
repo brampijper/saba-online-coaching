@@ -2,7 +2,7 @@ import React from 'react';
 // import PaylpalButton from './PaypalButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import CornerSvg from "../../images/svg/service-card-triangle.svg";
+import { ServiceCardTriangle } from "../svg/ServiceCardTriangle";
 
 const ServiceCardBuyContent = ({price}) => {
     return (
@@ -14,7 +14,7 @@ const ServiceCardBuyContent = ({price}) => {
                     {/* <PaylpalButton key={price} price={price} className='md:mt-2 md:mx-auto' /> */}
                     <FontAwesomeIcon icon={faShoppingCart} className='fa-lg fa-fw md:mt-2 md:mx-auto' />
                 </button> 
-                <CornerSvg className="w-80 h-80" />
+                <ServiceCardTriangle className="w-80 h-80" />
         </div>
     )
 }

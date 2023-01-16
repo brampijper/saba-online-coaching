@@ -1,7 +1,7 @@
 import React from 'react'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import ArrowDown from "../../images/svg/arrow-down.svg";
+import {ArrowDown} from "../svg/ArrowDown";
 
 const ArrowBounceDown = ({ scrollToTarget }) => {
     return (
