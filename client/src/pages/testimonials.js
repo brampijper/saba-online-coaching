@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
 import TestimonialCard from "../components/testimonial/TestimonialCard";
-import BgTestimonials from "../images/svg/bg_testimonials.svg";
+import { Stripes } from '../components/svg/Stripes';
 
 const getData = graphql`
 query getAllTestimonals {
@@ -55,7 +55,7 @@ const TestimonialPage = () => {
                             ))
                         }
                     </div>
-                    <BgTestimonials className="w-full h-full absolute top-1/20 md:top-1/20 transform scale-x-220 z-minus" />
+                    <Stripes className="w-full h-full absolute top-1/20 md:top-1/20 transform scale-x-220 z-minus" />
                 </div>
             </div>
         </Layout>
