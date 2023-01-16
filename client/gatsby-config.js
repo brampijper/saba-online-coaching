@@ -49,13 +49,5 @@ module.exports = {
         queryLimit: 1000,
       },
     },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /images/ // See below to configure properly
-        }
-      }
-    },
   ],
 };
