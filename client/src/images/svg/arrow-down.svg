@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.19 84.17"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="arrowdown"><line id="line" class="cls-1" x1="26.6" x2="26.6" y2="83.46"/><polyline id="arrowhead" class="cls-1" points="52.84 57.22 26.59 83.46 0.35 57.22"/></g></g></svg>
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 53.19 84.17"
+>
+    <defs>
+        <style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;}</style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="arrowdown">
+            <line id="line" class="cls-1" x1="26.6" x2="26.6" y2="83.46"/>
+            <polyline id="arrowhead" class="cls-1" points="52.84 57.22 26.59 83.46 0.35 57.22"/>
+        </g>
+    </g>
+</svg>
