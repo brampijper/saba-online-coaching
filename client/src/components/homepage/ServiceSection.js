@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 // import Products from './stripe/Products';
 import ServiceCard from '../service/ServiceCard';
 
-import Triangles from "../../images/svg/triangles.svg";
+import {Triangles} from "../svg/Triangles";
 
 const getData = graphql`
 query ServiceCards {

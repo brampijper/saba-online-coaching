@@ -4,9 +4,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ReactMarkdown from 'react-markdown';
 
 import CircleTitle from '../ui/CircleTitle';
-import Stripe from "../../images/svg/stripe.svg";
-import Squares from "../../images/svg/squares.svg";
 import UnsplashCredit from "../UnsplashCredit";
+import { GreenStripe } from '../svg/GreenStripe';
+import { Squares } from '../svg/Squares';
 
 const getData = graphql`
 query GetAboutMeContent {
@@ -86,7 +86,7 @@ const AboutMe = () => {
             <div className="flex justify-center">
                 <Squares className="absolute z-minus top-1/15 md:top-0 w-full h-auto max-w-screen-xl" />
             </div>
-            <Stripe className="absolute z-minus top-1/4 md:top-1/3 w-auto h-full lg:w-full lg:h-auto" />
+            <GreenStripe className="absolute z-minus top-1/4 md:top-1/3 w-auto h-full lg:w-full lg:h-auto" />
         </div>
     )
 }
