@@ -57,7 +57,7 @@ const TestimonialSection = () => {
                     }
                 </div> 
             </div>
-            <Stripes className="w-full h-full absolute top-1/13 sm:top-0 md:top-0 xl:transform xl:scale-x-220 z-minus" />
+            <Stripes className="w-full h-full absolute top-1/13 sm:top-0 md:top-0 xl:scale-x-220 z-minus" />
         </div>
     )
 }

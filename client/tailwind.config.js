@@ -20,10 +20,6 @@ module.exports = {
         's-purple': '#312B6E',
         's-turquoise-light': '#D9EEE7',
       },
-      backgroundImage: theme => ({
-        'blocks': "url('/images/svg/blocks.svg')",
-        'stripe': "url('/images/svg/stripe.svg')",
-      }),
       zIndex: {
         'minus': '-10',
       },

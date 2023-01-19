@@ -55,7 +55,7 @@ const TestimonialPage = () => {
                             ))
                         }
                     </div>
-                    <Stripes className="w-full h-full absolute top-1/20 md:top-1/20 transform scale-x-220 z-minus" />
+                    <Stripes className="w-full h-full absolute top-1/20 md:top-1/20 scale-x-220 z-minus" />
                 </div>
             </div>
         </Layout>
