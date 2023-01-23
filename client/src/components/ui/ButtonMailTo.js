@@ -14,10 +14,11 @@ ButtonMailTo.defaultProps = {
     buttonText: "Send a message",
     styles: `
         mb-5 mt-5 
-        bg-white border-2 rounded border-black 
+        bg-white border rounded border-black 
         max-w-md px-6 py-2.5 
         text-center text-black
         md:max-w-xs
+        hover:bg-neutral-900 hover:text-white
         `
   };
 

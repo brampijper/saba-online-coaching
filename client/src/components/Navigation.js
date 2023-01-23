@@ -52,7 +52,7 @@ const Navigation = () => {
     }
 
     return (
-        <nav className="h-24 flex items-center justify-between px-6 relative">
+        <nav className="h-24 flex items-center justify-between px-6 relative bg-neutral-50">
 
             <Link to='/' className="z-20">
                 <OnHoverChangeText defaultString="aba Feronah" taglines={taglines} />

@@ -40,10 +40,12 @@ const Header = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="bg-s-turquoise-light h-auto">
+        <div className="bg-sky-400/75 h-auto">
             <div className="flex flex-col px-6 py-12 space-y-14 mx-auto
                             md:max-w-screen-lg md:flex-row md:justify-evenly md:space-y-0 md:gap-8 md:py-20
-                            xl:max-w-screen-xl">
+                            xl:max-w-screen-xl
+                            static
+                            ">
 
                 <div className="flex flex-col space-y-6 container justify-start md:space-y-10 md:max-w-lg xl:max-w-xl">
                     <h1>{header_title}</h1>
