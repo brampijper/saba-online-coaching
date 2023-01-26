@@ -11,8 +11,8 @@ const NavigationHamburger = (props) => {
         <div className="sm:hidden z-20 absolute right-0 px-6">
             {
                 props.showMenu 
-                    ? <button aria-label="open" onClick={onIconClick}><FontAwesomeIcon icon={faTimes} className='fa-2x' /></button>
-                    : <button aria-label="close" onClick={onIconClick}><FontAwesomeIcon icon={faBars} className='fa-2x' /></button>
+                    ? <button aria-label="open" onClick={onIconClick}><FontAwesomeIcon icon={faTimes} className='fa-2x text-white' /></button>
+                    : <button aria-label="close" onClick={onIconClick}><FontAwesomeIcon icon={faBars} className='fa-2x text-white' /></button>
             }
         </div>
     )

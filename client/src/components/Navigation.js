@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import NavigationMobile from './NavigationMobile';
 import OnHoverChangeText from './OnHoverChangeText';
 import NavigationHamburger from './NavigationHamburger';
+import { Logo } from './svg/Logo';
 
 const getNavbarContent = graphql`
 query retrieveImage {
@@ -52,16 +53,17 @@ const Navigation = () => {
     }
 
     return (
-        <nav className="h-24 flex items-center justify-between px-6 relative bg-neutral-50">
+        <nav className="h-24 flex items-center justify-between px-6 relative bg-neutral-900">
 
             <Link to='/' className="z-20">
                 <OnHoverChangeText defaultString="aba Feronah" taglines={taglines} />
                 <div className="block lg:hidden">
-                    <GatsbyImage image={image} alt={alternativeText} />
+                    {/* <GatsbyImage image={image} alt={alternativeText} /> */}
+                    <Logo className="w-[35px] fill-rose-700 bg-black rounded-2xl"/>
                 </div>
             </Link>
 
-            <ul className="hidden sm:flex flex-row space-x-6">
+            <ul className="hidden sm:flex flex-row space-x-6 text-white">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/services'>Services</Link></li>

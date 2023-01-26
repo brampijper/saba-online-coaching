@@ -16,7 +16,7 @@
     }
 
     .full-navbar-height {
-        height: calc(100vh - 3rem);
+        height: calc(100vh);
     }
 }
 
