@@ -3,12 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import ButtonMailTo from '../ui/ButtonMailTo';
-import UnsplashCredit from "../UnsplashCredit";
+import UnsplashCredit from '../UnsplashCredit';
+import { HeaderTitle } from '../svg/HeaderTitle'
 
 const getData = graphql`
 query GetHeaderContent {
     strapiHomepage {
-        header_title
         header_subtitle
         header_button
         header_image {
@@ -30,7 +30,8 @@ const Header = () => {
     const data = useStaticQuery(getData);
     const {
         strapiHomepage: {
-            header_title, header_subtitle, header_button,
+            header_subtitle, header_button,
+            // header_title
             header_image: { 
                 localFile, 
                 alternativeText: alt 
@@ -40,27 +41,54 @@ const Header = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="bg-sky-400/75 h-auto">
-            <div className="flex flex-col px-6 py-12 space-y-14 mx-auto
-                            md:max-w-screen-lg md:flex-row md:justify-evenly md:space-y-0 md:gap-8 md:py-20
-                            xl:max-w-screen-xl
-                            static
-                            ">
-
-                <div className="flex flex-col space-y-6 container justify-start md:space-y-10 md:max-w-lg xl:max-w-xl">
-                    <h1>{header_title}</h1>
-                    <p>{header_subtitle}</p>
-                    <ButtonMailTo buttonText={header_button} /> 
-                </div>
+        <div className="bg-black h-auto">
+            {/* <hr className='w-5/6 m-auto sm:w-full' /> */}
+            <div className="flex flex-col content-center flex-wrap space-y-16">
                 
-                <div className="relative max-w-sm md:max-w-md">
-                    <GatsbyImage image={image} alt={alt} className="rounded-lg" />
-                    <UnsplashCredit 
-                        photographer="Gabnrielle Clare Marino" 
-                        unsplashName="@gabiontheroad"
-                        textColor="text-s-turquoise-light"
-                        className="absolute inset-x-1 bottom-2"/>
+                <div className="
+                    container bg-black grid mt-16 test-container min-h-[350px]
+                    md:items-center md:min-h-[500px] overflow-hidden 
+                ">
+                    <HeaderTitle className="
+                        w-full h-full scale-y-150 mt-8 scale-x-100 max-w-5xl
+                        sm:scale-y-[1.02] sm:mt-0 grid-center
+                    "/>
+                    <p className="
+                        text-white w-[168px] text-[0.9rem] top-10 left-3
+                        sm:w-[230px] sm:top-0
+                        sm:w-[300px] md:text-[1.2rem] sm:text-right
+                        lg:text-[1.5rem] lg:max-w-prose
+                        grid-left
+
+                        top:2.5rem;
+                        left: 0.8rem;
+                    ">
+                        {header_subtitle}
+                    </p>
+
+                    <ButtonMailTo buttonText={header_button} customStyle="
+                        w-[8rem] h-[3rem] flex flex-col justify-center text-center self-start
+                        rounded-[2rem] bg-red-600 text-white font-bold self-center text-lg
+                        md:self-end
+                        lg:w-[15rem] lg:h-[4.4rem]
+                        " 
+                    />
+
+                    {/* <div className='w-full h-full bg-neutral-900 mt-16'></div> */}
+                   
+                    <div className='relative'>
+                        <GatsbyImage image={image} alt={alt} />
+                        <UnsplashCredit 
+                            photographer="Sasha Freemind" 
+                            unsplashName="@sashafreemind"
+                            textColor="text-white/40"
+                            className="flex justify-center bg-black pb-4 md:absolute md:inset-x-1 md:bottom-2"
+                        /> 
+                    </div>
+
+
                 </div>
+
             </div>
         </div>
     )
