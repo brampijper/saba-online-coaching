@@ -2,15 +2,14 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import ButtonMailTo from '../ui/ButtonMailTo';
 import UnsplashCredit from '../UnsplashCredit';
 import { HeaderTitle } from '../svg/HeaderTitle'
+import ButtonScrollTo from '../ui/ButtonScrollTo';
 
 const getData = graphql`
 query GetHeaderContent {
     strapiHomepage {
         header_subtitle
-        header_button
         header_image {
             alternativeText
             localFile {
@@ -30,8 +29,7 @@ const Header = () => {
     const data = useStaticQuery(getData);
     const {
         strapiHomepage: {
-            header_subtitle, header_button,
-            // header_title
+            header_subtitle,
             header_image: { 
                 localFile, 
                 alternativeText: alt 
@@ -41,52 +39,33 @@ const Header = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="bg-black h-auto">
-            {/* <hr className='w-5/6 m-auto sm:w-full' /> */}
-            <div className="flex flex-col content-center flex-wrap space-y-16">
+        <div className="bg-black">
+            <div className="max-w-screen-lg flex flex-col justify-start px-12 m-auto py-24 
+                xl:max-w-screen-2xl lg:grid lg:grid-rows-2 lg:px-0 lg:place-content-center">
                 
-                <div className="
-                    container bg-black grid mt-16 test-container min-h-[350px]
-                    md:items-center md:min-h-[500px] overflow-hidden 
-                ">
-                    <HeaderTitle className="
-                        w-full h-full scale-y-150 mt-8 scale-x-100 max-w-5xl
-                        sm:scale-y-[1.02] sm:mt-0 grid-center
-                    "/>
-                    <p className="
-                        text-white w-[168px] text-[0.9rem] top-10 left-3
-                        sm:w-[230px] sm:top-0
-                        sm:w-[300px] md:text-[1.2rem] sm:text-right
-                        lg:text-[1.5rem] lg:max-w-prose
-                        grid-left
+                <div className="flex justify-center min-h-[10rem]">
+                    <HeaderTitle className="max-w-screen-xl absolute left-0 xl:static"/>
+                </div>
 
-                        top:2.5rem;
-                        left: 0.8rem;
-                    ">
-                        {header_subtitle}
-                    </p>
-
-                    <ButtonMailTo buttonText={header_button} customStyle="
-                        w-[8rem] h-[3rem] flex flex-col justify-center text-center self-start
-                        rounded-[2rem] bg-red-600 text-white font-bold self-center text-lg
-                        md:self-end
-                        lg:w-[15rem] lg:h-[4.4rem]
-                        " 
-                    />
-
-                    {/* <div className='w-full h-full bg-neutral-900 mt-16'></div> */}
-                   
-                    <div className='relative'>
-                        <GatsbyImage image={image} alt={alt} />
+                <div className='flex flex-col gap-12 lg:flex-row lg:justify-end'>
+                    <div className='flex flex-col gap-2
+                        lg:grow-0 lg:ml-auto lg:-mt-24 lg:items-end'>
+                        <h1 className='text-[1.1rem] text-white leading-[2.2rem] w-full sm:text-lg sm:w-[300px]
+                            lg:w-[500px] lg:text-3xl lg:text-right lg:leading-[3rem]'>
+                            {header_subtitle}
+                        </h1>
+                        <ButtonScrollTo scrollToTarget='#about-me' className="float-right text-white" />
+                    </div>
+                    
+                    <div className='ml-auto flex flex-col items-center'>
+                        <GatsbyImage image={image} alt={alt} className="lg:top-20 w-full" />
                         <UnsplashCredit 
                             photographer="Sasha Freemind" 
                             unsplashName="@sashafreemind"
                             textColor="text-white/40"
-                            className="flex justify-center bg-black pb-4 md:absolute md:inset-x-1 md:bottom-2"
+                            className="z-10 mt-12"
                         /> 
                     </div>
-
-
                 </div>
 
             </div>
