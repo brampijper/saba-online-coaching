@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link, graphql, useStaticQuery} from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+// import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import NavigationMobile from './NavigationMobile';
 import OnHoverChangeText from './OnHoverChangeText';
@@ -13,17 +13,6 @@ query retrieveImage {
         taglines {
           taglines {
               text
-          }
-        }
-        logo {
-          alternativeText
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200,
-                placeholder: BLURRED
-              )
-            }
           }
         }
       }
@@ -39,14 +28,14 @@ const Navigation = () => {
             taglines: {
                 taglines
             },
-            logo: {
-                alternativeText,
-                localFile
-            }
+            // logo: {
+            //     alternativeText,
+            //     localFile
+            // }
         }
     } = data
 
-    const image = getImage(localFile);
+    // const image = getImage(localFile);
 
     const handleClick = () => {
         setShowMenu(!showMenu);
