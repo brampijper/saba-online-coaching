@@ -10,7 +10,7 @@ module.exports = {
         'xss': '0.65rem',
         'xs': '0.85rem',  // 14px
         'base': '1.125rem',   // 18px
-        'sm': '1.375rem',   // 21px
+        'sm': '1.375rem',
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],
@@ -47,6 +47,9 @@ module.exports = {
       },
       letterSpacing: {
         widest: '.2em'
+      },
+      borderRadius: {
+        'half': '6rem'
       }
     },
   },
