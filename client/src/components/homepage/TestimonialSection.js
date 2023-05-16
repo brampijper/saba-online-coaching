@@ -39,7 +39,7 @@ const TestimonialSection = () => {
 
     return (
         <div className="h-auto pb-20 lg:pb-40 relative">    
-            <div className="h-auto max-w-screen-lg md:mt-96 xl:max-w-screen-xl mx-auto px-6">
+            <div className="h-auto md:mt-96 mx-auto px-6">
                 <h2 className="text-center pt-20">
                     {testimonial_title}
                 </h2>

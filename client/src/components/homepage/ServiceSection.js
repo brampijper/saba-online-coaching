@@ -27,7 +27,7 @@ const ServiceSection = () => {
     } = data;
     return (
         <div className="h-auto bg-s-purple relative">
-            <div className="mx-auto pt-16 pb-32 md:pt-32 md:pb-60 flex flex-col gap-20 md:gap-32 px-6 max-w-screen-lg xl:max-w-screen-xl">
+            <div className="mx-auto pt-16 pb-32 md:pt-32 md:pb-60 flex flex-col gap-20 md:gap-32 px-6">
                 <h2 className="text-white text-left md:text-center">
                     {service_title}
                 </h2>
