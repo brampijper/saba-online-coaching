@@ -38,29 +38,45 @@ const Header = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="bg-black">
-            <div className="max-w-screen-lg flex flex-col space-y-16 px-6 m-auto py-24 
-                sm:items-center xl:max-w-screen-2xl xl:px-36 xl:space-y-28">
+        <div className="bg-black viewport-height-mobile sm:viewport-height">
+            <div className="h-full flex flex-col items-center max-w-screen-lg px-6 pb-14
+                sm:py-16 sm:justify-start 
+                md:space-y-24 md:m-auto md:pt-0
+                xl:max-w-screen-2xl xl:px-36 xl:space-y-28">
                 
-                <HeaderTitle className="max-w-screen-xl"/>
+                <HeaderTitle className="max-w-screen-sm lg:max-w-screen-md"/>
 
-                <div className='flex flex-col md:flex-row gap-16 relative'>
-                    <section>
-                        <h1 className='text-white text-[1.2rem] leading-[2.2rem] sm:text-[2rem] sm:leading-[3.5rem]'>
-                            {header_subtitle}
-                        </h1>
-                        <ButtonScrollTo scrollToTarget='#about-me' className="text-black rounded-md lg:mt-12" />
+                <div className='
+                  flex flex-col justify-evenly h-full text-center 
+                  sm:max-w-sm
+                  md:relative md:justify-start md:max-w-screen-lg md:h-auto'
+                >
+                    
+                    <h1 className='text-white text-base max-w-prose 
+                      md:w-1/2 md:text-left md:text-sm md:mb-6
+                    '>
+                        {header_subtitle}
+                    </h1>
+
+                    <ButtonScrollTo 
+                      scrollToTarget='#about-me' 
+                      className="text-white order-last md:order-none md:self-start" />
+
+                    <section className='relative md:absolute md:max-w-sm md:right-0 md:top-0'>
+                        <GatsbyImage 
+                          image={image}
+                          alt={alt} 
+                          objectFit="contain" 
+                          className="max-h-72 sm:max-h-96 md:max-w-lg md:max-h-full" 
+                        />
+
+                        <UnsplashCredit 
+                            photographer="Sasha Freemind" 
+                            unsplashName="@sashafreemind"
+                            textColor="text-white"
+                            className="absolute -bottom-6 w-full flex justify-center"
+                        /> 
                     </section>
-                
-                <section className='relative'>
-                    <GatsbyImage image={image} alt={alt} objectFit="contain" className="max-h-[500px]" />
-                    <UnsplashCredit 
-                        photographer="Sasha Freemind" 
-                        unsplashName="@sashafreemind"
-                        textColor="text-white/40"
-                        className="absolute -bottom-6 w-full flex justify-center"
-                    /> 
-                </section>
                 </div>
             </div>
         </div>
