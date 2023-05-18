@@ -51,7 +51,7 @@ const HelpSection = () => {
         <>
         <div className="bg-s-turquoise-light h-auto py-10">
             <div className="
-                flex flex-col space-y-12 h-auto max-w-screen-lg xl:max-w-screen-xl mx-auto px-6
+                flex flex-col space-y-12 h-auto mx-auto px-6
                 md:flex-row md:gap-20 md:space-y-0
                 ">
                 

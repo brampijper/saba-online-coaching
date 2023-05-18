@@ -1,13 +1,19 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/components/**/*.{js,jsx}',
+    './src/pages/**/*.{js,jsx}',
+    './src/styles/**/*.{js,jsx}',
+  ],
   theme: {
     extend: {      
       fontSize: {
         'xss': '0.65rem',
         'xs': '0.85rem',  // 14px
         'base': '1.125rem',   // 18px
-        'sm': '1.375rem',   // 21px
+        'sm': '1.375rem',
+        'md': '1.5rem',
+        'lg': '1.775rem',
+
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],
@@ -19,10 +25,6 @@ module.exports = {
         's-purple': '#312B6E',
         's-turquoise-light': '#D9EEE7',
       },
-      backgroundImage: theme => ({
-        'blocks': "url('/images/svg/blocks.svg')",
-        'stripe': "url('/images/svg/stripe.svg')",
-      }),
       zIndex: {
         'minus': '-10',
       },
@@ -48,11 +50,11 @@ module.exports = {
       },
       letterSpacing: {
         widest: '.2em'
+      },
+      borderRadius: {
+        'half': '6rem'
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

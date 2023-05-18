@@ -6,18 +6,18 @@ module.exports = {
   siteMetadata: {
     title: "saba-feronah-coaching",
   },
-  // flags: {
-  //   FAST_DEV: true,
-  //   PARALLEL_SOURCING: true,
-  //   DEV_SSR: true
-  // },
+  flags: {
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+    DEV_SSR: true,
+    DETECT_NODE_MUTATIONS: true
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-smoothscroll",
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {

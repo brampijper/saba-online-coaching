@@ -39,7 +39,7 @@ const TestimonialSection = () => {
 
     return (
         <div className="h-auto pb-20 lg:pb-40 relative">    
-            <div className="h-auto max-w-screen-lg md:mt-96 xl:max-w-screen-xl mx-auto px-6">
+            <div className="h-auto md:mt-96 mx-auto px-6">
                 <h2 className="text-center pt-20">
                     {testimonial_title}
                 </h2>
@@ -57,7 +57,7 @@ const TestimonialSection = () => {
                     }
                 </div> 
             </div>
-            <Stripes className="w-full h-full absolute top-1/13 sm:top-0 md:top-0 xl:transform xl:scale-x-220 z-minus" />
+            <Stripes className="w-full h-full absolute top-1/13 sm:top-0 md:top-0 xl:scale-x-220 z-minus" />
         </div>
     )
 }
