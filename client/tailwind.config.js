@@ -11,6 +11,9 @@ module.exports = {
         'xs': '0.85rem',  // 14px
         'base': '1.125rem',   // 18px
         'sm': '1.375rem',
+        'md': '1.5rem',
+        'lg': '1.775rem',
+
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],

@@ -7,7 +7,7 @@ const NavigationMobile = (props) => {
     UseLockBodyScroll(props.showMenu);
     return (
         <Transition show={props.showMenu}>
-            <ul id="mobile-menu" className="bg-neutral-900 absolute left-0 top-0 full-navbar-height w-full z-10 
+            <ul id="mobile-menu" className="bg-black absolute left-0 top-0 full-navbar-height w-full z-10 
                                             text-white text-2xl text-center font-bold
                                             flex flex-col justify-center space-y-12 sm:hidden">
                 <li><Link to='/'>Home</Link></li>

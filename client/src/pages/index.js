@@ -14,9 +14,8 @@ export default IndexPage
 
 export const Head = () => (
   <>
-      <html lang="en" />
       <meta name="description" content="Resources for managing your mental health" />
       <meta name="icon" href="../images/favicon.png" />
-      <title>Mental Health - Among other things</title>  
+      <title>Mental Health - A brief intro</title>  
   </>
 )
