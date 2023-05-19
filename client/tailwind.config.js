@@ -53,6 +53,10 @@ module.exports = {
       },
       borderRadius: {
         'half': '6rem'
+      },
+      height: {
+        '100-4': 'calc(100vh - 4rem)', // minus mobile navb height
+        '100-6': 'calc(100vh - 6rem)' // minus desktop nav height
       }
     },
   },
