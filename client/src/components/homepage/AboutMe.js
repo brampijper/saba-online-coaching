@@ -61,10 +61,13 @@ const AboutMe = () => {
 
     return (
         <div className="relative overflow-hidden md:overflow-visible">
-            <div  id="about-me" 
-                className="h-auto space-y-20 mx-auto
-                            px-6 pb-8 mx-auto md:grid md:grid-cols-2 md:gap-8 md:space-y-40
-                            max-w-screen-lg xl:max-w-screen-2xl">
+            <div id="about-me" 
+            className="h-auto space-y-20 mx-auto
+                px-6 pb-8 mx-auto max-w-screen-lg 
+                md:grid md:grid-cols-2 md:gap-8 md:space-y-40
+                xl:max-w-screen-xl"
+            >
+
                 <CircleTitle title={aboutme_title} styles="col-span-2" />  
                 <div>
                 <ReactMarkdown children={aboutme_text} className="space-y-6 max-w-prose pb-4" />
