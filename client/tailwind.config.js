@@ -57,6 +57,9 @@ module.exports = {
       height: {
         '100-4': 'calc(100vh - 4rem)', // minus mobile navb height
         '100-6': 'calc(100vh - 6rem)' // minus desktop nav height
+      },
+      maxHeight: {
+        '125': '31.5rem'
       }
     },
   },
