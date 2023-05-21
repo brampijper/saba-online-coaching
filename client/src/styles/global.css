@@ -86,4 +86,13 @@
         @apply text-base md:text-sm;
         @apply font-normal;
     }
+
+    /* Target a element inside the markdown component  */
+    p > a { 
+        @apply text-base;
+    }
+
+    a {
+        @apply underline
+    }
 }
