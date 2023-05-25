@@ -18,8 +18,8 @@ ButtonScrollTo.defaultProps = {
     styles: `
         mb-5 mt-5 w-full h-12 text-sm
         font-bold md:text-xl md:w-64 md:h-16
-        hover:bg-neutral-800 hover:text-white 
-        `
+        hover:bg-white hover:text-black 
+    `
   };
 
 export default ButtonScrollTo
