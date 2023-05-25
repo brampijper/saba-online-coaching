@@ -14,13 +14,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "header_title": {
-      "type": "string",
-      "required": true
-    },
     "header_subtitle": {
-      "type": "text",
-      "required": true
+      "type": "richtext"
     },
     "header_button": {
       "type": "string",
