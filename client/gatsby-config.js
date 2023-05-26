@@ -33,7 +33,7 @@ module.exports = {
         accessToken: process.env.STRAPI_TOKEN,
         collectionTypes: [
           {
-            singularName: `service`,
+            singularName: `tool`,
             queryParams: {
               populate: "*"
             } 
@@ -45,7 +45,7 @@ module.exports = {
             } 
           },
         ],
-        singleTypes: [`navigation`, `contactbar`, `service-page`, `about-page`,`faq-page`,`homepage`],
+        singleTypes: [`navigation`, `contactbar`, `homepage`, `about-page`, `faq-page`],
         queryLimit: 1000,
       },
     },

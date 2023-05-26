@@ -3,17 +3,30 @@ import { graphql, useStaticQuery } from 'gatsby';
 // import Products from './stripe/Products';
 import ServiceCard from '../service/ServiceCard';
 
-import {Triangles} from "../svg/Triangles";
+import { Triangles } from "../svg/Triangles";
 
 const getData = graphql`
 query ServiceCards {
     strapiHomepage {
       service_title
-      services {
-        description
+      tools {
         id
-        price
         title
+        description {
+            data {
+                description
+            }
+        }
+        image {
+            alternativeText
+            localFile {
+                childImageSharp {
+                    gatsbyImageData(
+                        placeholder: BLURRED
+                    )
+                }
+           }
+        }
       }
     }
   }
@@ -23,7 +36,7 @@ query ServiceCards {
 const ServiceSection = () => {
     const data = useStaticQuery(getData);
     const { 
-        strapiHomepage: { service_title, services } 
+        strapiHomepage: { service_title, tools } 
     } = data;
     return (
         <div className="h-auto bg-s-purple relative">
@@ -36,8 +49,8 @@ const ServiceSection = () => {
 
                 <div className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-20">
                     {
-                        services.map( (service) => (
-                            <ServiceCard key={service.id} service={service} />
+                        tools.map( (tool) => ( // Move this out of the template elements.
+                            <ServiceCard key={tool.id} tool={tool} />
                         ))
                     }
                 </div>

@@ -1,20 +1,55 @@
 import React from 'react';
 import { Link } from "gatsby";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import ServiceCardBuyContent from "./ServiceCardBuyContent";
+import ReactMarkdown from 'react-markdown';
 
+// make graphql query to retrieve the image / svg for this specific tool.
 
-const ServiceCard = ({service}) => {
-    return (
-        <div className="w-full h-auto rounded-lg bg-white shadow-md relative z-10 p-8 lg:p-12 max-w-prose overflow-hidden">
-            
-            <ServiceCardBuyContent price={service.price} />
-            
-            <article className="md:mt-0 md:space-y-8 space-y-4 z-20 relative md:mr-14 lg:mr-4">
-                <h4 className="word-spacing-wide md:word-spacing-none">{service.title}</h4>                                
-                <p>{service.description}</p>
-                <Link className="underline inline-block" to={`/services#${service.id}`}>Explore {service.title}</Link>
-            </article>
+const ServiceCard = ({tool}) => {
+    const { 
+        title, 
+        id, 
+        description: {
+             data: { 
+                description 
+            } 
+        },
+        image: {
+            localFile,
+            alternativeText: alt
+        } 
+    } = tool
+
+    const image = getImage(localFile);
+
+    return ( // actually i want a carousel with cards that are taller. and users can swipe.
+        <div className="max-w-lg h-[48rem] rounded-lg bg-white shadow-md overflow-hidden flex flex-col">
+                        
+            <GatsbyImage 
+                image={image}
+                alt={alt} 
+                objectFit="cover" 
+                className="min-w-full max-h-80"  // css for outer wrapper
+                imgClassName="" // css for img element
+            />
+
+            <section className="p-8 flex flex-col space-y-8">
+                <h4 className="word-spacing-wide md:word-spacing-none">
+                    {title}
+                </h4>
+
+                    
+                <ReactMarkdown children={description} />
+                    
+                {/* // this should link to the specific tool id page.
+                    // Would be nice to do tools/{name Of tool}
+                */}
+                <Link className="underline inline-block" to={`/tools#${id}`}>
+                    Read more about {title}
+                </Link>
+            </section>
+                
         </div>
     )
 }
