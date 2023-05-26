@@ -72,11 +72,6 @@
       "type": "string",
       "required": true
     },
-    "services": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::service.service"
-    },
     "service_title": {
       "type": "string",
       "required": true
@@ -93,6 +88,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::testimonal.testimonal"
+    },
+    "tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
     }
   }
 }
