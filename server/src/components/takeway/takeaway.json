@@ -13,11 +13,6 @@
     "text": {
       "type": "richtext",
       "required": true
-    },
-    "service": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::service.service"
     }
   }
 }
