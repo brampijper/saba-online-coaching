@@ -5,11 +5,12 @@ import { SliderButton } from './SliderButton';
 
 export const Slider = ({items}) => {
     const [index, setIndex] = useState(0)
-    const [showMore, setShowMore] = useState(false)
     const [cards, setCards] = useState(items)
+    
+    const currentItem = cards[index];
 
-    const hasNext = index < items.length - 1;
-    const hasPrev = index !== 0;
+    const hasNext = index < cards.length - 1;
+    const hasPrev = index  !== 0;
 
     function handleNextClick() {
         hasNext && setIndex(index + 1)
@@ -22,13 +23,21 @@ export const Slider = ({items}) => {
     return (
         <div className="flex flex-row gap-4">
             
-            <SliderButton onClick={handleNextClick} direction={"prev"} />
+            <SliderButton 
+                onClick={handleNextClick} 
+                disabled={hasPrev} 
+                direction={"prev"} 
+            />
 
             <div className=''>
-                {items[index]}
+                {currentItem}
             </div>
 
-            <SliderButton onClick={handlePrevClick} direction={"next"} />
+            <SliderButton 
+                onClick={handlePrevClick} 
+                disabled={hasNext} 
+                direction={"next"} 
+            />
 
         </div>
     )
