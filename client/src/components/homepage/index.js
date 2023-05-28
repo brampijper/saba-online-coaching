@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import HeaderQuote from "./HeaderQuote";
 import AboutMe from './AboutMe';
-import ServiceSection from './ServiceSection';
+import ToolsSection from './ToolsSection';
 import TestimonialSection from './TestimonialSection';
 import HelpSection from './HelpSection';
 
@@ -12,7 +12,7 @@ const HomeContent = () => {
             <Header />
             <HeaderQuote />
             <AboutMe />
-            <ServiceSection />
+            <ToolsSection />
             <TestimonialSection />
             <HelpSection />
         </>
