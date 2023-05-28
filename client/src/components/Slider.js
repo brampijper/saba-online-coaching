@@ -2,41 +2,33 @@ import React from 'react';
 import { useState } from "react";
 
 import { SliderButton } from './SliderButton';
+import ServiceCard from './SliderCard';
+import useSlider from './hooks/useSlider';
 
-export const Slider = ({items}) => {
-    const [index, setIndex] = useState(0)
-    const [cards, setCards] = useState(items)
-    
-    const currentItem = cards[index];
+import "../styles/slider.css";
 
-    const hasNext = index < cards.length - 1;
-    const hasPrev = index  !== 0;
+export const Slider = (props) => {
+    const [items, setItems] = useState(props.children)
+    const [selected, beforeSelected, onNext] = useSlider(items)
 
-    function handleNextClick() {
-        hasNext && setIndex(index + 1)
-    }
-
-    function handlePrevClick() {
-        hasPrev && setIndex(index -1)
-    }
+    const sliderCards = items.map(item =>
+        <ServiceCard 
+            key={item.id} 
+            tool={item}
+            isSelected={selected === item}
+            isBeforeSelected={beforeSelected === item}
+        />
+    );
 
     return (
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 w-full h-[48rem]">
             
-            <SliderButton 
-                onClick={handleNextClick} 
-                disabled={hasPrev} 
-                direction={"prev"} 
-            />
-
-            <div className=''>
-                {currentItem}
+            <div className="relative flex-1 flex flex-col items-center">
+                {sliderCards}
             </div>
 
             <SliderButton 
-                onClick={handlePrevClick} 
-                disabled={hasNext} 
-                direction={"next"} 
+                onClick={onNext} 
             />
 
         </div>
