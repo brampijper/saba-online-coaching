@@ -5,17 +5,15 @@ import { faArrowCircleLeft, faArrowCircleRight } from '@fortawesome/free-solid-s
 export const SliderButton = ({onClick, direction = "next", disabled = false}) => {
 
     const arrowIcon = direction === "next" ? faArrowCircleRight : faArrowCircleLeft 
-    
-    const disabledStyle = disabled ? "text-white/25" : "text-white"
-   
+       
     return (
         <button
-            className="self-center"
+            className="absolute -right-6 top-1/2 z-[3] rounded-full bg-black flex border-[3px] border-solid border-black text-white
+            sm:static sm:self-end"
             onClick={() => onClick()}
-            disabled={disabled}
         >
             <FontAwesomeIcon 
-                className={`fa-2x ${disabledStyle}`}
+                className={`fa-3x text-white`}
                 icon={arrowIcon} 
             />
         </button>

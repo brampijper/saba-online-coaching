@@ -43,16 +43,21 @@ const ToolsSection = () => {
 
     return (
         <div className="bg-s-purple relative h-auto">
-            <div className="mx-auto p-16 flex flex-col items-center gap-20 md:gap-32">
-                <h2 className="text-white text-left md:text-center">
+            <div className="
+                mx-auto px-6 py-20 h-screen flex flex-col items-center gap-16 
+                min-h-[900px] sm:min-h-unset
+                md:gap-8 md:p-16
+            ">
+                
+                <h2 className="text-white text-left text-4xl md:text-center">
                     {service_title}
                 </h2>
-
-                <Slider className="grid grid-flow-row gap-12 place-content-center lg:grid-cols-2 lg:gap-20">
+                
+                <Slider> 
                     {tools}
                 </Slider> 
             </div>
-            <Triangles className="w-full h-auto absolute lg:max-w-screen-lg xl:max-w-screen-xl left-0 right-0 ml-auto mr-auto" />
+            <Triangles className="w-full h-auto absolute left-0 right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl"/>
         </div>
     )
 }
