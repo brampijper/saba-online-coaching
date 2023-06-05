@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_tools_tool_contents",
+  "info": {
+    "displayName": "resources",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "youtubeLinks": {
+      "type": "richtext"
+    },
+    "podcastLinks": {
+      "type": "richtext"
+    },
+    "blogLinks": {
+      "type": "richtext"
+    },
+    "appLinks": {
+      "type": "richtext"
+    }
+  }
+}

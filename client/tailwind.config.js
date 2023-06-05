@@ -13,7 +13,11 @@ module.exports = {
         'sm': '1.375rem',
         'md': '1.5rem',
         'lg': '1.775rem',
-
+        'xl': '2rem',
+        '2xl': '2.225rem',
+        '3xl': '2.5rem',
+        '4xl': '2.75rem',
+        '5xl': '3.0rem',
       },
       fontFamily: {
         'averta': ['Averta', 'Open Sans'],
@@ -60,6 +64,9 @@ module.exports = {
       },
       maxHeight: {
         '125': '31.5rem'
+      },
+      lineHeight: {
+        'extra-loose': '5.5rem'
       }
     },
   },

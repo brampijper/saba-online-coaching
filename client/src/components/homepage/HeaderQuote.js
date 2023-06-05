@@ -16,8 +16,8 @@ const HeaderQuote = () => {
     const { strapiHomepage: { quote } } = data
     return (
         <div className="px-6 mx-auto text-center md:max-w-4xl space-y-16">
-            <h3 className="leading-relaxed lg:leading-loose">
-                <span className="text-3xl mx-1 md:text-5xl font-gabriela">
+            <h3>
+                <span className="mx-1">
                     "{quote}"
                 </span>
             </h3>

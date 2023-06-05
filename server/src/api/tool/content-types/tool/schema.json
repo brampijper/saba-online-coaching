@@ -27,6 +27,16 @@
         "videos",
         "audios"
       ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "resources": {
+      "type": "component",
+      "repeatable": false,
+      "component": "tool.tool-content"
     }
   }
 }

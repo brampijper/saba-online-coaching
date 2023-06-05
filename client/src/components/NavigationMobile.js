@@ -12,7 +12,7 @@ const NavigationMobile = (props) => {
                                             flex flex-col justify-center space-y-12 sm:hidden">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
-                <li><Link to='/services'>Services</Link></li>
+                <li><Link to='/tools'>Tools</Link></li>
                 <li><Link to='/testimonials'>Testimonials</Link></li>
                 <li><Link to='/faq'>FAQ</Link></li>
             </ul>

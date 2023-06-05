@@ -72,7 +72,7 @@
       "type": "string",
       "required": true
     },
-    "service_title": {
+    "tools_title": {
       "type": "string",
       "required": true
     },

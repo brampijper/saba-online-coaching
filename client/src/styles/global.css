@@ -1,33 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer utilities {
-    .word-spacing-wide {
-        word-spacing: 100vw;
-    }
-
-    .word-spacing-none {
-        word-spacing: initial;
-    }
-
-    .circle-height {
-        height: 100vw;
-    }
-
-    .full-navbar-height {
-        height: calc(100vh);
-    }
-
-    .viewport-height { 
-        height: calc(100vh - 6rem); /* minus navbar height */
-    }
-
-    .viewport-height-mobile {
-        height: calc(100vh - 4rem);
-    }
-}
-
+/* Base */
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
     @font-face {
@@ -60,39 +34,41 @@
         @apply font-averta;
     }
 
-    h1 {
+    h1, h2, h3, h4 {
         @apply font-bold; 
     }
 
-    h2 {
-        @apply font-bold;
-        @apply text-5xl lg:text-7xl lg:leading-snug leading-tight;
-    }
-
     h3 {
-        @apply text-4xl font-gabriela;
-        @apply lg:text-5xl lg:leading-tight;
-    }
-
-    h4 {
-        @apply text-2xl font-semibold;
-    }
-
-    h5 {
-        @apply font-averta tracking-widest text-2xl font-light;
-    }
-
-    p {
-        @apply text-base md:text-sm;
-        @apply font-normal;
-    }
-
-    /* Target a element inside the markdown component  */
-    p > a { 
-        @apply text-base;
+        @apply text-3xl font-gabriela;
+        @apply md:text-5xl md:leading-extra-loose;
     }
 
     a {
         @apply underline
     }
 }
+
+/* 
+    Utilities
+    These can override anything come before them. 
+*/
+@layer utilities {
+
+    .circle-height {
+        height: 100vw;
+    }
+
+    .full-navbar-height {
+        height: calc(100vh);
+    }
+
+    .viewport-height { 
+        height: calc(100vh - 6rem); /* minus navbar height */
+    }
+
+    .viewport-height-mobile {
+        height: calc(100vh - 4rem);
+    }
+}
+
+@tailwind utilities;

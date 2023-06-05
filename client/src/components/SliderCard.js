@@ -3,13 +3,12 @@ import { Link } from "gatsby";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import ReactMarkdown from 'react-markdown';
+import useShortText from './hooks/useShortText';
 
-const MAX_CHAR_LENGTH = 250;
-
-const ServiceCard = ({tool, isSelected, isNextItem, isPreviousItem}) => {
+const ServiceCard = ({tool, isSelected, isPrevious, isNext, position = "absolute"}) => {
     const { 
-        title, 
-        id, 
+        title,
+        slug,
         description: {
             data: { description } 
         },
@@ -17,28 +16,25 @@ const ServiceCard = ({tool, isSelected, isNextItem, isPreviousItem}) => {
     } = tool
 
     const image = getImage(localFile);
-    
-    //could turn this into a helper funciton (hook)
-    const shortDescription = description
-        .slice(0, MAX_CHAR_LENGTH)
-        .padEnd(MAX_CHAR_LENGTH + 5, '(...)');
 
-    // not the best way.
-    const selectedStyles = "opacity-100 scale-100 z-[2] translate-x-[0%]"
-    const nextItemStyles = "opacity-30 scale-95 translate-x-[20%] lg:translate-x-1/2 xl:translate-x-[70%]"
-    const previousItemStyles = "opacity-30 scale-95 translate-x-[-20%] lg:translate-x-[-50%] xl:translate-x-[-70%]"
+    const shorterText = useShortText(description)
+
+    const sliderCardStyles = {
+        base: "absolute opacity-0",
+        selected: "opacity-100 scale-100 z-[2] translate-x-[0%]",
+        next: "opacity-30 scale-95 translate-x-[20%] lg:translate-x-1/2 xl:translate-x-[70%]",
+        previous: "opacity-30 scale-95 translate-x-[-20%] lg:translate-x-[-50%] xl:translate-x-[-70%]"
+    }
    
     return (
-        <div className={ // make this more readable. + add border for selected item.
-            [
-                'absolute flex flex-col h-auto opacity-0 max-w-lg',
-                'rounded-lg bg-white shadow-md ',
-                'transition-all duration-500 ease-in-out will-change-transform',
-                isSelected ? selectedStyles : '',
-                isNextItem ? nextItemStyles : '',
-                isPreviousItem ? previousItemStyles : '',
-            ].join(' ')
-        }>
+        <div className={`
+            flex flex-col h-auto max-w-lg rounded-lg bg-white shadow-md
+            transition-all duration-500 ease-in-out will-change-transform
+            ${ position === 'absolute' ? sliderCardStyles.base : `opacity-100 ${position}` }
+            ${ isSelected ? sliderCardStyles.selected : "" }
+            ${ isNext ? sliderCardStyles.next : "" }
+            ${ isPrevious ? sliderCardStyles.previous : "" }
+        `}>
                         
             <GatsbyImage 
                 image={image}
@@ -53,9 +49,9 @@ const ServiceCard = ({tool, isSelected, isNextItem, isPreviousItem}) => {
                     {title}
                 </h4>
 
-                <ReactMarkdown children={shortDescription} />
+                <ReactMarkdown children={shorterText} />
                     
-                <Link className="underline inline-block" to={`/tools#${id}`}>
+                <Link className="underline inline-block" to={`/${slug}`}>
                     Read more about {title}
                 </Link>
             </section>
