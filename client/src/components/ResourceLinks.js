@@ -2,12 +2,10 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 
 const ResourceLinks = ({resources}) => {
-    const [data] = resources;
-
     const {
         youtubeLinks: { data: { youtubeLinks }},
         podcastLinks: { data: { podcastLinks }},
-    } = data
+    } = resources
 
     return (
         <div className="bg-s-turquoise-light rounded-lg px-12 pb-12 pt-6 justify-self-end justify-between gap-y-8 sm:gap-y-4 h-auto self-center sm:max-w-sm">
