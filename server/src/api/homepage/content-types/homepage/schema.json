@@ -76,23 +76,23 @@
       "type": "string",
       "required": true
     },
-    "testimonal_title": {
+    "friends_title": {
       "type": "string",
       "required": true
     },
-    "testimonal_subtitle": {
+    "friends_subtitle": {
       "type": "text",
       "required": true
-    },
-    "testimonals": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::testimonal.testimonal"
     },
     "tools": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tool.tool"
+    },
+    "friends": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::friend.friend"
     }
   }
 }

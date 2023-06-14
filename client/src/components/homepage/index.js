@@ -3,7 +3,7 @@ import Header from './Header';
 import HeaderQuote from "./HeaderQuote";
 import AboutMe from './AboutMe';
 import ToolsSection from './ToolsSection';
-import TestimonialSection from './TestimonialSection';
+import FriendsSection from './FriendsSection';
 import HelpSection from './HelpSection';
 
 const HomeContent = () => {
@@ -13,7 +13,7 @@ const HomeContent = () => {
             <HeaderQuote />
             <AboutMe />
             <ToolsSection />
-            <TestimonialSection />
+            <FriendsSection />
             <HelpSection />
         </>
     )

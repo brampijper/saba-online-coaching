@@ -39,7 +39,7 @@ module.exports = {
             } 
           },
           {
-            singularName: `testimonal`,
+            singularName: `friend`,
             queryParams: {
               populate: "*"
             } 
