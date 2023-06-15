@@ -47,7 +47,7 @@ const FriendsSection = () => {
     const { friends_title, friends_subtitle, friends } = strapiHomepage;
 
     return (
-        <div className="pt-20 h-auto relative grid gap-12 px-6 md:gap-0 md:pt-32 lg:pt-64">    
+        <div className="pt-20 h-auto relative grid gap-12 sm:px-6 md:gap-0 md:pt-32 lg:pt-64">    
                 
             <article className="text-center flex flex-col items-center gap-16 relative">
                 <h2 className="text-4xl">
