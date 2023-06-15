@@ -48,32 +48,35 @@ const HelpSection = () => {
     } = data
     const image = getImage(localFile);
     return (
-        <>
-        <div className="bg-s-turquoise-light h-auto py-10">
-            <div className="
-                flex flex-col space-y-12 h-auto mx-auto px-6
-                md:flex-row md:gap-20 md:space-y-0
-                ">
+        <div className="bg-s-turquoise-light h-auto py-10 px-8 grid md:grid-cols-2 md:grid-rows-[5rem] md:gap-x-12">
+
+                <h2 className="text-4xl order-1 mb-8 lg:mb-0 md:col-start-2 md:row-start-1 lg:justify-self-start">
+                    {helpsection_title}
+                </h2>
                 
-                <div className="flex flex-col space-y-10 md:order-last md:justify-center">
-                    <h2>{helpsection_title}</h2>
-                    <ReactMarkdown children={helpsection_description} className="space-y-2 max-w-prose" />                    
+                <div className="flex flex-col order-3 mt-8 lg:justify-self-start">
+                    <ReactMarkdown 
+                        children={helpsection_description} 
+                        className="space-y-6 max-w-lg text-base" 
+                    />                    
                     <ButtonMailTo buttonText={helpsection_button} /> 
                 </div>
-                <div className="relative">
-                    <GatsbyImage image={image} alt={alt} className="md:order-first max-w-xs lg:max-w-lg mx-auto mt-8 md:mt-0 relative" />
+                
+                <div className="relative order-2 md:row-start-1 md:row-end-3 lg:justify-self-end">
+                    <GatsbyImage 
+                        image={image} 
+                        alt={alt} 
+                        className="max-w-2xl h-full rounded-lg" 
+                    />
                     <UnsplashCredit 
-                        photographer="Gabnrielle Clare Marino" 
-                        unsplashName="@gabiontheroad"
-                        textColor="text-s-turquoise-light"
-                        className="absolute inset-x-1 bottom-2"
+                        photographer="Matthew Waring" 
+                        unsplashName="@matthewwaring"
+                        textColor="text-black"
+                        className="absolute inset-x-2 bottom-2"
                     />  
                 </div>
-            </div>
         </div>
-
-        </>
     )
 }
 
-export default HelpSection;
+export default HelpSection;  
