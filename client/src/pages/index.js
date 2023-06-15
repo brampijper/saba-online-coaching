@@ -5,7 +5,7 @@ import HomeContent from '../components/homepage';
  const IndexPage = () => {
   return (
     <Layout>
-      <HomeContent />
+        <HomeContent />
     </Layout>
   )
 }

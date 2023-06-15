@@ -3,22 +3,22 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ReactMarkdown from 'react-markdown';
 
-const FriendCard = ({friend}) => {
+const FriendCard = ({item, cardStyles = ""}) => {
     const { 
         image: { localFile, alternativeText: alt }, 
         description: { data: { description }},
         tool: { title: toolTitle, slug: toolSlug },
         name, job_title, slug, struggles, strengths
-     } = friend;
+     } = item;
 
     const image = getImage(localFile);
     
     return (
-        <div className="border-opacity-90 border-4 border-s-gold bg-white shadow-md rounded-lg
-            flex flex-col max-w-7xl
-            md:flex-row
-        ">
-            <div className="relative md:flex-[0_1_400px]">
+        <div className={`border-opacity-90 border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
+            max-w-7xl lg:flex-row
+            ${cardStyles}
+        `}>
+            <div className="relative lg:flex-[0_1_400px]">
                 <GatsbyImage 
                     image={image} 
                     alt={alt} 
@@ -36,7 +36,7 @@ const FriendCard = ({friend}) => {
             </div>
 
             <div className="max-w-prose space-y-4 p-6
-                md:flex-[1_0_50%] md:p-12
+                lg:flex-[1_0_50%] lg:p-12
             ">
                 <header className="flex flex-col w-full gap-1 sm:flex-row">
                     <h4>{`${name}'s favorite tool:`}</h4>

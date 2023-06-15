@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
-import FriendCard from "../components/friend/FriendCard";
+import FriendCard from "../components/cards/FriendCard";
 import { Stripes } from '../components/svg/Stripes';
 
 const getData = graphql`
@@ -58,7 +58,7 @@ const FriendsPage = () => {
                             friends.map( friend => (
                                 <FriendCard 
                                     key={friend.id} 
-                                    friend={friend} 
+                                    item={friend} 
                                 />
                             ))
                         }

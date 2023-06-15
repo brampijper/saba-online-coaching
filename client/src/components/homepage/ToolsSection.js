@@ -2,9 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { Triangles } from "../svg/Triangles";
-
-import useSlider from '../hooks/useSlider';
-import { SliderButton } from '../SliderButton';
+import ToolCard from '../cards/ToolCard';
+import { Slider } from '../Slider';
 
 const getData = graphql`
     query getHomepageTools {
@@ -43,31 +42,19 @@ const ToolsSection = () => {
             tools 
         } 
     } = data;
-    
-    const [onNext, onPrevious, sliderCards] = useSlider(tools)
-    
+        
     return (
-        <div className="bg-s-purple relative h-auto">
-            <div className="
-                mx-auto px-6 py-20 h-screen flex flex-col items-center 
-                min-h-[900px] sm:min-h-unset
-                md:gap-8 md:p-16
-            ">
+        <div className="bg-s-purple relative h-auto grid gap-12 pt-16 pb-16 sm:px-6 sm:pb-32">
                 
-                <h2 className="text-white text-left text-4xl md:text-center">
-                    {tools_title}
-                </h2>
+            <h2 className="text-white text-4xl text-center ">
+                {tools_title}
+            </h2>
 
-                <div className="relative flex flex-col h-full w-full items-center justify-around
-                    lg:flex-row 
-                ">
-                    <SliderButton onClick={onPrevious} direction="previous" />
-                    {sliderCards}
-                    <SliderButton onClick={onNext} direction="next" />
-                </div>
+            <Slider items={tools} styles={`min-h-[600px]`}>
+                {ToolCard}
+            </Slider>
 
-            </div>
-            <Triangles className="w-full h-auto absolute left-0 right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl"/>
+            <Triangles className="w-full h-auto absolute left-0 top-full right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl" />
         </div>
     )
 }

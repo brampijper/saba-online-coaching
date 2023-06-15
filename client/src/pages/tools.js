@@ -2,13 +2,14 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
-import SliderCard from '../components/SliderCard';
+import ToolCard from '../components/cards/ToolCard';
 
 const getData = graphql`
 query MyQuery {
     allStrapiTool {
       nodes {
         id
+        slug
         title
         image {
           alternativeText
@@ -38,10 +39,9 @@ const ToolsPage = () => {
     
     const toolCards = tools.map( tool => {
       return (
-        <SliderCard 
+        <ToolCard 
           key={tool.id}
-          tool={tool}
-          position="static"
+          item={tool}
         />
       )
     })

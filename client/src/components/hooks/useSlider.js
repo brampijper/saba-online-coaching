@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SliderCard from '../SliderCard';
+import { getCardClassName } from '../Slider/sliderCardStyles';
 
-export default function useSlider(items = []) {
+export default function useSlider(items = [], CardComponent) {
     const [selectedIndex, setSelectedIndex] = useState(0)
 
     function onNext() {
@@ -22,15 +22,13 @@ export default function useSlider(items = []) {
         const isPrevious = index === (selectedIndex - 1 + items.length) % items.length;
 
         return (
-            <SliderCard 
+            <CardComponent 
                 key={item.id}
-                tool={item}
-                isSelected={isSelected}
-                isNext={isNext}
-                isPrevious={isPrevious}
+                item={item}
+                cardStyles={getCardClassName(isSelected, isNext, isPrevious)}
             />
         )
     });
- 
+
     return [onNext, onPrevious, sliderCards]
 }
