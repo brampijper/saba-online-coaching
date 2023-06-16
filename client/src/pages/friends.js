@@ -48,7 +48,7 @@ const FriendsPage = () => {
     } = data
     return (
         <Layout>
-            <div className="h-auto pb-20 lg:pb-40 relative">    
+            <div className="h-auto pb-20 lg:pb-40 relative overflow-hidden">    
                 <div className="h-auto max-w-screen-lg xl:max-w-screen-xl mx-auto px-6">
                 <h2 className="text-center pt-20 text-4xl">
                         All friends

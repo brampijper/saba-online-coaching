@@ -14,7 +14,7 @@ const FriendCard = ({item, cardStyles = ""}) => {
     const image = getImage(localFile);
     
     return (
-        <div className={`border-opacity-90 border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
+        <div className={`border-opacity-90 border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
             max-w-7xl lg:flex-row
             ${cardStyles}
         `}>
@@ -22,7 +22,7 @@ const FriendCard = ({item, cardStyles = ""}) => {
                 <GatsbyImage 
                     image={image} 
                     alt={alt} 
-                    className="h-full w-auto" 
+                    className="h-full w-auto rounded-md" 
                     objectFit="cover"
                     objectPosition="50% 100%"
                 />
@@ -35,7 +35,7 @@ const FriendCard = ({item, cardStyles = ""}) => {
                 </h4>
             </div>
 
-            <div className="max-w-prose space-y-4 p-6
+            <div className="max-w-prose space-y-4 p-2 sm:p-6
                 lg:flex-[1_0_50%] lg:p-12
             ">
                 <header className="flex flex-col w-full gap-1 sm:flex-row">

@@ -36,7 +36,7 @@ query GetAboutMeContent {
 }
 `
 
-const AboutMe = () => {
+const ResourceSection = () => {
     const data = useStaticQuery(getData);
     const {
         strapiHomepage: {
@@ -60,13 +60,10 @@ const AboutMe = () => {
     const image = getImage(localFile);
 
     return (
-        <div className="relative overflow-hidden md:overflow-visible">
-            <div id="about-me" 
-                className="h-auto space-y-20 mx-auto
-                    px-6 pb-8 mx-auto max-w-screen-lg 
-                    md:grid md:grid-cols-2 md:gap-8 md:space-y-16
-                    xl:max-w-screen-xl"
-            >
+        <div className="relative w-full h-auto flex flex-col overflow-hidden">
+            <article id="about-me" className="h-auto max-w-5xl space-y-20 mx-auto px-6 relative pb-8 lg:pb-32
+                md:grid md:grid-cols-2 md:gap-x-8 md:space-y-28
+            ">
                 <CircleTitle title={aboutme_title} styles="col-span-2" />  
                 
                 <ReactMarkdown 
@@ -94,15 +91,14 @@ const AboutMe = () => {
                         className="space-y-2 max-w-prose mt-8" 
                     />
                 </div>
-            </div>
+                
+                <GreenStripe className="absolute z-minus top-1/4 md:row-start-2 md:-top-1/5 left-0 h-auto w-auto md:scale-x-[2]" />
 
-            <div className="flex justify-center">
-                <Squares className="absolute z-minus top-1/15 md:top-0 w-full h-auto max-w-screen-xl" />
-            </div>
-            
-            <GreenStripe className="absolute z-minus top-1/4 md:top-1/3 w-auto h-full lg:w-full lg:h-auto" />
+            </article>
+            <Squares className="absolute -z-[9] top-1/15 sm:top-0 w-full self-center h-auto max-w-screen-lg" />
         </div>
+
     )
 }
 
-export default AboutMe
+export default ResourceSection

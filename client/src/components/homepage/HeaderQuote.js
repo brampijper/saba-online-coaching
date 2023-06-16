@@ -15,7 +15,7 @@ const HeaderQuote = () => {
     const data = useStaticQuery(getData);
     const { strapiHomepage: { quote } } = data
     return (
-        <div className="px-6 mx-auto text-center md:max-w-4xl space-y-16">
+        <div className="mx-auto text-center max-w-4xl px-6 space-y-20">
             <h3>
                 <span className="mx-1">
                     "{quote}"

@@ -1,23 +1,16 @@
 import React from 'react';
-import Navigation from './Navigation';
+import Navigation from './navigation/Navigation';
 import Footer from './Footer';
 
-const Layout = ({children}) => {
+const Layout = ({children, hideNavLogo}) => {
     return (
-        <>
-            <Navigation />
-
-            <main className="
-                space-y-20 
-                sm:space-y-32 
-                md:space-y-40
-                overflow-hidden
-            ">
+        <div>
+            <Navigation hideNavLogo={hideNavLogo} />
+            <main className="flex flex-col justify-center w-full mb-16 space-y-32">
                 {children}
             </main>
-
             <Footer />
-        </>
+        </div>
     )
 }
 
