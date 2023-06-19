@@ -50,7 +50,7 @@ const ToolsSection = () => {
                 {ToolCarouselCard}
             </Slider>
 
-            <Triangles className="w-full h-auto absolute left-0 top-full right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl" />
+            <Triangles className="w-full h-auto absolute left-0 top-full z-[1] right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl" />
         </div>
     )
 }

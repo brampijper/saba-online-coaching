@@ -14,17 +14,17 @@ const ProfileCard = ({item, cardStyles = ""}) => {
     const image = getImage(localFile);
     
     return (
-        <div className={`border-opacity-90 shadow-xl border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
-            max-w-7xl lg:flex-row
+        <div className={`border-opacity-90 shadow-xl border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg
+        flex flex-col max-w-7xl lg:flex-row lg:max-h-[25rem]
             ${cardStyles}
         `}>
-            <div className="relative lg:flex-[0_1_400px]">
+            <div className="relative lg:flex-[0_1_300px]">
                 <GatsbyImage 
                     image={image} 
                     alt={alt} 
-                    className="h-full w-auto rounded-md" 
+                    className="max-h-[16rem] lg:max-h-none lg:h-full w-full rounded-md"
                     objectFit="cover"
-                    objectPosition="50% 100%"
+                    objectPosition={"50% 15%"}
                 />
                 
                 <h4 className="absolute flex flex-col bottom-0 w-full py-2 px-8 
@@ -36,7 +36,7 @@ const ProfileCard = ({item, cardStyles = ""}) => {
             </div>
 
             <div className="max-w-prose space-y-4 p-2 sm:p-6
-                lg:flex-[1_0_50%] lg:p-12
+                lg:p-12 lg:flex-[1_0_70%]
             ">
                 <header className="flex flex-col w-full gap-1 sm:flex-row">
                     <h4>{`${name}'s favorite tool:`}</h4>
@@ -56,12 +56,12 @@ const ProfileCard = ({item, cardStyles = ""}) => {
                 <h4>Struggles</h4>
                 {struggles}
 
-                <Link 
+                {/* <Link 
                     className="underline block" 
                     to={`/${slug}`}
                 >
                     {`Read more about ${name}`}
-                </Link>
+                </Link> */}
             </div>
         </div>
     )

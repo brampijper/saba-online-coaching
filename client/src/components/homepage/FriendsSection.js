@@ -14,7 +14,6 @@ const FriendsSection = () => {
                 friends_subtitle
                 friends {
                     id
-                    slug
                     job_title
                     name
                     starsign
@@ -49,7 +48,7 @@ const FriendsSection = () => {
     return (
         <div className="pt-20 h-auto relative grid gap-12 sm:px-6 md:gap-0 md:pt-32 lg:pt-64 overflow-hidden">    
                 
-            <article className="text-center flex flex-col items-center gap-16 relative rounded-xl bg-slate-50/75 p-12">
+            <article className="text-center flex flex-col items-center gap-16 relative">
                 <h2 className="text-4xl">
                     {friends_title}
                 </h2>
@@ -62,7 +61,7 @@ const FriendsSection = () => {
                 {ProfileCard}
             </Slider>
 
-            <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-purple" />
+            <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-turquoise-light" />
         </div>
     )
 }
