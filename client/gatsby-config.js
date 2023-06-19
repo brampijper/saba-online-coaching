@@ -45,7 +45,7 @@ module.exports = {
             } 
           },
         ],
-        singleTypes: [`navigation`, `contactbar`, `homepage`, `about-page`, `faq-page`],
+        singleTypes: [`navigation`, `homepage`, `faq-page`],
         queryLimit: 1000,
       },
     },
