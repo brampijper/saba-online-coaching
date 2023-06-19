@@ -35,8 +35,18 @@
     },
     "resources": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "tool.tool-content"
+    },
+    "instructions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tool.instructions"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tool.benefits"
     }
   }
 }

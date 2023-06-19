@@ -48,7 +48,7 @@ const HelpSection = () => {
     } = data
     const image = getImage(localFile);
     return (
-        <div className="bg-s-turquoise-light h-auto p-12 grid md:grid-cols-2 md:grid-rows-[5rem] md:gap-x-12 lg:p-28 lg:min-h-[20rem]">
+        <div className="bg-s-turquoise-light h-auto py-16 px-6 grid md:p-12 h-72 md:grid-cols-2 md:grid-rows-[5rem] md:gap-x-12 lg:p-28 lg:min-h-[650px]">
 
                 <h2 className="text-4xl order-1 mb-8 lg:mb-0 md:col-start-2 md:row-start-1 lg:justify-self-start">
                     {helpsection_title}

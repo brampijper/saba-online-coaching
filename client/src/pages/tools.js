@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
-import ToolCard from '../components/cards/ToolCard';
+import ToolCarouselCard from '../components/cards/ToolCarouselCard';
 
 const getData = graphql`
 query MyQuery {
@@ -14,9 +14,7 @@ query MyQuery {
         image {
           alternativeText
           localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
+            publicURL
           }
         }
         description {
@@ -39,7 +37,7 @@ const ToolsPage = () => {
     
     const toolCards = tools.map( tool => {
       return (
-        <ToolCard 
+        <ToolCarouselCard 
           key={tool.id}
           item={tool}
         />

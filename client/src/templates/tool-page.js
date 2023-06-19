@@ -1,77 +1,93 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ReactMarkdown from 'react-markdown';
 
 import Layout from "../components/layout"
-import UnsplashCredit from "../components/UnsplashCredit";
-import ResourceLinks from "../components/ResourceLinks";
+import ToolResourceCard from "../components/cards/ToolResourceCard";
+import ToolBenefitCard from "../components/cards/ToolBenefitCard";
+import ToolInstructionCard from "../components/cards/ToolInstructionCard";
 
 export default function toolPage({ data }) {
     
     const { strapiTool: {
         title,
         description: { data: { description } },
-        image: { localFile, alternativeText: alt },
+        image: { localFile: { publicURL }, alternativeText: alt },
+        instructions,
+        benefits,
         resources
     } } = data;
 
-    const image = getImage(localFile)
+    const toolBenefitCards = benefits.map( benefit => (
+        <ToolBenefitCard
+            key={benefit.id}
+            benefit={benefit}
+        />
+    ))
+
+    const instructionCards = instructions.map( instruction => (
+        <ToolInstructionCard
+            key={instruction.id}
+            instruction={instruction}
+        />
+    ) )
+
+    const toolResourceCards = resources.map( (resource, index) => (
+        <ToolResourceCard
+            key={index}
+            resource={resource}
+        />
+    ))
     
     return (
         <Layout>
 
-            <div className="h-auto space-y-10 mx-auto p-8 max-w-screen-lg 
-                md:grid md:grid-cols-2 md:space-y-12 md:px-6 md:pb-20"
-            >
-                <h2 className="text-2xl text-left
-                    sm:text-5xl sm:mt-12
-                    md:text-center md:col-start-1 md:col-end-3
-                ">
-                    {`Tool: ${title}`}
-                </h2>
+            <div className="self-center	h-auto px-8 max-w-screen-lg flex flex-col gap-8
+                md:grid md:grid-cols-2 md:px-0 md:pb-20 lg:gap-16
+            ">
                 
-                <div className="place-self-center 
-                    md:row-start-2 md:col-start-1 md:col-end-3
+                <div className="w-full
+                    md:row-start-1 md:col-start-1 md:col-end-3
                 ">
-                    <GatsbyImage 
-                        image={image} 
+                    <img 
+                        src={publicURL} 
                         alt={alt}
-                        objectFit="cover"
-                        className="rounded-lg self-center max-h-80" 
-                    />
-                    
-                    <UnsplashCredit 
-                        photographer="Moritz Kindler" 
-                        unsplashName="@moritz_photography"
-                        className="mt-0 text-center" 
-                        />  
+                        className="rounded-lg object-cover min-h-[20rem]" 
+                    /> 
                 </div>
 
-                <section>
-                    <h4 className="py-2">Description</h4>
+                <article className="flex flex-col gap-6 md:px-8">
+                    <h2 className="text-base">{`About ${title}`}</h2>
                     <ReactMarkdown 
-                        className="space-y-6 max-w-prose pb-4" 
+                        className="space-y-6 max-w-prose" 
                         linkTarget="_blank"
                         children={description} 
                     />
 
-                    <ReactMarkdown 
-                        className="space-y-6 max-w-prose pb-4" 
-                        linkTarget="_blank"
-                        children={description} 
-                    />
-                </section>
+                    {instructionCards}
 
-                <ResourceLinks resources={resources}/>
+                    <div className="space-y-6 md:h-min">
+                        <h2 className="text-base mb-8">{`Benefits`}</h2>
+                        <div className="flex flex-col gap-6">
+                            {toolBenefitCards}
+                        </div>
+                    </div>
 
-                {/* <div className="w-full md:col-start-1 md:col-end-3 flex flex-col text-left items-center">
-                    <h4 className="py-2">Extra</h4>
-                    <ReactMarkdown 
-                            className="space-y-6 max-w-prose pb-4 text-lg" 
-                            children={description} 
-                        />
-                </div> */}
+                </article>
+
+
+                <div className="col-span-full rounded-lg justify-self-end justify-between gap-y-8 h-auto self-center
+                    grid grid-cols-1 w-full
+                    sm:px-6
+                    md:gap-x-8 md:col-start-2 md:row-start-2
+                ">
+                    {/* <h2 className="col-span-full text-xl text-center"> 
+                        Tools and resources
+                    </h2> */}
+                    {toolResourceCards}
+
+                </div>
+
             </div>
         </Layout>
     )
@@ -89,25 +105,33 @@ export const query = graphql`
         image {
             alternativeText
             localFile {
-                childImageSharp {
-                    gatsbyImageData(
-                        placeholder: BLURRED
-                    )
+                publicURL
+            }
+        }
+        instructions {
+            id
+            title
+            description {
+                data {
+                    description
+                }
+            }
+        }
+        benefits {
+            id
+            title
+            description {
+                data {
+                    description
                 }
             }
         }
         resources {
-            youtubeLinks {
-                data { youtubeLinks }
-            }
-            podcastLinks {
-                data { podcastLinks }
-            }
-            blogLinks {
-                data { blogLinks }
-            }
-            appLinks {
-                data { appLinks }
+            title
+            description {
+                data {
+                    description
+                }
             }
         }
     }

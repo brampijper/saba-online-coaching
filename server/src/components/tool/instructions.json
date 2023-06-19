@@ -1,13 +1,12 @@
 {
-  "collectionName": "components_tools_tool_contents",
+  "collectionName": "components_tool_instructions",
   "info": {
-    "displayName": "resources",
-    "description": ""
+    "displayName": "instructions"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "text"
     },
     "description": {
       "type": "richtext"

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ReactMarkdown from 'react-markdown';
 
-const FriendCard = ({item, cardStyles = ""}) => {
+const ProfileCard = ({item, cardStyles = ""}) => {
     const { 
         image: { localFile, alternativeText: alt }, 
         description: { data: { description }},
@@ -14,7 +14,7 @@ const FriendCard = ({item, cardStyles = ""}) => {
     const image = getImage(localFile);
     
     return (
-        <div className={`border-opacity-90 border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
+        <div className={`border-opacity-90 shadow-xl border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg flex flex-col 
             max-w-7xl lg:flex-row
             ${cardStyles}
         `}>
@@ -67,4 +67,4 @@ const FriendCard = ({item, cardStyles = ""}) => {
     )
 }
 
-export default FriendCard;
+export default ProfileCard;

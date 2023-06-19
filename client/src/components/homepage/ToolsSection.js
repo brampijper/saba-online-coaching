@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { Triangles } from "../svg/Triangles";
-import ToolCard from '../cards/ToolCard';
+import ToolCarouselCard from '../cards/ToolCarouselCard';
 import { Slider } from '../Slider';
 
 const getData = graphql`
@@ -21,11 +21,7 @@ const getData = graphql`
                 image {
                     alternativeText
                     localFile {
-                        childImageSharp {
-                            gatsbyImageData(
-                                placeholder: BLURRED
-                            )
-                        }
+                        publicURL
                     }
                 }
             }
@@ -51,7 +47,7 @@ const ToolsSection = () => {
             </h2>
 
             <Slider items={tools} styles={`min-h-[600px]`}>
-                {ToolCard}
+                {ToolCarouselCard}
             </Slider>
 
             <Triangles className="w-full h-auto absolute left-0 top-full right-0 ml-auto mr-auto lg:max-w-screen-lg xl:max-w-screen-xl" />

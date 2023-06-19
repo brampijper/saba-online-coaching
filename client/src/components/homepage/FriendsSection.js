@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import FriendCard from "../cards/FriendCard"
+import ProfileCard from "../cards/ProfileCard"
 import { Stripes } from "../svg/Stripes"
 import { Slider } from "../Slider"
 
@@ -59,7 +59,7 @@ const FriendsSection = () => {
             </article>
 
             <Slider items={friends} styles={`min-h-[800px]`}>
-                {FriendCard}
+                {ProfileCard}
             </Slider>
 
             <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-purple" />

@@ -1,16 +1,16 @@
 {
-  "collectionName": "components_tools_tool_contents",
+  "collectionName": "components_tool_benefits",
   "info": {
-    "displayName": "resources",
+    "displayName": "benefits",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "description": {
       "type": "richtext"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }
