@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "gatsby";
 import ReactMarkdown from 'react-markdown';
+import useShortText from '../hooks/useShortText';
 
 const ToolCarouselCard = ({item, cardStyles = ""}) => {
     const { 
@@ -11,6 +12,8 @@ const ToolCarouselCard = ({item, cardStyles = ""}) => {
         },
         image: { localFile: { publicURL }, alternativeText: alt } 
     } = item
+
+    const shortDescription = useShortText(description);
 
     return (
         <div className={`flex flex-col h-auto max-w-lg rounded-lg bg-white shadow-md overflow-hidden shadow-xl
@@ -28,8 +31,8 @@ const ToolCarouselCard = ({item, cardStyles = ""}) => {
                 </h4>
 
                 <ReactMarkdown
-                    className="line-clamp-4 md:line-clamp-6"
-                    children={description} 
+                    className=""
+                    children={shortDescription} 
                 />
                     
                 <Link className="underline inline-block" to={`/${slug}`}>
