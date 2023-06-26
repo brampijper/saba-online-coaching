@@ -63,8 +63,8 @@ const FriendsPage = () => {
                             ))
                         }
                     </div>
-                    <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-purple" />
                 </div>
+                <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-purple" />
             </div>
         </Layout>
     )

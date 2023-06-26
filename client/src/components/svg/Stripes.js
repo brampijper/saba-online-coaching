@@ -2,14 +2,17 @@ import * as React from "react"
 
 export const Stripes = (props) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2974" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 3536.51 2670.5" {...props}>
       <g fillRule="evenodd">
-        <path d="M2187.784 0L-874.875 1840.231l417.181 694.306L2604.965 694.305 2187.784 0z" />
-        <path
-          d="M2229.783 1058L-832.875 2898.232l45.323 75.43 3062.659-1840.23-45.324-75.432z"
+        <path 
+          d="M3062.66,0,0,1840.23l417.18,694.31L3479.84,694.3Z"
+        />
+        <path 
+          d="M3491.18,754.84,428.53,2595.07l45.32,75.43L3536.51,830.27l-45.33-75.43Z"
           fillOpacity={0.6}
         />
       </g>
     </svg>
   )
 }
+

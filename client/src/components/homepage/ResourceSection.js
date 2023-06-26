@@ -92,7 +92,7 @@ const ResourceSection = () => {
                     />
                 </div>
                 
-                <GreenStripe className="absolute z-minus top-1/4 md:row-start-2 md:-top-1/5 left-0 h-auto w-auto md:scale-x-[2]" />
+                <GreenStripe className="absolute z-minus top-1/4 md:row-start-2 md:-top-1/5 left-0 h-auto w-auto md:scale-x-300" />
 
             </article>
             <Squares className="absolute -z-[9] top-1/15 sm:top-0 w-full self-center h-auto max-w-screen-lg" />
