@@ -4,9 +4,11 @@ export default function useShortText(text, start = 0, padding = 5, maxLength = 2
     const [shortText, setShortText] = useState('')
 
     useEffect( () => {
+        const padEndLength = text.length < maxLength ? text.length : maxLength
+
         setShortText(text
             .slice(start, maxLength)
-            .padEnd(maxLength + padding, '. . .')
+            .padEnd(padEndLength + padding, '. . .')
         )
     }, [text, maxLength, padding, start])
 
