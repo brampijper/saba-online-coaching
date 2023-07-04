@@ -8,7 +8,7 @@ const ToolInstructionCard = ({ instruction }) => {
         <div className="flex flex-col gap-1">
             <h4>{`${title}`}</h4>
             <ReactMarkdown
-                className=""
+                className="max-w-prose"
                 children={description}
             />
         </div>

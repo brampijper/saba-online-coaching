@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navigation from './navigation/Navigation';
 import Footer from './Footer';
 
-const Layout = ({children, hideNavLogo}) => {
+import { ThemeContext } from './themeContext';
+
+export default function Layout ({children, homePageNav}) {
+
+   const { primaryColor } = useContext(ThemeContext)
+
     return (
-        <div>
-            <Navigation hideNavLogo={hideNavLogo} />
-            <main className="flex flex-col justify-center w-full mb-16 space-y-32">
+        <>
+            <Navigation homePageNav={homePageNav} />
+            
+            <main 
+                className={`flex flex-col justify-center w-full mb-0 space-y-32`}
+                style={{ backgroundColor: primaryColor}}
+            >
                 {children}
             </main>
+            
             <Footer />
-        </div>
+        </>
     )
 }
-
-export default Layout

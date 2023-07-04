@@ -15,8 +15,9 @@ const SliderButton = ({onClick, direction, styles}) => {
 
     return (
         <button onClick={onClick} 
-            className={`z-[3] rounded-md bg-black text-white px-1 py-1 flex items-center justify-center space-x-2
-                sm:rounded-full sm:border-[3px] sm:border-solid sm:border-black sm:px-4 sm:py-2
+            className={`z-[3] rounded-md bg-slate-900 text-white px-1 py-1 flex items-center justify-center space-x-2
+                sm:rounded-full sm:border-[3px] sm:border-solid sm:border-black sm:px-4 sm:py-2 
+                hover:bg-slate-700 hover:border-slate-700
                 ${arrowDirectionStyles[direction]} 
                 ${styles}
         `}>

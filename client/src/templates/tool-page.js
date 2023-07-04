@@ -7,21 +7,33 @@ import ToolResourceCard from "../components/cards/ToolResourceCard";
 import ToolBenefitCard from "../components/cards/ToolBenefitCard";
 import ToolInstructionCard from "../components/cards/ToolInstructionCard";
 
+import { setAlpha } from "../components/colorUtils";
+import { ThemeContextProvider } from "../components/themeContext";
+
 export default function toolPage({ data }) {
-    
     const { strapiTool: {
         title,
         description: { data: { description } },
         image: { localFile: { publicURL }, alternativeText: alt },
         instructions,
         benefits,
-        resources
+        resources,
+        baseColor
     } } = data;
+    
+    const colorStyles = {
+        baseColor,
+        primaryColor: setAlpha(baseColor, 0.3),
+        secondaryColor: setAlpha(baseColor, 0.2),
+        accentColor: setAlpha(baseColor, 0.05),
+        logoColor: baseColor
+    }
 
-    const toolBenefitCards = benefits.map( benefit => (
+    const toolBenefitCards = benefits.map( (benefit, index) => (
         <ToolBenefitCard
             key={benefit.id}
             benefit={benefit}
+            index={index+1}
         />
     ))
 
@@ -40,56 +52,62 @@ export default function toolPage({ data }) {
     ))
     
     return (
-        <Layout>
+        <ThemeContextProvider value={colorStyles}>
+            <Layout> 
 
-            <div className="self-center	h-auto px-8 max-w-screen-lg flex flex-col gap-8
-                md:grid md:grid-cols-2 md:px-0 md:pb-20 lg:gap-16
-            ">
-                
-                <div className="w-full
-                    md:row-start-1 md:col-start-1 md:col-end-3
-                ">
-                    <img 
-                        src={publicURL} 
-                        alt={alt}
-                        className="rounded-lg object-cover min-h-[20rem]" 
-                    /> 
-                </div>
-
-                <article className="flex flex-col gap-6 md:px-8">
-                    <h2 className="text-base">{`About ${title}`}</h2>
-                    <ReactMarkdown 
-                        className="space-y-6 max-w-prose" 
-                        linkTarget="_blank"
-                        children={description} 
-                    />
-
-                    {instructionCards}
-
-                    <div className="space-y-6 md:h-min">
-                        <h2 className="text-base mb-8">{`Benefits`}</h2>
-                        <div className="flex flex-col gap-6">
-                            {toolBenefitCards}
-                        </div>
+                <div className={`self-center h-auto p-8 max-w-screen-lg flex flex-col gap-8
+                    md:grid md:grid-cols-2 md:p-16 md:pb-20 
+                    lg:gap-16 
+                    lg:max-w-screen-xl lg:grid-cols-3
+                `}>
+                    
+                    <div className="w-full
+                        md:row-start-1 md:col-span-full
+                    ">
+                        <img 
+                            src={publicURL} 
+                            alt={alt}
+                            className="rounded-lg object-cover min-h-[20rem]" 
+                        /> 
                     </div>
 
-                </article>
+                    <article className="flex flex-col gap-6 md:px-8 lg:col-span-2">
+                        <h2 className="text-base">{`About ${title}`}</h2>
+                        <ReactMarkdown 
+                            className="space-y-6 max-w-prose" 
+                            linkTarget="_blank"
+                            children={description} 
+                        />
+
+                        {instructionCards}
+
+                    </article>
+
+                    <div className="space-y-6 md:h-min
+                    lg:col-start-3">
+                            {/* <h2 className="text-base mb-8">{`Benefits`}</h2> */}
+                            <div className="flex flex-col gap-6">
+                                {toolBenefitCards}
+                            </div>
+                    </div>
 
 
-                <div className="col-span-full rounded-lg justify-self-end justify-between gap-y-8 h-auto self-center
-                    grid grid-cols-1 w-full
-                    sm:px-6
-                    md:gap-x-8 md:col-start-2 md:row-start-2
-                ">
-                    {/* <h2 className="col-span-full text-xl text-center"> 
-                        Tools and resources
-                    </h2> */}
-                    {toolResourceCards}
+                    <div className="col-span-full rounded-lg justify-self-end justify-between gap-y-8 h-auto self-center
+                        grid grid-cols-1 w-full
+                        sm:px-6
+                        md:gap-x-8
+                        lg:grid-cols-2
+                    ">
+                        {/* <h2 className="col-span-full text-lg text-center"> 
+                            Tools and resources
+                        </h2> */}
+                        {toolResourceCards}
+
+                    </div>
 
                 </div>
-
-            </div>
-        </Layout>
+            </Layout>
+        </ThemeContextProvider>
     )
 }
 
@@ -134,6 +152,7 @@ export const query = graphql`
                 }
             }
         }
+        baseColor
     }
   }
   `

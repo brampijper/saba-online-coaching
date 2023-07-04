@@ -4,9 +4,9 @@ import HomeContent from '../components/homepage';
 
  const IndexPage = () => {
   return (
-    <Layout hideNavLogo={true}>
-        <HomeContent />
-    </Layout>
+      <Layout homePageNav={true}>
+          <HomeContent />
+      </Layout>
   )
 }
 

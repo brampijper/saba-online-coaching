@@ -45,6 +45,25 @@ const FriendsSection = () => {
 
     const { friends_title, friends_subtitle, friends } = strapiHomepage;
 
+    const showSlider = friends.length > 1 ? true : false;
+
+    const sliderElem = (
+        <Slider 
+            items={friends} 
+            styles={`min-h-[800px]`}
+        >
+            {ProfileCard}
+        </Slider> 
+    )
+
+    const singleProfileCard = friends.map( friend => (
+        <ProfileCard 
+            key={friend.id} 
+            item={friend} 
+            cardStyles={'lg:max-w-5xl mt-16 place-self-center'} 
+        />
+    ))
+
     return (
         <div className="pt-20 h-auto relative grid gap-12 sm:px-6 md:gap-0 md:pt-32 lg:pt-64 overflow-hidden">    
                 
@@ -57,9 +76,7 @@ const FriendsSection = () => {
                 </p>
             </article>
 
-            <Slider items={friends} styles={`min-h-[800px]`}>
-                {ProfileCard}
-            </Slider>
+            { showSlider ? sliderElem : singleProfileCard }
 
             <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-turquoise-light" />
         </div>

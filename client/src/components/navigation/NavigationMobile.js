@@ -5,23 +5,30 @@ import { Link } from 'gatsby';
 import UseLockBodyScroll from "./UseLockBodyScroll.js";
 import NavigationHamburger from './NavigationHamburger.js';
 
-const NavigationMobile = ({showMenu, handleClick}) => {
+const NavigationMobile = (props) => {
     
-    UseLockBodyScroll(showMenu);
+    UseLockBodyScroll(props.showMenu);
     
+    const homepageStyle = {
+        backgroundColor: '#312B6E'
+    }
+
+    const defaultStyle = {
+        backgroundColor: props.logoColor
+    }
+
     return (
         <>
-            <NavigationHamburger 
-                showMenu={showMenu} 
-                handleClick={handleClick} 
-            />
+            <NavigationHamburger {...props} />
         
-            <Transition show={showMenu}>
+            <Transition show={props.showMenu}>
                 <ul id="mobile-menu"
-                className="bg-black absolute left-0 top-0 full-navbar-height w-full z-10 
+                className={`absolute left-0 top-0 full-navbar-height w-full z-10 
                     text-white text-2xl text-center font-bold
-                    flex flex-col justify-center space-y-12 sm:hidden
-                ">
+                    flex flex-col justify-center space-y-12 sm:hidden`}
+                    style={ props.homePageNav ? homepageStyle : defaultStyle}
+
+                    >
                     <li>
                         <Link to='/'>Home</Link>
                     </li>

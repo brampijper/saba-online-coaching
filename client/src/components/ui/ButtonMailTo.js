@@ -13,8 +13,8 @@ ButtonMailTo.defaultProps = {
     email: "Saba.Feronah@gmail.com",
     buttonText: "Send a message",
     styles: `mb-5 mt-5 w-fit
-        hover:bg-neutral-100 hover:text-black 
-        `
+        bg-slate-700/10 px-1 py-1 rounded-md text-black hover:bg-slate-700/20 
+    `
   };
 
 export default ButtonMailTo;
