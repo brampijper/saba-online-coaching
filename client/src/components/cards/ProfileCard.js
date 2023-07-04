@@ -24,7 +24,7 @@ const ProfileCard = ({item, cardStyles = ""}) => {
                     alt={alt} 
                     className="max-h-[16rem] lg:max-h-none lg:h-full w-full rounded-md"
                     objectFit="cover"
-                    objectPosition={"50% 15%"}
+                    objectPosition={"50% 55%"}
                 />
                 
                 <h4 className="absolute flex flex-col bottom-0 w-full py-2 px-8 
