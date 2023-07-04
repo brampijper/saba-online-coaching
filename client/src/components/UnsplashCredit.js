@@ -7,7 +7,7 @@ const UnsplashCredit = ({textColor, className, photographer, unsplashName}) => {
             Photo by
             <a href={url} target="_blank" rel="noreferrer">{`\xa0${photographer}\xa0`}</a>
             on
-            <a href={url} target="_blank" rel="noreferrer">{`\xa0Unslpash`}</a>
+            <a href={url} target="_blank" rel="noreferrer">{`\xa0Unsplash`}</a>
         </div>
     )
 }

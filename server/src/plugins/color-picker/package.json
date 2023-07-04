@@ -1,10 +1,10 @@
 {
   "name": "color-picker",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "A basic color picker for your Strapi application",
   "strapi": {
     "name": "color-picker",
-    "description": "Description of Color Picker plugin",
+    "description": "A basic color picker for your Strapi application",
     "kind": "plugin",
     "displayName": "Color Picker"
   },
@@ -12,11 +12,11 @@
     "react-color": "^2.19.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Bram Pijper"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Bram Pijper"
     }
   ],
   "engines": {
