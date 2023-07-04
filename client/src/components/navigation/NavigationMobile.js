@@ -24,11 +24,10 @@ const NavigationMobile = (props) => {
             <Transition show={props.showMenu}>
                 <ul id="mobile-menu"
                 className={`absolute left-0 top-0 full-navbar-height w-full z-10 
-                    text-white text-2xl text-center font-bold
+                    text-2xl text-center font-bold text-white
                     flex flex-col justify-center space-y-12 sm:hidden`}
                     style={ props.homePageNav ? homepageStyle : defaultStyle}
-
-                    >
+                >
                     <li>
                         <Link to='/'>Home</Link>
                     </li>
