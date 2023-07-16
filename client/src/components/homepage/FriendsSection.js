@@ -78,7 +78,7 @@ const FriendsSection = () => {
 
             { showSlider ? sliderElem : singleProfileCard }
 
-            <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 z-minus fill-s-turquoise-light" />
+            <Stripes className="w-full h-full absolute sm:top-0 md:scale-x-220 xl:scale-x-300 z-minus fill-s-turquoise-light" />
         </div>
     )
 }
