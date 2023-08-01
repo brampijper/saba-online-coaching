@@ -98,11 +98,10 @@ export default function toolPage({ data }) {
                         md:gap-x-8
                         lg:grid-cols-2
                     ">
-                        {/* <h2 className="col-span-full text-lg text-center"> 
-                            Tools and resources
-                        </h2> */}
+                        <h2 className="col-span-full text-lg text-left"> 
+                            Recommended resources
+                        </h2>
                         {toolResourceCards}
-
                     </div>
 
                 </div>
@@ -151,6 +150,7 @@ export const query = graphql`
                     description
                 }
             }
+            url
         }
         baseColor
     }
