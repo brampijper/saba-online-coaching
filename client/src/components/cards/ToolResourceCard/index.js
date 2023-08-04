@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 import { faPodcast, faBlog, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import YoutubeVideo from "./youtubeVideo";
+import YoutubeVideo from "./YoutubeVideo";
 
 const ToolResourceCard = ({resource}) => {
   const { 
@@ -23,14 +23,14 @@ const ToolResourceCard = ({resource}) => {
   const displayYoutubeVideo = title === "Youtube" ? <YoutubeVideo url={url} /> : null
 
   return (
-    <article className={`flex flex-col
-      rounded p-6 shadow-2xl space-y-7 h-min
-      text-neutral-900 bg-gradient-to-r from-zinc-50 to-zinc-100
+    <article className={`flex flex-col border m-4 bg-gray-100 shadow-md
+      rounded p-6 space-y-7 h-min
+      text-neutral-900
       md:px-8`}
     >
       <div className="flex flex-row gap-3">
         <FontAwesomeIcon 
-          className="text-gray-800 text-2xl" 
+          className="fa-2xl text-gray-800 text-2xl" 
           icon={icons[title]} 
         />
 
@@ -49,13 +49,13 @@ const ToolResourceCard = ({resource}) => {
         rel="noopener noreferrer" 
       >
         <ReactMarkdown 
-          className={`mb-4 border rounded p-4 hover:bg-gray-100`}
+          className={`mb-4 border rounded p-4 bg-gray-50 hover:bg-white`}
           linkTarget="_blank"
           children={description} 
         />
 
         <FontAwesomeIcon 
-          className="text-gray-600 absolute right-3 top-3"
+          className="fa-xs text-gray-600 absolute right-3 top-3"
           icon={faUpRightFromSquare}
         />
       </a>

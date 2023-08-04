@@ -12,8 +12,6 @@ export default function YoutubeVideo({url}) {
   }
   
   return (
-    <>
       <YouTube videoId={youtubeId} opts={opts} />
-    </>
   )
 }

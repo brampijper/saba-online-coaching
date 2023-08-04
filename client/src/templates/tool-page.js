@@ -18,9 +18,9 @@ export default function toolPage({ data }) {
         instructions,
         benefits,
         resources,
-        baseColor
+        baseColor,
     } } = data;
-    
+
     const colorStyles = {
         baseColor,
         primaryColor: setAlpha(baseColor, 0.3),
@@ -50,7 +50,7 @@ export default function toolPage({ data }) {
             resource={resource}
         />
     ))
-    
+
     return (
         <ThemeContextProvider value={colorStyles}>
             <Layout> 
@@ -91,14 +91,15 @@ export default function toolPage({ data }) {
                             </div>
                     </div>
 
-
                     <div className="col-span-full rounded-lg justify-self-end justify-between gap-y-8 h-auto self-center
-                        grid grid-cols-1 w-full
-                        sm:px-6
+                        grid grid-cols-1 w-full pt-24
+                        sm:pt-28
                         md:gap-x-8
                         lg:grid-cols-2
+                        py-16 bg-gradient-to-r from-zinc-50 to-zinc-100
+                        relative
                     ">
-                        <h2 className="col-span-full text-lg text-left"> 
+                        <h2 className="col-span-full absolute text-sm sm:text-md text-center text-black w-full rounded-t-lg py-4 border-b" style={{ backgroundColor: baseColor}}> 
                             Recommended resources
                         </h2>
                         {toolResourceCards}
