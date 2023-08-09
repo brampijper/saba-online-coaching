@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 import { faPodcast, faBlog, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+
 import YoutubeVideo from "./YoutubeVideo";
 
 const ToolResourceCard = ({resource}) => {
@@ -23,15 +24,15 @@ const ToolResourceCard = ({resource}) => {
   const displayYoutubeVideo = title === "Youtube" ? <YoutubeVideo url={url} /> : null
 
   return (
-    <article className={`flex flex-col border m-4 bg-gray-100 shadow-md
+    <article className={`flex flex-col border border-slate-500
       rounded p-6 space-y-7 h-min
       text-neutral-900
-      md:px-8`}
+      md:m-4 md:px-8`}
     >
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-3 items-center">
         <FontAwesomeIcon 
-          className="fa-2xl text-gray-800 text-2xl" 
-          icon={icons[title]} 
+          className="fa-xl text-gray-800" 
+          icon={icons[title]}
         />
 
         <h4 className={`decoration-4 text-md align-text-bottom`}>
