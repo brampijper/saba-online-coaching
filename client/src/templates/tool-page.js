@@ -44,7 +44,7 @@ export default function toolPage({ data }) {
     <ThemeContextProvider value={colorStyles}>
       <Layout>
         <section className="space-y-24 flex flex-col my-24">
-          <div className={`self-center h-auto max-w-screen-lg flex flex-col gap-8
+          <div className={`self-center h-auto max-w-screen-lg flex flex-col gap-8 px-6 
             lg:grid lg:grid-cols-3 lg:auto-rows-auto 
             xl:gap-16 xl:max-w-screen-xl
           `}>
@@ -72,8 +72,8 @@ export default function toolPage({ data }) {
             </div>
           </div>
 
-          <div className="w-auto flex flex-col items-center overflow-hidden p-16 gap-6" style={{backgroundColor: baseColor}}>
-              <h2 className="text-md text-white mt-6 text-center">
+          <div className="w-auto flex flex-col items-center overflow-hidden px-1 sm:p-16 gap-6" style={{backgroundColor: baseColor}}>
+              <h2 className="text-md text-white mt-6 text-center px-8">
                 {`${title} - Best practise & tips`}
               </h2>
 
@@ -85,7 +85,7 @@ export default function toolPage({ data }) {
               </Slider>   
           </div>
 
-          <div className="self-center max-w-screen-lg xl:max-w-screen-xl flex flex-wrap place-content-center gap-y-12">
+          <div className="self-center max-w-screen-lg xl:max-w-screen-xl flex flex-wrap place-content-center gap-y-12 px-6">
               <h2 className="text-md text-gray-800 text-center w-full">
                 {`${title} - Extra resources`}
               </h2>
