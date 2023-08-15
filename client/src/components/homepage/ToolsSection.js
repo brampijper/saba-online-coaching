@@ -46,7 +46,7 @@ const ToolsSection = () => {
                 {tools_title}
             </h2>
 
-            <Slider items={tools} styles={`min-h-[600px]`}>
+            <Slider items={tools}>
                 {ToolCarouselCard}
             </Slider>
 

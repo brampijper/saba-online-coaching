@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ReactMarkdown from 'react-markdown';
 
-const ProfileCard = ({item, cardStyles = ""}) => {
+const ProfileCard = forwardRef (({item, cardStyles = ""}, ref) => {
     const { 
         image: { localFile, alternativeText: alt }, 
         description: { data: { description }},
@@ -14,8 +14,11 @@ const ProfileCard = ({item, cardStyles = ""}) => {
     const image = getImage(localFile);
     
     return (
-        <div className={`border-opacity-90 shadow-xl border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg
-        flex flex-col max-w-7xl lg:flex-row lg:max-h-[25rem]
+        <div
+            ref={ref} 
+            className=
+            {`border-opacity-90 shadow-xl border-2 sm:border-4 border-s-gold bg-white shadow-md rounded-lg
+            flex flex-col max-w-7xl lg:flex-row lg:max-h-[25rem]
             ${cardStyles}
         `}>
             <div className="relative lg:flex-[0_1_300px]">
@@ -65,6 +68,6 @@ const ProfileCard = ({item, cardStyles = ""}) => {
             </div>
         </div>
     )
-}
+})
 
 export default ProfileCard;

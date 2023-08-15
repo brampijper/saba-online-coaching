@@ -7,6 +7,8 @@ import ToolResourceCard from "../components/cards/ToolResourceCard";
 import ToolBenefitCards from "../components/cards/ToolBenefitCards";
 import ToolInstructionCard from "../components/cards/ToolInstructionCard";
 
+import { Slider } from "../components/Slider";
+
 import { setAlpha } from "../components/colorUtils";
 import { ThemeContextProvider } from "../components/themeContext";
 
@@ -31,14 +33,6 @@ export default function toolPage({ data }) {
     logoColor: baseColor
   }
 
-  const instructionCards = instructions.map( (instruction, index) => (
-    <ToolInstructionCard
-      key={instruction.id}
-      instruction={instruction}
-      index={index+1}
-    />
-  ) )
-
   const toolResourceCards = resources.map( (resource, index) => (
     <ToolResourceCard
       key={index}
@@ -49,42 +43,55 @@ export default function toolPage({ data }) {
   return (
     <ThemeContextProvider value={colorStyles}>
       <Layout>
-        <div className={`self-center h-auto p-8 max-w-screen-lg flex flex-col gap-8
-          md:grid md:grid-cols-3 md:auto-rows-auto md:p-16 md:pb-20 
-          lg:gap-16 lg:max-w-screen-xl
-        `}>
+        <section className="space-y-24 flex flex-col my-24">
+          <div className={`self-center h-auto max-w-screen-lg flex flex-col gap-8
+            lg:grid lg:grid-cols-3 lg:auto-rows-auto 
+            xl:gap-16 xl:max-w-screen-xl
+          `}>
 
-          <div className="md:col-span-2 flex flex-col gap-y-4">
-            <h2 className="text-base">
-                {`${title}`}
-            </h2>
-            <ReactMarkdown 
-              className="space-y-6 max-w-prose" 
-              linkTarget="_blank"
-              children={description} 
-            />
-            <img 
-              src={publicURL} 
-              alt={alt}
-              className="rounded-lg object-cover min-h-[20rem] w-full mt-4" 
-            />
+            <div className="lg:col-span-2 flex flex-col gap-y-4">
+              <h2 className="text-base">
+                  {`${title}`}
+              </h2>
+              <ReactMarkdown 
+                className="space-y-6 max-w-prose" 
+                linkTarget="_blank"
+                children={description} 
+              />
+              <img 
+                src={publicURL} 
+                alt={alt}
+                className="rounded-lg object-cover min-h-[20rem] w-full mt-4" 
+              />           
+            </div>
 
-            <h2 className="text-base my-6">
-                {`${title} best practise and tips`}
-            </h2>
-
-            <article className="flex flex-col gap-6 md:px-6">
-                {instructionCards}
-            </article>
+            <div className="space-y-6 lg:h-min lg:col-start-3 lg:row-start-1">
+              <ToolBenefitCards 
+                benefits={benefits} 
+              />
+            </div>
           </div>
 
-          <div className="space-y-6 md:h-min md:col-start-3 md:row-start-1">
-            <ToolBenefitCards 
-              benefits={benefits} 
-            />
+          <div className="w-auto flex flex-col items-center overflow-hidden p-16 gap-6" style={{backgroundColor: baseColor}}>
+              <h2 className="text-md text-white mt-6 text-center">
+                {`${title} - Best practise & tips`}
+              </h2>
+
+              <Slider 
+                items={instructions} 
+                styles={``}
+              >
+                {ToolInstructionCard}
+              </Slider>   
+          </div>
+
+          <div className="self-center max-w-screen-lg xl:max-w-screen-xl flex flex-wrap place-content-center gap-y-12">
+              <h2 className="text-md text-gray-800 text-center w-full">
+                {`${title} - Extra resources`}
+              </h2>
             {toolResourceCards}
           </div>
-        </div>
+        </section>
       </Layout>
     </ThemeContextProvider>
   )

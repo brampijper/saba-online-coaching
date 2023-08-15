@@ -8,14 +8,14 @@ import HelpSection from './HelpSection';
 
 const HomeContent = () => {
     return (
-        <>
+        <section className="space-y-32">
             <Header />
             <HeaderQuote />
             <ResourceSection />
             <ToolsSection />
             <FriendsSection />
             <HelpSection />
-        </>
+        </section>
     )
 }
 

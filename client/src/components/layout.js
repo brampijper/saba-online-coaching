@@ -13,7 +13,7 @@ export default function Layout ({children, homePageNav}) {
             <Navigation homePageNav={homePageNav} />
             
             <main 
-                className={`flex flex-col justify-center w-full mb-0 space-y-32`}
+                className={`flex flex-col justify-center w-full`}
                 style={{ backgroundColor: primaryColor}}
             >
                 {children}

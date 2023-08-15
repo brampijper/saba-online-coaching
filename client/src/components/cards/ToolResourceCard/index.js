@@ -24,8 +24,8 @@ const ToolResourceCard = ({resource}) => {
   const displayYoutubeVideo = title === "Youtube" ? <YoutubeVideo url={url} /> : null
 
   return (
-    <article className={`flex flex-col border border-slate-500
-      rounded p-6 space-y-7 h-min
+    <article className={`flex flex-col border border-slate-500 max-w-[30rem]
+      rounded p-6 space-y-7 h-auto
       text-neutral-900
       md:m-4 md:px-8`}
     >

@@ -16,17 +16,17 @@ const SliderButton = ({onClick, direction, styles}) => {
     return (
         <button onClick={onClick} 
             className={`z-[3] rounded-md bg-slate-900 text-white px-1 py-1 flex items-center justify-center space-x-2
-                sm:rounded-full sm:border-[3px] sm:border-solid sm:border-black sm:px-4 sm:py-2 
-                hover:bg-slate-700 hover:border-slate-700
+                sm:rounded-full sm:border-[3px] sm:border-solid sm:border-black sm:px-2 sm:py-1 
+                hover:bg-slate-700 hover:border-slate-700 self-center
                 ${arrowDirectionStyles[direction]} 
                 ${styles}
         `}>
             <FontAwesomeIcon 
-                className="text-white text-2xl" 
+                className="fa-xl text-white" 
                 icon={arrowIcon[direction]} 
             />
             
-            <span className="hidden md:block text-sm font-bold uppercase">
+            <span className="hidden md:block text-xs lg:text-sm font-bold uppercase">
                 {direction}
             </span>
         </button>

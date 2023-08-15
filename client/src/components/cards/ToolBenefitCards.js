@@ -2,15 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-// import { ThemeContext } from "../themeContext";
-
 const ToolBenefitCards = ({ benefits }) => {
-  // const { accentColor, baseColor } = useContext(ThemeContext)
-
+  
   const benefitTitle = benefits.map( 
-    (benefit, index) => (
-      <h4 className="flex flex-col gap-2 text-xs border rounded p-4 bg-gray-50 hover:bg-white">
-        {` ${index+1}. ${benefit.title}`}
+    ({id, title}, index) => (
+      <h4 key={id} className="flex flex-col gap-2 text-xs border rounded p-4 bg-gray-50 hover:bg-white">
+        {` ${index+1}. ${title}`}
       </h4>
     )
   )
@@ -22,7 +19,6 @@ const ToolBenefitCards = ({ benefits }) => {
         <FontAwesomeIcon 
           className="fa-xl text-gray-800" 
           icon={faHeart}
-          // style={{color: baseColor }} 
         />
 
         <h4 className={`decoration-4 text-sm align-text-bottom`}>
