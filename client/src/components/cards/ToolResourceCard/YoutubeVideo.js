@@ -1,6 +1,6 @@
 import React from "react";
 import YouTube from "react-youtube";
-import GetYouTubeId from "../../../utils/GetYoutubeID";
+import GetYouTubeId from "../../../utils/GetYouTubeId";
 
 export default function YoutubeVideo({url}) {
 
