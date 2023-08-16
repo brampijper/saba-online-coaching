@@ -72,7 +72,7 @@ export default function toolPage({ data }) {
             </div>
           </div>
 
-          <div className="w-auto flex flex-col items-center overflow-hidden px-1 sm:p-16 gap-6" style={{backgroundColor: baseColor}}>
+          <div className="w-auto flex flex-col items-center overflow-hidden px-1 sm:p-16 gap-3" style={{backgroundColor: baseColor}}>
               <h2 className="text-md text-white mt-6 text-center px-8">
                 {`${title} - Best practise & tips`}
               </h2>

@@ -25,14 +25,16 @@ const ToolCarouselCard = forwardRef(({item, cardStyles = ""}, ref) => {
                 className="min-w-full max-h-52 sm:max-h-80 object-cover"  // css for outer wrapper
             />
 
-            <section className="p-6 flex flex-col space-y-4 mr-2 md:space-y-8">
+            <section className="p-6 flex flex-col space-y-4 mr-2 md:space-y-4">
                 <h4>
                     {title}
                 </h4>
 
                 <ReactMarkdown
-                    className="line-clamp-4 lg:line-clamp-6"
-                    children={description} 
+                    children={description}
+                    components={{
+                        p: ({node, ...props}) => <p className="line-clamp-3" {...props}></p>
+                    }}
                 />
                     
                 <Link className="underline inline-block" to={`/${slug}`}>

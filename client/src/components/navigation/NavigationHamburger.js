@@ -6,7 +6,7 @@ const NavigationHamburger = ({showMenu, handleClick, homePageNav}) => {
 
     const icon = showMenu ? faTimes : faBars
     const ariaLabel = showMenu ? "open" : "close"
-    const iconColor = homePageNav ? 'text-slate-100' : 'text-slate-400'
+    const iconColor = homePageNav ? 'text-slate-100' : 'text-gray-800'
     
     return (
         <div className="sm:hidden z-20 absolute right-0 px-6">

@@ -12,10 +12,10 @@ import HomeContent from '../components/homepage';
 
 export default IndexPage
 
-export const Head = () => (
-  <>
+export const Head = ({location}) => (
+  <React.Fragment key={location}>
       <meta name="description" content="Resources for managing your mental health" />
       <meta name="icon" href="../images/favicon.png" />
       <title>Mental Health - A brief intro</title>  
-  </>
+  </React.Fragment>
 )

@@ -6,7 +6,7 @@ export const Slider = ({items, styles = "", children}) => {
     const [onNext, onPrevious, sliderCards, height] = useSlider(items, children)
 
     return (
-        <div className={`grid grid-cols-[1fr_6fr_1fr] min-h-[10rem] min-w-full justify-around items-center gap-2 my-8 ${styles}`}
+        <div className={`grid grid-cols-[1fr_6fr_1fr] min-h-[10rem] min-w-full justify-around items-center gap-2 my-16 ${styles}`}
             style={{height: height}}
         >
             <SliderButton 

@@ -50,7 +50,8 @@ const ProfileCard = forwardRef (({item, cardStyles = ""}, ref) => {
                 
                 <ReactMarkdown 
                     children={description} 
-                    className="space-y-2" 
+                    className="space-y-2"
+                    linkTarget="_blank"
                 />
 
                 <h4>Strengths</h4>

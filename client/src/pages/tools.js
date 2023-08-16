@@ -46,7 +46,7 @@ const ToolsPage = () => {
 
     return (
         <Layout>
-            <h1 className=" px-6 text-3xl mt-14 md:text-6xl text-center md:mt-28"> Overview of all tools </h1>
+            <h1 className=" px-6 text-3xl my-14 md:text-6xl text-center md:my-28"> Overview of all tools </h1>
             <div className="px-6 flex flex-row flex-wrap gap-12 md:px-16 pb-48 mx-auto justify-center">
               {toolCards}
             </div>

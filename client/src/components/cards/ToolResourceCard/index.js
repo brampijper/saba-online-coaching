@@ -50,13 +50,13 @@ const ToolResourceCard = ({resource}) => {
         rel="noopener noreferrer" 
       >
         <ReactMarkdown 
-          className={`mb-4 border rounded p-4 bg-gray-50 hover:bg-white`}
+          className={`mb-4 border rounded p-6 bg-gray-50 hover:bg-white`}
           linkTarget="_blank"
           children={description} 
         />
 
         <FontAwesomeIcon 
-          className="fa-xs text-gray-600 absolute right-3 top-3"
+          className="fa-xs text-gray-600 absolute right-2 top-2"
           icon={faUpRightFromSquare}
         />
       </a>
