@@ -15,13 +15,13 @@ const HeaderQuote = () => {
     const data = useStaticQuery(getData);
     const { strapiHomepage: { quote } } = data
     return (
-        <div className="mx-auto text-center max-w-4xl px-6 space-y-20">
+        <div className="mx-auto text-center max-w-4xl px-6 space-y-20 pt-80">
             <h3>
                 <span className="mx-1">
                     "{quote}"
                 </span>
             </h3>
-            <ArrowBounceDown scrollToTarget='#about-me' />
+            <ArrowBounceDown scrollToTarget='#friends-section' />
         </div>
     )
 }

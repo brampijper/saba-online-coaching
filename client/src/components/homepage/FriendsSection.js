@@ -65,9 +65,8 @@ const FriendsSection = () => {
     ))
 
     return (
-        <div className="pt-20 h-auto relative grid gap-12 px-6 md:gap-0 md:pt-32 lg:pt-64 overflow-hidden">    
-                
-            <article className="text-center flex flex-col items-center gap-16 relative">
+        <div className="pt-20 h-auto relative grid gap-12 px-6 md:gap-0 overflow-hidden">    
+            <article id="friends-section" className="text-center flex flex-col items-center gap-16 relative">
                 <h2 className="text-4xl">
                     {friends_title}
                 </h2>

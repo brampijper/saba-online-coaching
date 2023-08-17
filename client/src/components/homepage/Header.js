@@ -74,7 +74,7 @@ const Header = () => {
                 "/>
 
                 <ButtonScrollTo 
-                    scrollToTarget='#about-me' 
+                    scrollToTarget='#resource-section' 
                     className="
                         text-slate-900 text-sm bg-s-turquoise row-start-5 rounded-half
                         md:text-sm md:rounded-none md:col-start-1 md:row-start-3 md:row-end-5 md:self-center md:w-full md:m-0 md:h-20

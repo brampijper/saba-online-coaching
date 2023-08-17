@@ -9,7 +9,7 @@ module.exports = {
   flags: {
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
-    DEV_SSR: true,
+    DEV_SSR: false,
     DETECT_NODE_MUTATIONS: true
   },
   plugins: [

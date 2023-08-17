@@ -55,7 +55,6 @@ export default function toolPage({ data }) {
               </h2>
               <ReactMarkdown 
                 className="space-y-6 max-w-prose" 
-                linkTarget="_blank"
                 children={description} 
               />
               <img 
@@ -77,10 +76,7 @@ export default function toolPage({ data }) {
                 {`${title} - Best practise & tips`}
               </h2>
 
-              <Slider 
-                items={instructions} 
-                styles={``}
-              >
+              <Slider items={instructions}>
                 {ToolInstructionCard}
               </Slider>   
           </div>
