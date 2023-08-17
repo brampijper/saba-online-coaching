@@ -51,8 +51,8 @@ const ToolResourceCard = ({resource}) => {
       >
         <ReactMarkdown 
           className={`mb-4 border rounded p-6 bg-gray-50 hover:bg-white`}
-          linkTarget="_blank"
-          children={description} 
+          children={description}
+          components={{ a: ({node, ...props}) => <p {...props}></p>}} // filter out a tags.
         />
 
         <FontAwesomeIcon 

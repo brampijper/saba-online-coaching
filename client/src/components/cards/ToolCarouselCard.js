@@ -18,7 +18,8 @@ const ToolCarouselCard = forwardRef(({item, cardStyles = ""}, ref) => {
     return (
         <div 
             ref={ref}
-            className={`flex flex-col h-auto max-w-lg rounded-lg bg-white shadow-md overflow-hidden shadow-xl ${cardStyles}`}>                
+            className={`flex flex-col h-auto max-w-lg rounded-lg bg-white shadow-md overflow-hidden shadow-xl ${cardStyles}`}
+        >                
             <img 
                 src={publicURL}
                 alt={alt} 
@@ -32,8 +33,9 @@ const ToolCarouselCard = forwardRef(({item, cardStyles = ""}, ref) => {
 
                 <ReactMarkdown
                     children={description}
+                    allowElement={ (element, index, parent) => index === 0 } // only display the first paragraph.
                     components={{
-                        p: ({node, ...props}) => <p className="line-clamp-3" {...props}></p>
+                        p: ({node, ...props}) => <p className="line-clamp-5" {...props}></p> // Bug fix for Safari not handling line-clamp properly.
                     }}
                 />
                     

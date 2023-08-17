@@ -61,7 +61,7 @@ const ResourceSection = () => {
 
     return (
         <div className="relative w-full h-auto flex flex-col overflow-hidden">
-            <article id="about-me" className="h-auto max-w-5xl space-y-20 mx-auto px-6 relative pb-8 lg:pb-32
+            <article id="resource-section" className="h-auto max-w-5xl space-y-20 mx-auto px-6 relative pb-8 lg:pb-32
                 md:grid md:grid-cols-2 md:gap-x-8 md:space-y-28
             ">
                 <CircleTitle title={aboutme_title} styles="col-span-2" />  

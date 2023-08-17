@@ -10,9 +10,9 @@ const HomeContent = () => {
     return (
         <section className="space-y-32">
             <Header />
-            <HeaderQuote />
             <ResourceSection />
             <ToolsSection />
+            <HeaderQuote />
             <FriendsSection />
             <HelpSection />
         </section>

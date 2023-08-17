@@ -24,10 +24,9 @@ const Navigation = ({homePageNav = false}) => {
     const defaultStyles = `justify-between text-slate-800`
 
     return (
-        <nav 
-            className={`h-24 flex items-center px-6 relative ${homePageNav ? homePageNavStyles : defaultStyles}`}
+        <nav className={`h-24 flex items-center px-6 relative ${homePageNav ? homePageNavStyles : defaultStyles}`}
             style={{ backgroundColor: `${homePageNav ? '#312B6E' : secondaryColor}` }}
-            >
+        >
             {!homePageNav && navBarLogo}
             
             <ul className="hidden sm:flex flex-row space-x-8 lg:space-x-16">
