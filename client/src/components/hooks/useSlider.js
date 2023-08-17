@@ -20,8 +20,12 @@ export default function useSlider(items = [], CardComponent) {
         );
     }
     
-    useEffect( () => {
-        setHeight(cardRef.current.clientHeight)
+    useEffect( () => { // timeout to wait until all content is loaded.
+        const heightTimeout = setTimeout( () => {
+            setHeight(cardRef.current.clientHeight)
+        }, 300)
+
+        return () => clearTimeout(heightTimeout);
     }, [hasResized])
 
     const sliderCards = items.map( (item, index) => { 
